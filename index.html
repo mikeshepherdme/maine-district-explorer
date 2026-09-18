@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maine District Explorer</title>
+<style>
+.viz-root {
+  color-scheme: light;
+  --surface-1:      #fcfcfb;
+  --surface-page:   #f9f9f7;
+  --text-primary:   #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted:     #898781;
+  --grid:           #e1e0d9;
+  --baseline:       #c3c2b7;
+  --border:         rgba(11,11,11,0.10);
+  --dem:            #2a78d6;
+  --gop:            #e34948;
+  --other:          #4a3aa7;
+  --neutral-fill:   #eeece6;
+  --accent-outline: #0b0b0b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --surface-page:   #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --grid:           #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --dem:            #3987e5;
+    --gop:            #e66767;
+    --other:          #9085e9;
+    --neutral-fill:   #2c2c2a;
+    --accent-outline: #ffffff;
+  }
+}
+:root[data-theme="dark"] .viz-root {
+  color-scheme: dark;
+  --surface-1:      #1a1a19;
+  --surface-page:   #0d0d0d;
+  --text-primary:   #ffffff;
+  --text-secondary: #c3c2b7;
+  --text-muted:     #898781;
+  --grid:           #2c2c2a;
+  --baseline:       #383835;
+  --border:         rgba(255,255,255,0.10);
+  --dem:            #3987e5;
+  --gop:            #e66767;
+  --other:          #9085e9;
+  --neutral-fill:   #2c2c2a;
+  --accent-outline: #ffffff;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface-page); }
+.viz-root {
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-height: 100vh;
+  padding: 20px 16px 48px;
+}
+.page { max-width: 1000px; margin: 0 auto; }
+
+header h1 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+header p.sub { margin: 0; color: var(--text-secondary); font-size: 0.9rem; }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 16px 0; }
+.toggle-group { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.toggle-btn {
+  font: inherit; font-size: 0.85rem; font-weight: 600; padding: 7px 16px;
+  background: var(--surface-1); color: var(--text-secondary); border: none; cursor: pointer;
+}
+.toggle-btn.active { background: var(--text-primary); color: var(--surface-1); }
+.toggle-btn:not(.active):hover { background: var(--grid); }
+
+.search-box { flex: 1 1 200px; max-width: 260px; }
+.search-box input {
+  width: 100%; font: inherit; font-size: 0.85rem; padding: 7px 10px;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--surface-1); color: var(--text-primary);
+}
+
+.map-wrap {
+  position: relative;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.map-wrap svg { width: 100%; height: auto; display: block; touch-action: none; }
+.district-path { fill: var(--neutral-fill); stroke: var(--surface-1); stroke-width: 0.6; cursor: pointer; }
+.district-path.tracked { stroke: var(--accent-outline); stroke-width: 1.6; }
+.district-path:hover { filter: brightness(1.12); }
+.district-path.selected { stroke: var(--accent-outline); stroke-width: 2.4; }
+.map-hint { position: absolute; top: 10px; left: 12px; font-size: 0.72rem; color: var(--text-muted); background: color-mix(in srgb, var(--surface-1) 85%, transparent); padding: 3px 8px; border-radius: 6px; }
+
+.legend-row { display: flex; align-items: center; gap: 10px; margin: 10px 0 4px; font-size: 0.75rem; color: var(--text-secondary); flex-wrap: wrap; }
+.legend-gradient { width: 140px; height: 10px; border-radius: 5px; background: linear-gradient(to right, var(--gop), var(--neutral-fill), var(--dem)); }
+.legend-outline-swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; border: 1.6px solid var(--accent-outline); background: var(--neutral-fill); vertical-align: -3px; }
+
+.top-spending-list { display: flex; flex-direction: column; gap: 2px; }
+.ts-row {
+  display: grid; grid-template-columns: 20px minmax(60px,84px) 1fr minmax(56px,76px);
+  align-items: center; gap: 8px; padding: 6px 6px; border-radius: 8px; cursor: pointer;
+}
+.ts-row:hover { background: var(--grid); }
+.ts-rank { font-size: 0.72rem; color: var(--text-muted); text-align: right; font-variant-numeric: tabular-nums; }
+.ts-label { font-size: 0.82rem; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ts-bar-wrap { min-width: 0; }
+.ts-bar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; background: var(--neutral-fill); }
+.ts-seg { height: 100%; }
+.ts-seg.d { background: var(--dem); }
+.ts-seg.r { background: var(--gop); }
+.ts-seg.other { background: var(--other); }
+.ts-seg:not(:last-child) { border-right: 2px solid var(--surface-1); }
+.ts-amount { font-size: 0.8rem; font-variant-numeric: tabular-nums; text-align: right; color: var(--text-secondary); white-space: nowrap; }
+.ts-empty { color: var(--text-muted); font-size: 0.85rem; padding: 10px 0; }
+
+section { margin-bottom: 28px; }
+section h2 { font-size: 1.05rem; margin: 0 0 4px; }
+section p.desc { margin: 0 0 10px; color: var(--text-secondary); font-size: 0.85rem; }
+
+.detail-panel {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px;
+}
+.detail-empty { color: var(--text-secondary); font-size: 0.88rem; text-align: center; padding: 30px 10px; }
+.detail-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.detail-head h3 { margin: 0; font-size: 1.2rem; }
+.detail-head .chamber-badge { font-size: 0.72rem; color: var(--text-muted); border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px; }
+.cand2026-section { margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid var(--grid); }
+.cand2026-section h4 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin: 0 0 10px; font-weight: 600; }
+.cand2026-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.cand2026-card {
+  flex: 1 1 200px; min-width: 160px; border-radius: 10px; padding: 10px 14px;
+  border: 1px solid var(--border); background: var(--surface-page);
+  border-left: 4px solid var(--baseline);
+}
+.cand2026-card.D { border-left-color: var(--dem); }
+.cand2026-card.R { border-left-color: var(--gop); }
+.cand2026-card.other { border-left-color: var(--other); }
+.cand2026-name { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); line-height: 1.25; }
+.cand2026-meta { font-size: 0.76rem; color: var(--text-secondary); margin-top: 2px; }
+.cand2026-meta .party-label.D { color: var(--dem); font-weight: 600; }
+.cand2026-meta .party-label.R { color: var(--gop); font-weight: 600; }
+.cand2026-meta .party-label.other { color: var(--other); font-weight: 600; }
+.cand2026-empty { color: var(--text-muted); font-size: 0.85rem; }
+
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.detail-block h4 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); margin: 0 0 8px; font-weight: 600; }
+.reg-bar { display: flex; height: 20px; border-radius: 5px; overflow: hidden; margin-bottom: 6px; }
+.reg-seg.D { background: var(--dem); }
+.reg-seg.R { background: var(--gop); }
+.reg-seg.U { background: var(--baseline); }
+.reg-labels { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-secondary); }
+.result-row { display: flex; justify-content: space-between; gap: 8px; font-size: 0.82rem; padding: 4px 0; border-bottom: 1px solid var(--grid); }
+.result-row .cand { min-width: 0; }
+.result-row > span:last-child { flex-shrink: 0; white-space: nowrap; }
+.result-row:last-child { border-bottom: none; }
+.result-row .cand.D { color: var(--dem); }
+.result-row .cand.R { color: var(--gop); }
+.result-row .cand.other { color: var(--other); }
+.result-row .cand-party { color: var(--text-muted); font-weight: 400; }
+.margin-pill { font-size: 0.68rem; font-weight: 600; padding: 1px 6px; border-radius: 999px; }
+.margin-pill.D { background: color-mix(in srgb, var(--dem) 18%, transparent); color: var(--dem); }
+.margin-pill.R { background: color-mix(in srgb, var(--gop) 18%, transparent); color: var(--gop); }
+.ie-row { font-size: 0.82rem; padding: 4px 0; border-bottom: 1px solid var(--grid); display: flex; justify-content: space-between; }
+.ie-row:last-child { border-bottom: none; }
+.ie-total { font-weight: 600; margin-top: 6px; font-size: 0.85rem; }
+.no-ie { color: var(--text-muted); font-size: 0.82rem; }
+
+.district-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; max-height: 260px; overflow-y: auto; padding: 4px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-1); }
+.district-list-item {
+  display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem;
+  padding: 6px 9px; border-radius: 7px; cursor: pointer; color: var(--text-secondary);
+}
+.district-list-item:hover { background: var(--grid); }
+.district-list-item.selected { background: var(--text-primary); color: var(--surface-1); }
+.district-list-item .swatch { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; }
+
+footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-top: 1px solid var(--grid); padding-top: 14px; }
+.state-msg { color: var(--text-secondary); font-size: 0.85rem; padding: 24px 0; text-align: center; }
+
+.tooltip {
+  position: fixed; background: var(--text-primary); color: var(--surface-1); font-size: 0.72rem;
+  padding: 6px 9px; border-radius: 6px; pointer-events: none; z-index: 50; max-width: 220px; line-height: 1.4; display: none;
+}
+</style>
+</head>
+<body>
+<div class="viz-root">
+<div class="page">
+  <header>
+    <h1>Maine District Explorer</h1>
+    <p class="sub">Click any State House or Senate district for its registration, election history, and 2026 independent-expenditure detail.</p>
+  </header>
+
+  <section>
+    <h2>Top-spending races</h2>
+    <p class="desc">Legislative races ranked by total independent-expenditure spending, Sept. 1, 2026&ndash;present. <span style="color:var(--dem);font-weight:600">Blue</span> = spending that helps the Democratic candidate &middot; <span style="color:var(--gop);font-weight:600">red</span> = helps the Republican candidate. Click a race to jump to its detail.</p>
+    <div class="top-spending-list" id="top-spending-list"><div class="state-msg">Loading&hellip;</div></div>
+  </section>
+
+  <div class="toolbar">
+    <div class="toggle-group">
+      <button class="toggle-btn active" id="btn-senate" type="button">Senate (35)</button>
+      <button class="toggle-btn" id="btn-house" type="button">House (151)</button>
+    </div>
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Jump to district, e.g. 16 or a candidate name">
+    </div>
+  </div>
+
+  <section>
+    <h2 id="detail-heading">District detail</h2>
+    <p class="desc">Select a district below or in the map at the bottom of this page.</p>
+    <div class="detail-panel" id="detail-panel"><div class="detail-empty">Click a district to see its detail.</div></div>
+  </section>
+
+  <section>
+    <h2>All districts</h2>
+    <p class="desc">Sorted by district number. Colored dot matches the map's registration shading.</p>
+    <div class="district-list" id="district-list"><div class="state-msg">Loading&hellip;</div></div>
+  </section>
+
+  <section>
+    <h2>Map</h2>
+    <p class="desc">Click any district for its registration, election history, and 2026 independent-expenditure detail.</p>
+    <div class="map-wrap" id="map-wrap">
+      <div class="map-hint">Scroll/pinch to zoom &middot; drag to pan</div>
+      <div class="state-msg">Loading map&hellip;</div>
+    </div>
+    <div class="legend-row">
+      <span>Colored by voter registration: R+ &larr;</span>
+      <span class="legend-gradient"></span>
+      <span>&rarr; D+</span>
+      <span style="margin-left:14px"><span class="legend-outline-swatch"></span> Bold outline = IE spending recorded this cycle</span>
+    </div>
+  </section>
+
+  <footer>
+    District boundaries: Maine Office of the Secretary of State / Maine GeoLibrary, 2021 redistricting (simplified for display). Registration: active voter enrollment by district, March 7, 2026. Election results: 2022 and 2024 general elections, aggregated from town-level returns. IE spending: independent expenditures reported to the Maine Ethics Commission, Sept. 1, 2026&ndash;present. Data snapshot current as of <strong>Sept. 18, 2026</strong> &mdash; this is a static export, not a live feed; check back for periodic updates.
+  </footer>
+</div>
+</div>
+<div class="tooltip" id="tooltip"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+const fmtMoney = (n) => '$' + Math.round(n).toLocaleString('en-US');
+const fmtMoney2 = (n) => '$' + n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+const fmtPct = (n) => n.toFixed(1) + '%';
+
+let chamber = 'SS';
+let boundaries = { SS: null, SR: null };
+let districtData = {};
+let selectedKey = null;
+let projections = {};
+
+const tooltip = document.getElementById('tooltip');
+function showTip(evt, html) {
+  tooltip.innerHTML = html;
+  tooltip.style.display = 'block';
+  tooltip.style.left = Math.min(evt.clientX + 14, window.innerWidth - 230) + 'px';
+  tooltip.style.top = (evt.clientY + 14) + 'px';
+}
+function hideTip() { tooltip.style.display = 'none'; }
+
+function marginColor(margin) {
+  const t = Math.max(-1, Math.min(1, margin / 40));
+  const rootEl = document.querySelector('.viz-root') || document.documentElement;
+  const cs = getComputedStyle(rootEl);
+  const dem = cs.getPropertyValue('--dem').trim() || '#2a78d6';
+  const gop = cs.getPropertyValue('--gop').trim() || '#e34948';
+  const neutral = cs.getPropertyValue('--neutral-fill').trim() || '#eeece6';
+  const c1 = t < 0 ? gop : dem;
+  const mix = Math.abs(t) * 100;
+  return `color-mix(in srgb, ${c1} ${mix.toFixed(0)}%, ${neutral})`;
+}
+
+function districtKey(office, num) { return `${office}${num}`; }
+
+function partySplit(ie) {
+  let d = 0, r = 0, other = 0;
+  (ie.spending || []).forEach(s => {
+    const benefitsD = (s.stance === 'Support' && s.party === 'D') || (s.stance === 'Oppose' && s.party === 'R');
+    const benefitsR = (s.stance === 'Support' && s.party === 'R') || (s.stance === 'Oppose' && s.party === 'D');
+    if (benefitsD) d += s.amount;
+    else if (benefitsR) r += s.amount;
+    else other += s.amount;
+  });
+  return { d, r, other };
+}
+
+function renderTopSpending() {
+  const el = document.getElementById('top-spending-list');
+  const rows = Object.keys(districtData)
+    .map(key => {
+      const rec = districtData[key];
+      if (!rec.ie || !rec.ie.total) return null;
+      return { key, office: rec.office, district: rec.district, total: rec.ie.total, split: partySplit(rec.ie) };
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.total - a.total)
+    .slice(0, 12);
+
+  if (!rows.length) { el.innerHTML = '<div class="ts-empty">No independent expenditures recorded yet.</div>'; return; }
+
+  const max = rows[0].total;
+  el.innerHTML = rows.map((r, i) => {
+    const chamberLabel = r.office === 'SS' ? 'Senate' : 'House';
+    const segs = [
+      { cls: 'd', pct: max ? r.split.d / max * 100 : 0 },
+      { cls: 'r', pct: max ? r.split.r / max * 100 : 0 },
+      { cls: 'other', pct: max ? r.split.other / max * 100 : 0 },
+    ].filter(s => s.pct > 0.5);
+    const barHtml = segs.map(s => `<div class="ts-seg ${s.cls}" style="width:${s.pct}%"></div>`).join('');
+    return `<div class="ts-row" data-key="${r.key}">
+      <div class="ts-rank">${i + 1}</div>
+      <div class="ts-label">${chamberLabel} ${r.district}</div>
+      <div class="ts-bar-wrap"><div class="ts-bar">${barHtml}</div></div>
+      <div class="ts-amount">${fmtMoney(r.total)}</div>
+    </div>`;
+  }).join('');
+
+  el.querySelectorAll('.ts-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const key = row.dataset.key;
+      const office = key.startsWith('SS') ? 'SS' : 'SR';
+      if (office !== chamber) setChamber(office);
+      selectDistrict(key);
+      document.getElementById('detail-heading').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+}
+
+function renderMap() {
+  const wrap = document.getElementById('map-wrap');
+  const geo = boundaries[chamber];
+  if (!geo) { wrap.innerHTML = '<div class="map-hint">Scroll/pinch to zoom &middot; drag to pan</div><div class="state-msg">Loading map&hellip;</div>'; return; }
+
+  const W = 760, H = 760;
+  wrap.innerHTML = '<div class="map-hint">Scroll/pinch to zoom &middot; drag to pan</div>';
+
+  const svg = d3.select(wrap).append('svg')
+    .attr('viewBox', `0 0 ${W} ${H}`)
+    .attr('preserveAspectRatio', 'xMidYMid meet');
+  const g = svg.append('g');
+
+  const projection = d3.geoMercator().fitSize([W - 20, H - 20], geo);
+  projection.translate([projection.translate()[0] + 10, projection.translate()[1] + 10]);
+  const path = d3.geoPath(projection);
+  projections[chamber] = { projection, path };
+
+  g.selectAll('path')
+    .data(geo.features)
+    .join('path')
+    .attr('class', d => {
+      const key = districtKey(chamber, d.properties.DISTRICTN);
+      const rec = districtData[key];
+      const tracked = rec && rec.ie;
+      return 'district-path' + (tracked ? ' tracked' : '') + (key === selectedKey ? ' selected' : '');
+    })
+    .attr('d', path)
+    .style('fill', d => {
+      const key = districtKey(chamber, d.properties.DISTRICTN);
+      const rec = districtData[key];
+      const m = rec && rec.registration ? rec.registration.margin : 0;
+      return marginColor(m);
+    })
+    .attr('data-key', d => districtKey(chamber, d.properties.DISTRICTN))
+    .on('mousemove', (evt, d) => {
+      const key = districtKey(chamber, d.properties.DISTRICTN);
+      const rec = districtData[key];
+      const reg = rec && rec.registration;
+      const label = `${chamber} ${d.properties.DISTRICTN}`;
+      const regLine = reg ? `Reg: D ${reg.dem_pct}% &middot; R ${reg.gop_pct}%` : '';
+      showTip(evt, `<strong>${label}</strong><br>${regLine}${rec && rec.ie ? '<br>IE spending recorded' : ''}`);
+    })
+    .on('mouseleave', hideTip)
+    .on('click', (evt, d) => selectDistrict(districtKey(chamber, d.properties.DISTRICTN)));
+
+  const zoom = d3.zoom().scaleExtent([1, 10]).on('zoom', (evt) => {
+    g.attr('transform', evt.transform);
+  });
+  svg.call(zoom);
+}
+
+function renderDistrictList() {
+  const el = document.getElementById('district-list');
+  const keys = Object.keys(districtData)
+    .filter(k => k.startsWith(chamber))
+    .sort((a, b) => parseInt(a.slice(2)) - parseInt(b.slice(2)));
+  if (!keys.length) { el.innerHTML = '<div class="state-msg">No data.</div>'; return; }
+  el.innerHTML = keys.map(key => {
+    const rec = districtData[key];
+    const m = rec.registration ? rec.registration.margin : 0;
+    const num = key.slice(2);
+    return `<div class="district-list-item${key === selectedKey ? ' selected' : ''}" data-key="${key}">
+      <span><span class="swatch" style="background:${marginColor(m)}"></span>${chamber} ${num}</span>
+      ${rec.ie ? '&#9679;' : ''}
+    </div>`;
+  }).join('');
+  el.querySelectorAll('.district-list-item').forEach(item => {
+    item.addEventListener('click', () => selectDistrict(item.dataset.key));
+  });
+}
+
+function renderDetail(key) {
+  const el = document.getElementById('detail-panel');
+  const heading = document.getElementById('detail-heading');
+  const rec = districtData[key];
+  if (!rec) { el.innerHTML = '<div class="detail-empty">Click a district to see its detail.</div>'; heading.textContent = 'District detail'; return; }
+
+  const label = `${rec.chamber === 'Senate' ? 'Senate' : 'House'} District ${rec.district}`;
+  heading.textContent = label;
+
+  const partyClass = (p) => p === 'D' ? 'D' : p === 'R' ? 'R' : 'other';
+  const cands2026 = rec.candidates_2026 || [];
+  const cand2026Section = `
+    <div class="cand2026-section">
+      <h4>2026 candidates</h4>
+      ${cands2026.length ? `<div class="cand2026-row">${cands2026.map(c => `
+        <div class="cand2026-card ${partyClass(c.party)}">
+          <div class="cand2026-name">${c.name}</div>
+          <div class="cand2026-meta"><span class="party-label ${partyClass(c.party)}">${c.party}</span> &middot; ${c.municipality}</div>
+        </div>`).join('')}</div>` : `<div class="cand2026-empty">No 2026 candidates on file for this district.</div>`}
+    </div>`;
+
+  const reg = rec.registration;
+  const regBlock = reg ? `
+    <div class="detail-block">
+      <h4>Voter registration</h4>
+      <div class="reg-bar">
+        <div class="reg-seg D" style="width:${reg.dem_pct}%"></div>
+        <div class="reg-seg R" style="width:${reg.gop_pct}%"></div>
+        <div class="reg-seg U" style="width:${(100-reg.dem_pct-reg.gop_pct).toFixed(1)}%"></div>
+      </div>
+      <div class="reg-labels"><span>D ${reg.dem_pct}%</span><span>U ${reg.unenrolled_pct}%</span><span>R ${reg.gop_pct}%</span></div>
+    </div>` : '';
+
+  function resultBlock(title, res) {
+    if (!res) return `<div class="detail-block"><h4>${title}</h4><div class="no-ie">No result on file.</div></div>`;
+    const winner = res.margin >= 0 ? 'D' : 'R';
+    const total = res.cast_votes || (res.dem_votes + res.rep_votes + (res.other_votes || 0));
+    const candList = res.candidates && res.candidates.length
+      ? res.candidates
+      : [
+          res.dem_candidate ? { name: res.dem_candidate, party: 'D', votes: res.dem_votes } : null,
+          res.rep_candidate ? { name: res.rep_candidate, party: 'R', votes: res.rep_votes } : null,
+        ].filter(Boolean);
+    const rows = candList.map(c => {
+      const cls = c.party === 'D' ? 'D' : c.party === 'R' ? 'R' : 'other';
+      return `<div class="result-row"><span class="cand ${cls}">${c.name} <span class="cand-party">(${c.party})</span></span><span>${total ? fmtPct(c.votes / total * 100) : '—'}</span></div>`;
+    });
+    return `<div class="detail-block">
+      <h4>${title} <span class="margin-pill ${winner}">${winner}+${Math.abs(res.margin).toFixed(1)}</span></h4>
+      ${rows.join('')}
+    </div>`;
+  }
+
+  const ie = rec.ie;
+  let ieBlock;
+  if (ie && ie.spending && ie.spending.length) {
+    const rows = ie.spending.map(s => `<div class="ie-row"><span>${s.stance} ${s.candidate} (${s.party})</span><span>${fmtMoney2(s.amount)}</span></div>`).join('');
+    ieBlock = `<div class="detail-block">
+      <h4>2026 IE spending</h4>
+      ${rows}
+      <div class="ie-total">Total: ${fmtMoney(ie.total)}</div>
+    </div>`;
+  } else {
+    ieBlock = `<div class="detail-block"><h4>2026 IE spending</h4><div class="no-ie">No independent expenditures recorded this cycle for this district.</div></div>`;
+  }
+
+  el.innerHTML = `
+    <div class="detail-head">
+      <h3>${label}</h3>
+      <span class="chamber-badge">${rec.office}${rec.district}</span>
+    </div>
+    ${cand2026Section}
+    <div class="detail-grid">
+      ${regBlock}
+      ${resultBlock('2022 result', rec.result_2022)}
+      ${resultBlock('2024 result', rec.result_2024)}
+      ${ieBlock}
+    </div>`;
+}
+
+function selectDistrict(key) {
+  selectedKey = key;
+  renderDetail(key);
+  document.querySelectorAll('.district-path').forEach(p => p.classList.toggle('selected', p.dataset.key === key));
+  renderDistrictList();
+}
+
+function setChamber(next) {
+  chamber = next;
+  document.getElementById('btn-senate').classList.toggle('active', chamber === 'SS');
+  document.getElementById('btn-house').classList.toggle('active', chamber === 'SR');
+  selectedKey = null;
+  renderDetail(null);
+  renderMap();
+  renderDistrictList();
+}
+
+document.getElementById('btn-senate').addEventListener('click', () => setChamber('SS'));
+document.getElementById('btn-house').addEventListener('click', () => setChamber('SR'));
+
+document.getElementById('search-input').addEventListener('input', (e) => {
+  const q = e.target.value.trim().toLowerCase();
+  if (!q) { renderDistrictList(); return; }
+  const el = document.getElementById('district-list');
+  const keys = Object.keys(districtData).filter(k => k.startsWith(chamber)).sort((a,b) => parseInt(a.slice(2))-parseInt(b.slice(2)));
+  const matches = keys.filter(key => {
+    const rec = districtData[key];
+    const num = key.slice(2);
+    const names = [rec.result_2024?.dem_candidate, rec.result_2024?.rep_candidate, rec.result_2022?.dem_candidate, rec.result_2022?.rep_candidate]
+      .filter(Boolean).join(' ').toLowerCase();
+    return num === q || names.includes(q);
+  });
+  el.innerHTML = matches.length ? matches.map(key => {
+    const rec = districtData[key];
+    const m = rec.registration ? rec.registration.margin : 0;
+    return `<div class="district-list-item${key === selectedKey ? ' selected' : ''}" data-key="${key}">
+      <span><span class="swatch" style="background:${marginColor(m)}"></span>${chamber} ${key.slice(2)}</span>
+      ${rec.ie ? '&#9679;' : ''}
+    </div>`;
+  }).join('') : '<div class="state-msg">No matches.</div>';
+  el.querySelectorAll('.district-list-item').forEach(item => {
+    item.addEventListener('click', () => selectDistrict(item.dataset.key));
+  });
+});
+
+async function init() {
+  try {
+    const [houseGeo, senateGeo] = await Promise.all([
+      fetch('house.json').then(r => r.json()),
+      fetch('senate.json').then(r => r.json()),
+    ]);
+    boundaries.SR = houseGeo;
+    boundaries.SS = senateGeo;
+  } catch (err) {
+    document.getElementById('map-wrap').innerHTML = '<div class="state-msg">Could not load district boundaries.</div>';
+    console.error(err);
+    return;
+  }
+
+  try {
+    districtData = await fetch('districts.json').then(r => r.json());
+  } catch (err) {
+    console.error(err);
+  }
+
+  renderMap();
+  renderDistrictList();
+  renderTopSpending();
+}
+
+init();
+</script>
+</body>
+</html>
