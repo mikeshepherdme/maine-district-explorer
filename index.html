@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Maine District Explorer</title>
+<title>MPI State House Explorer</title>
 <style>
 .viz-root {
   color-scheme: light;
@@ -67,10 +67,13 @@ body { margin: 0; background: var(--surface-page); }
 }
 .page { max-width: 1000px; margin: 0 auto; }
 
+header { margin-bottom: 28px; }
+.brand-row { display: flex; align-items: center; gap: 14px; }
+.brand-logo { width: 44px; height: 44px; border-radius: 9px; flex-shrink: 0; display: block; }
 header h1 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: -0.01em; }
 header p.sub { margin: 0; color: var(--text-secondary); font-size: 0.9rem; }
 
-.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 16px 0; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0 0 24px; }
 .toggle-group { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
 .toggle-btn {
   font: inherit; font-size: 0.85rem; font-weight: 600; padding: 7px 16px;
@@ -195,15 +198,14 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
 <div class="viz-root">
 <div class="page">
   <header>
-    <h1>Maine District Explorer</h1>
-    <p class="sub">Click any State House or Senate district for its registration, election history, and 2026 independent-expenditure detail.</p>
+    <div class="brand-row">
+      <img class="brand-logo" src="bdn-logo.webp" alt="Bangor Daily News">
+      <div>
+        <h1>MPI State House Explorer</h1>
+        <p class="sub">Click any State House or Senate district for its registration, election history, and 2026 independent-expenditure detail.</p>
+      </div>
+    </div>
   </header>
-
-  <section>
-    <h2>Top-spending races</h2>
-    <p class="desc">Legislative races ranked by total independent-expenditure spending, Sept. 1, 2026&ndash;present. <span style="color:var(--dem);font-weight:600">Blue</span> = spending that helps the Democratic candidate &middot; <span style="color:var(--gop);font-weight:600">red</span> = helps the Republican candidate. Click a race to jump to its detail.</p>
-    <div class="top-spending-list" id="top-spending-list"><div class="state-msg">Loading&hellip;</div></div>
-  </section>
 
   <div class="toolbar">
     <div class="toggle-group">
@@ -214,6 +216,12 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
       <input type="text" id="search-input" placeholder="Jump to district, e.g. 16 or a candidate name">
     </div>
   </div>
+
+  <section>
+    <h2 id="top-spending-heading">Top-spending races</h2>
+    <p class="desc">Legislative races ranked by total independent-expenditure spending, Sept. 1, 2026&ndash;present. <span style="color:var(--dem);font-weight:600">Blue</span> = spending that helps the Democratic candidate &middot; <span style="color:var(--gop);font-weight:600">red</span> = helps the Republican candidate. Click a race to jump to its detail.</p>
+    <div class="top-spending-list" id="top-spending-list"><div class="state-msg">Loading&hellip;</div></div>
+  </section>
 
   <section>
     <h2 id="detail-heading">District detail</h2>
@@ -298,7 +306,11 @@ function partySplit(ie) {
 
 function renderTopSpending() {
   const el = document.getElementById('top-spending-list');
+  const heading = document.getElementById('top-spending-heading');
+  if (heading) heading.textContent = `Top-spending ${chamber === 'SS' ? 'Senate' : 'House'} races`;
+
   const rows = Object.keys(districtData)
+    .filter(key => key.startsWith(chamber))
     .map(key => {
       const rec = districtData[key];
       if (!rec.ie || !rec.ie.total) return null;
@@ -308,7 +320,7 @@ function renderTopSpending() {
     .sort((a, b) => b.total - a.total)
     .slice(0, 12);
 
-  if (!rows.length) { el.innerHTML = '<div class="ts-empty">No independent expenditures recorded yet.</div>'; return; }
+  if (!rows.length) { el.innerHTML = '<div class="ts-empty">No independent expenditures recorded yet for this chamber.</div>'; return; }
 
   const max = rows[0].total;
   el.innerHTML = rows.map((r, i) => {
@@ -505,6 +517,7 @@ function setChamber(next) {
   renderDetail(null);
   renderMap();
   renderDistrictList();
+  renderTopSpending();
 }
 
 document.getElementById('btn-senate').addEventListener('click', () => setChamber('SS'));
