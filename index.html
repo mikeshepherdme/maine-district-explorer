@@ -147,6 +147,11 @@ section p.desc { margin: 0 0 10px; color: var(--text-secondary); font-size: 0.85
 .cand2026-card.R { border-left-color: var(--gop); }
 .cand2026-card.other { border-left-color: var(--other); }
 .cand2026-name { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); line-height: 1.25; }
+.incumbent-badge {
+  font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+  background: var(--accent-outline); color: var(--surface-1); padding: 2px 6px; border-radius: 999px;
+  vertical-align: 2px; margin-left: 2px; white-space: nowrap;
+}
 .cand2026-meta { font-size: 0.76rem; color: var(--text-secondary); margin-top: 2px; }
 .cand2026-meta .party-label.D { color: var(--dem); font-weight: 600; }
 .cand2026-meta .party-label.R { color: var(--gop); font-weight: 600; }
@@ -251,7 +256,7 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
   </section>
 
   <footer>
-    District boundaries: Maine Office of the Secretary of State / Maine GeoLibrary, 2021 redistricting (simplified for display). Registration: active voter enrollment by district, March 7, 2026. Election results: 2022 and 2024 general elections, aggregated from town-level returns. IE spending: independent expenditures reported to the Maine Ethics Commission, Sept. 1, 2026&ndash;present. Data snapshot current as of <strong>Sept. 18, 2026</strong> &mdash; this is a static export, not a live feed; check back for periodic updates.
+    District boundaries: Maine Office of the Secretary of State / Maine GeoLibrary, 2021 redistricting (simplified for display). Registration: active voter enrollment by district, March 7, 2026. Election results: 2022 and 2024 general elections, aggregated from town-level returns. IE spending: independent expenditures reported to the Maine Ethics Commission, Sept. 1, 2026&ndash;present. Incumbent labels are inferred by matching each 2026 candidate to the 2024 election winner in that district. Data snapshot current as of <strong>Sept. 18, 2026</strong> &mdash; this is a static export, not a live feed; check back for periodic updates.
   </footer>
 </div>
 </div>
@@ -291,6 +296,22 @@ function marginColor(margin) {
 }
 
 function districtKey(office, num) { return `${office}${num}`; }
+
+function isIncumbent(cand, rec) {
+  const res = rec.result_2024;
+  const winner = res && res.candidates && res.candidates[0];
+  if (!winner || !winner.name || !cand.name) return false;
+  if (winner.party !== cand.party) return false;
+  const [winnerLastRaw, winnerFirstRaw] = winner.name.split(',');
+  if (!winnerLastRaw || !winnerFirstRaw) return false;
+  const winnerFirst = winnerFirstRaw.trim().split(/\s+/)[0].toLowerCase();
+  const winnerLast = winnerLastRaw.trim().toLowerCase();
+  const parts = cand.name.trim().split(/\s+/);
+  const candFirst = parts[0].toLowerCase();
+  const candRest = parts.slice(1).join(' ').toLowerCase().replace(/\b(jr\.?|sr\.?|ii|iii|iv|v)\.?$/, '').trim();
+  const lastMatches = candRest.length && (candRest.includes(winnerLast) || winnerLast.includes(candRest));
+  return candFirst === winnerFirst && lastMatches;
+}
 
 function partySplit(ie) {
   let d = 0, r = 0, other = 0;
@@ -438,7 +459,7 @@ function renderDetail(key) {
       <h4>2026 candidates</h4>
       ${cands2026.length ? `<div class="cand2026-row">${cands2026.map(c => `
         <div class="cand2026-card ${partyClass(c.party)}">
-          <div class="cand2026-name">${c.name}</div>
+          <div class="cand2026-name">${c.name}${isIncumbent(c, rec) ? ' <span class="incumbent-badge">Incumbent</span>' : ''}</div>
           <div class="cand2026-meta"><span class="party-label ${partyClass(c.party)}">${c.party}</span> &middot; ${c.municipality}</div>
         </div>`).join('')}</div>` : `<div class="cand2026-empty">No 2026 candidates on file for this district.</div>`}
     </div>`;
