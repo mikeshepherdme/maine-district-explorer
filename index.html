@@ -552,8 +552,13 @@ document.getElementById('search-input').addEventListener('input', (e) => {
   const matches = keys.filter(key => {
     const rec = districtData[key];
     const num = key.slice(2);
-    const names = [rec.result_2024?.dem_candidate, rec.result_2024?.rep_candidate, rec.result_2022?.dem_candidate, rec.result_2022?.rep_candidate]
-      .filter(Boolean).join(' ').toLowerCase();
+    const names = [
+      ...(rec.candidates_2026 || []).map(c => c.name),
+      ...(rec.result_2024?.candidates || []).map(c => c.name),
+      ...(rec.result_2022?.candidates || []).map(c => c.name),
+      rec.result_2024?.dem_candidate, rec.result_2024?.rep_candidate,
+      rec.result_2022?.dem_candidate, rec.result_2022?.rep_candidate,
+    ].filter(Boolean).join(' ').toLowerCase();
     return num === q || names.includes(q);
   });
   el.innerHTML = matches.length ? matches.map(key => {
