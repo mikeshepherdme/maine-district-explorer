@@ -497,7 +497,7 @@ function renderDetail(key) {
         <div class="reg-seg R" style="width:${reg.gop_pct}%"></div>
         <div class="reg-seg U" style="width:${(100-reg.dem_pct-reg.gop_pct).toFixed(1)}%"></div>
       </div>
-      <div class="reg-labels"><span>D ${reg.dem_pct}%</span><span>U ${reg.unenrolled_pct}%</span><span>R ${reg.gop_pct}%</span></div>
+      <div class="reg-labels"><span>D ${reg.dem_pct}%</span><span>R ${reg.gop_pct}%</span><span>U ${reg.unenrolled_pct}%</span></div>
     </div>` : '';
 
   function resultBlock(title, res) {
