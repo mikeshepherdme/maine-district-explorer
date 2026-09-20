@@ -211,8 +211,9 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
 .state-msg { color: var(--text-secondary); font-size: 0.85rem; padding: 24px 0; text-align: center; }
 
 .tooltip {
-  position: fixed; background: var(--text-primary); color: var(--surface-1); font-size: 0.72rem;
-  padding: 6px 9px; border-radius: 6px; pointer-events: none; z-index: 50; max-width: 220px; line-height: 1.4; display: none;
+  position: fixed; background: #ffffff; color: #0b0b0b; font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 700; font-size: 0.72rem; padding: 6px 9px; border-radius: 6px; pointer-events: none; z-index: 50;
+  max-width: 220px; line-height: 1.4; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.25); border: 1px solid rgba(0,0,0,0.08);
 }
 </style>
 </head>
@@ -274,7 +275,7 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
   </section>
 
   <footer>
-    District boundaries: Maine Office of the Secretary of State / Maine GeoLibrary, 2021 redistricting (simplified for display). Registration: active voter enrollment by district, March 7, 2026. Election results: 2022 and 2024 general elections, aggregated from town-level returns. IE spending: independent expenditures reported to the Maine Ethics Commission, Sept. 1, 2026&ndash;present. Incumbent labels are inferred by matching each 2026 candidate to the 2024 election winner in that district. Data snapshot current as of <strong>Sept. 18, 2026</strong> &mdash; this is a static export, not a live feed; check back for periodic updates.
+    District boundaries: Maine Office of the Secretary of State / Maine GeoLibrary, 2021 redistricting (simplified for display). Registration: active voter enrollment by district, March 7, 2026. Election results: 2022 and 2024 general elections, aggregated from town-level returns. IE spending: independent expenditures reported to the Maine Ethics Commission, Sept. 1, 2026&ndash;present. Incumbent labels are inferred by matching each 2026 candidate to the 2024 election winner in that district. Data snapshot current as of <strong>Sept. 20, 2026</strong> &mdash; this is a static export, not a live feed; check back for periodic updates.
   </footer>
 </div>
 </div>
@@ -301,8 +302,13 @@ function showTip(evt, html) {
 }
 function hideTip() { tooltip.style.display = 'none'; }
 
-function marginColor(margin) {
-  const t = Math.max(-1, Math.min(1, margin / 40));
+function regRatioScore(reg) {
+  if (!reg || !reg.democratic || !reg.republican) return 0;
+  return Math.log2(reg.democratic / reg.republican);
+}
+
+function marginColor(score) {
+  const t = Math.max(-1, Math.min(1, score / 2));
   const rootEl = document.querySelector('.viz-root') || document.documentElement;
   const cs = getComputedStyle(rootEl);
   const dem = cs.getPropertyValue('--dem').trim() || '#2a78d6';
@@ -420,8 +426,8 @@ function renderMap() {
     .style('fill', d => {
       const key = districtKey(chamber, d.properties.DISTRICTN);
       const rec = districtData[key];
-      const m = rec && rec.registration ? rec.registration.margin : 0;
-      return marginColor(m);
+      const score = rec && rec.registration ? regRatioScore(rec.registration) : 0;
+      return marginColor(score);
     })
     .attr('data-key', d => districtKey(chamber, d.properties.DISTRICTN))
     .on('mousemove', (evt, d) => {
@@ -449,10 +455,10 @@ function renderDistrictList() {
   if (!keys.length) { el.innerHTML = '<div class="state-msg">No data.</div>'; return; }
   el.innerHTML = keys.map(key => {
     const rec = districtData[key];
-    const m = rec.registration ? rec.registration.margin : 0;
+    const score = rec.registration ? regRatioScore(rec.registration) : 0;
     const num = key.slice(2);
     return `<div class="district-list-item${key === selectedKey ? ' selected' : ''}" data-key="${key}">
-      <span><span class="swatch" style="background:${marginColor(m)}"></span>${chamber} ${num}</span>
+      <span><span class="swatch" style="background:${marginColor(score)}"></span>${chamber} ${num}</span>
       ${rec.ie ? '&#9679;' : ''}
     </div>`;
   }).join('');
