@@ -67,6 +67,12 @@ body { margin: 0; background: var(--surface-page); }
 }
 .page { max-width: 1000px; margin: 0 auto; }
 
+.update-tag {
+  display: inline-block; margin-bottom: 12px; font-size: 0.72rem; font-weight: 700;
+  color: var(--text-secondary); background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: 999px; padding: 4px 11px;
+}
+
 header { margin-bottom: 28px; }
 .brand-row { display: flex; align-items: center; gap: 14px; }
 .brand-logo { width: 44px; height: 44px; border-radius: 9px; flex-shrink: 0; display: block; }
@@ -220,6 +226,7 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
 <body>
 <div class="viz-root">
 <div class="page">
+  <div class="update-tag" id="update-tag" hidden></div>
   <header>
     <div class="brand-row">
       <img class="brand-logo" src="bdn-logo.webp" alt="Bangor Daily News">
@@ -275,7 +282,7 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
   </section>
 
   <footer>
-    District boundaries: Maine Office of the Secretary of State / Maine GeoLibrary, 2021 redistricting (simplified for display). Registration: active voter enrollment by district, March 7, 2026. Election results: 2022 and 2024 general elections, aggregated from town-level returns. IE spending: independent expenditures reported to the Maine Ethics Commission, Sept. 1, 2026&ndash;present. Incumbent labels are inferred by matching each 2026 candidate to the 2024 election winner in that district. Data snapshot current as of <strong>Sept. 20, 2026</strong> &mdash; this is a static export, not a live feed; check back for periodic updates.
+    District boundaries: Maine Office of the Secretary of State / Maine GeoLibrary, 2021 redistricting (simplified for display). Registration: active voter enrollment by district, March 7, 2026. Election results: 2022 and 2024 general elections, aggregated from town-level returns. IE spending: independent expenditures reported to the Maine Ethics Commission, Sept. 1, 2026&ndash;present. Incumbent labels are inferred by matching each 2026 candidate to the 2024 election winner in that district. This is a static export, not a live feed; check back for periodic updates.
   </footer>
 </div>
 </div>
@@ -286,6 +293,23 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
 const fmtMoney = (n) => '$' + Math.round(n).toLocaleString('en-US');
 const fmtMoney2 = (n) => '$' + n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
 const fmtPct = (n) => n.toFixed(1) + '%';
+
+function fmtUpdated(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (isNaN(d)) return '';
+  const datePart = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/New_York' });
+  const timePart = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York', timeZoneName: 'short' });
+  return `Updated ${datePart} · ${timePart}`;
+}
+
+function renderUpdateTag(iso) {
+  const el = document.getElementById('update-tag');
+  const text = fmtUpdated(iso);
+  if (!text) { el.hidden = true; return; }
+  el.textContent = text;
+  el.hidden = false;
+}
 
 let chamber = 'SS';
 let boundaries = { SS: null, SR: null };
@@ -658,6 +682,7 @@ async function init() {
     console.error(err);
   }
 
+  renderUpdateTag('2026-09-21T12:40:57.785413Z');
   buildCandidateIndex();
   renderMap();
   renderDistrictList();
