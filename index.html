@@ -199,6 +199,7 @@ section p.desc { margin: 0 0 10px; color: var(--text-secondary); font-size: 0.85
 .margin-pill { font-size: 0.68rem; font-weight: 600; padding: 1px 6px; border-radius: 999px; }
 .margin-pill.D { background: color-mix(in srgb, var(--dem) 18%, transparent); color: var(--dem); }
 .margin-pill.R { background: color-mix(in srgb, var(--gop) 18%, transparent); color: var(--gop); }
+.margin-pill.other { background: color-mix(in srgb, var(--other) 18%, transparent); color: var(--other); }
 .ie-row { font-size: 0.82rem; padding: 4px 0; border-bottom: 1px solid var(--grid); display: flex; justify-content: space-between; }
 .ie-row:last-child { border-bottom: none; }
 .ie-total { font-weight: 600; margin-top: 6px; font-size: 0.85rem; }
@@ -526,20 +527,30 @@ function renderDetail(key) {
 
   function resultBlock(title, res) {
     if (!res) return `<div class="detail-block"><h4>${title}</h4><div class="no-ie">No result on file.</div></div>`;
-    const winner = res.margin >= 0 ? 'D' : 'R';
     const total = res.cast_votes || (res.dem_votes + res.rep_votes + (res.other_votes || 0));
-    const candList = res.candidates && res.candidates.length
-      ? res.candidates
+    const candList = (res.candidates && res.candidates.length
+      ? res.candidates.slice()
       : [
           res.dem_candidate ? { name: res.dem_candidate, party: 'D', votes: res.dem_votes } : null,
           res.rep_candidate ? { name: res.rep_candidate, party: 'R', votes: res.rep_votes } : null,
-        ].filter(Boolean);
+        ].filter(Boolean)
+    ).sort((a, b) => b.votes - a.votes);
     const rows = candList.map(c => {
       const cls = c.party === 'D' ? 'D' : c.party === 'R' ? 'R' : 'other';
       return `<div class="result-row"><span class="cand ${cls}">${c.name} <span class="cand-party">(${c.party})</span></span><span>${total ? fmtPct(c.votes / total * 100) : '—'}</span></div>`;
     });
+    // Margin of victory: top vote-getter over the runner-up, whoever they are —
+    // not always D vs R, so an independent/third-party winner gets their own party badge.
+    const topCand = candList[0];
+    const runnerUp = candList[1];
+    const winnerParty = topCand ? topCand.party : null;
+    const winnerCls = winnerParty === 'D' ? 'D' : winnerParty === 'R' ? 'R' : 'other';
+    const marginPct = total && topCand ? (topCand.votes - (runnerUp ? runnerUp.votes : 0)) / total * 100 : 0;
+    const marginPill = winnerParty
+      ? `<span class="margin-pill ${winnerCls}">${winnerParty}+${Math.abs(marginPct).toFixed(1)}</span>`
+      : '';
     return `<div class="detail-block">
-      <h4>${title} <span class="margin-pill ${winner}">${winner}+${Math.abs(res.margin).toFixed(1)}</span></h4>
+      <h4>${title} ${marginPill}</h4>
       ${rows.join('')}
     </div>`;
   }
@@ -682,7 +693,7 @@ async function init() {
     console.error(err);
   }
 
-  renderUpdateTag('2026-09-22T11:30:57.738789Z');
+  renderUpdateTag('2026-09-22T11:40:53.639589Z');
   buildCandidateIndex();
   renderMap();
   renderDistrictList();
