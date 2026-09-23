@@ -30,7 +30,7 @@
    "office": "SS",
    "spending": [
     {
-     "amount": 29561.39,
+     "amount": 45069.78,
      "candidate": "Amanda Heath",
      "party": "D",
      "stance": "Support"
@@ -42,7 +42,7 @@
      "stance": "Oppose"
     }
    ],
-   "total": 32755.24
+   "total": 48263.63
   },
   "office": "SS",
   "registration": {
@@ -813,7 +813,31 @@
   ],
   "chamber": "Senate",
   "district": 19,
-  "ie": null,
+  "ie": {
+   "candidates": [
+    "David Duguay (Independent)",
+    "Joseph Martin (R)",
+    "Peter Southam (D)"
+   ],
+   "chamber": "Senate",
+   "district": 19,
+   "office": "SS",
+   "spending": [
+    {
+     "amount": 2555.43,
+     "candidate": "Joseph Martin",
+     "party": "R",
+     "stance": "Oppose"
+    },
+    {
+     "amount": 1345.03,
+     "candidate": "Peter Southam",
+     "party": "D",
+     "stance": "Support"
+    }
+   ],
+   "total": 3900.46
+  },
   "office": "SS",
   "registration": {
    "dem_pct": 25.6,
@@ -2650,13 +2674,19 @@
    "office": "SS",
    "spending": [
     {
-     "amount": 3200,
+     "amount": 5150.23,
      "candidate": "Elizabeth Bosworth",
      "party": "D",
      "stance": "Support"
+    },
+    {
+     "amount": 1345.03,
+     "candidate": "John Andrews",
+     "party": "R",
+     "stance": "Oppose"
     }
    ],
-   "total": 3200
+   "total": 6495.26
   },
   "office": "SS",
   "registration": {
@@ -3436,13 +3466,13 @@
    "office": "SS",
    "spending": [
     {
-     "amount": 36355.84,
+     "amount": 52772.53,
      "candidate": "Craig Hickman",
      "party": "D",
      "stance": "Support"
     }
    ],
-   "total": 36355.84
+   "total": 52772.53
   },
   "office": "SS",
   "registration": {
@@ -4187,7 +4217,30 @@
   ],
   "chamber": "Senate",
   "district": 33,
-  "ie": null,
+  "ie": {
+   "candidates": [
+    "Matthew Harrington (R)",
+    "Mark Vigliotta (D)"
+   ],
+   "chamber": "Senate",
+   "district": 33,
+   "office": "SS",
+   "spending": [
+    {
+     "amount": 1345.03,
+     "candidate": "Mark Vigliotta",
+     "party": "D",
+     "stance": "Support"
+    },
+    {
+     "amount": 2555.43,
+     "candidate": "Matthew Harrington",
+     "party": "R",
+     "stance": "Oppose"
+    }
+   ],
+   "total": 3900.46
+  },
   "office": "SS",
   "registration": {
    "dem_pct": 26.5,
@@ -6291,19 +6344,19 @@
    "office": "SS",
    "spending": [
     {
-     "amount": 7645.97,
+     "amount": 8991,
      "candidate": "Leo Kenney",
      "party": "R",
      "stance": "Oppose"
     },
     {
-     "amount": 23811.61,
+     "amount": 37710.64,
      "candidate": "Michael Tipping",
      "party": "D",
      "stance": "Support"
     }
    ],
-   "total": 31457.58
+   "total": 46701.64
   },
   "office": "SS",
   "registration": {
@@ -10402,19 +10455,19 @@
    "office": "SS",
    "spending": [
     {
-     "amount": 13422.68,
+     "amount": 28300.55,
      "candidate": "Kenneth Cianchette",
      "party": "R",
      "stance": "Oppose"
     },
     {
-     "amount": 24783.4,
+     "amount": 26128.43,
      "candidate": "Timothy Nangle",
      "party": "D",
      "stance": "Support"
     }
    ],
-   "total": 38206.08
+   "total": 54428.98
   },
   "office": "SS",
   "registration": {
@@ -13096,19 +13149,19 @@
    "office": "SS",
    "spending": [
     {
-     "amount": 19489.75,
+     "amount": 28372.26,
      "candidate": "Bruce Bickford",
      "party": "R",
      "stance": "Oppose"
     },
     {
-     "amount": 16647.07,
+     "amount": 24319.18,
      "candidate": "Michael Scott",
      "party": "D",
      "stance": "Support"
     }
    ],
-   "total": 36136.82
+   "total": 52691.44
   },
   "office": "SS",
   "registration": {
@@ -13674,19 +13727,19 @@
    "office": "SS",
    "spending": [
     {
-     "amount": 14328.05,
-     "candidate": "Scott Cyrway",
-     "party": "R",
-     "stance": "Oppose"
-    },
-    {
-     "amount": 15170.35,
+     "amount": 22627.96,
      "candidate": "Patric Moore",
      "party": "D",
      "stance": "Support"
+    },
+    {
+     "amount": 22996.07,
+     "candidate": "Scott Cyrway",
+     "party": "R",
+     "stance": "Oppose"
     }
    ],
-   "total": 29498.4
+   "total": 45624.03
   },
   "office": "SS",
   "registration": {
