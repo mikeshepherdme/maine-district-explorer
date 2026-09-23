@@ -179,6 +179,8 @@ section p.desc { margin: 0 0 10px; color: var(--text-secondary); font-size: 0.85
 .cand2026-meta .party-label.D { color: var(--dem); font-weight: 600; }
 .cand2026-meta .party-label.R { color: var(--gop); font-weight: 600; }
 .cand2026-meta .party-label.other { color: var(--other); font-weight: 600; }
+.cand2026-finance { font-size: 0.74rem; color: var(--text-muted); margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--grid); }
+.cand2026-finance .fin-type { font-weight: 600; color: var(--text-secondary); }
 .cand2026-empty { color: var(--text-muted); font-size: 0.85rem; }
 
 .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
@@ -510,6 +512,7 @@ function renderDetail(key) {
         <div class="cand2026-card ${partyClass(c.party)}">
           <div class="cand2026-name">${c.name}${isIncumbent(c, rec) ? ' <span class="incumbent-badge">Incumbent</span>' : ''}</div>
           <div class="cand2026-meta"><span class="party-label ${partyClass(c.party)}">${c.party}</span> &middot; ${c.municipality}</div>
+          ${c.financing_type ? `<div class="cand2026-finance"><span class="fin-type">${c.financing_type}</span> &middot; ${fmtMoney(c.total_received)} raised &middot; ${fmtMoney(c.total_disbursed)} spent</div>` : ''}
         </div>`).join('')}</div>` : `<div class="cand2026-empty">No 2026 candidates on file for this district.</div>`}
     </div>`;
 
@@ -693,7 +696,7 @@ async function init() {
     console.error(err);
   }
 
-  renderUpdateTag('2026-09-23T11:41:58.594672Z');
+  renderUpdateTag('2026-09-23T12:02:12.184486Z');
   buildCandidateIndex();
   renderMap();
   renderDistrictList();
