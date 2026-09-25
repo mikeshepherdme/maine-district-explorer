@@ -206,6 +206,21 @@ section p.desc { margin: 0 0 10px; color: var(--text-secondary); font-size: 0.85
 .ie-row:last-child { border-bottom: none; }
 .ie-total { font-weight: 600; margin-top: 6px; font-size: 0.85rem; }
 .no-ie { color: var(--text-muted); font-size: 0.82rem; }
+.ie-subhead { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); font-weight: 600; margin: 12px 0 4px; }
+.filer-row { padding: 5px 0; border-bottom: 1px solid var(--grid); font-size: 0.82rem; }
+.filer-row:last-child { border-bottom: none; }
+.filer-top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.filer-name { font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
+.filer-amt { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.filer-meta { color: var(--text-muted); font-size: 0.72rem; margin-top: 1px; }
+.filer-bar { height: 4px; border-radius: 2px; background: var(--grid); margin-top: 4px; overflow: hidden; display: flex; }
+.filer-bar span { display: block; height: 100%; }
+.filer-bar .d { background: var(--dem); }
+.filer-bar .r { background: var(--gop); }
+.filer-bar .o { background: var(--other); }
+.helps-tag { font-size: 0.66rem; font-weight: 600; padding: 0 6px; border-radius: 999px; margin-left: 6px; white-space: nowrap; }
+.helps-tag.D { background: color-mix(in srgb, var(--dem) 18%, transparent); color: var(--dem); }
+.helps-tag.R { background: color-mix(in srgb, var(--gop) 18%, transparent); color: var(--gop); }
 
 .district-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; max-height: 260px; overflow-y: auto; padding: 4px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-1); }
 .district-list-item {
@@ -562,10 +577,24 @@ function renderDetail(key) {
   let ieBlock;
   if (ie && ie.spending && ie.spending.length) {
     const rows = ie.spending.map(s => `<div class="ie-row"><span>${s.stance} ${s.candidate} (${s.party})</span><span>${fmtMoney2(s.amount)}</span></div>`).join('');
+    let filerHtml = '';
+    if (ie.by_filer && ie.by_filer.length) {
+      const pct = (n) => ie.total ? (n / ie.total * 100).toFixed(1) : 0;
+      filerHtml = `<div class="ie-subhead">Who&rsquo;s spending</div>` + ie.by_filer.map(f => {
+        const other = Math.max(0, f.amount - (f.helps_d || 0) - (f.helps_r || 0));
+        const tags = [f.helps_d > 0 ? '<span class="helps-tag D">helps D</span>' : '', f.helps_r > 0 ? '<span class="helps-tag R">helps R</span>' : ''].join('');
+        return `<div class="filer-row">
+          <div class="filer-top"><span class="filer-name">${f.filer}${tags}</span><span class="filer-amt">${fmtMoney2(f.amount)}</span></div>
+          <div class="filer-meta">${f.transactions} filing${f.transactions === 1 ? '' : 's'} &middot; ${pct(f.amount)}% of race total</div>
+          <div class="filer-bar"><span class="d" style="width:${pct(f.helps_d || 0)}%"></span><span class="r" style="width:${pct(f.helps_r || 0)}%"></span><span class="o" style="width:${pct(other)}%"></span></div>
+        </div>`;
+      }).join('');
+    }
     ieBlock = `<div class="detail-block">
       <h4>2026 IE spending</h4>
       ${rows}
       <div class="ie-total">Total: ${fmtMoney(ie.total)}</div>
+      ${filerHtml}
     </div>`;
   } else {
     ieBlock = `<div class="detail-block"><h4>2026 IE spending</h4><div class="no-ie">No independent expenditures recorded this cycle for this district.</div></div>`;
@@ -696,7 +725,7 @@ async function init() {
     console.error(err);
   }
 
-  renderUpdateTag('2026-09-23T18:53:03Z');
+  renderUpdateTag('2026-09-25T11:04:10Z');
   buildCandidateIndex();
   renderMap();
   renderDistrictList();

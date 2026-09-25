@@ -42,7 +42,23 @@
      "stance": "Oppose"
     }
    ],
-   "total": 48263.63
+   "total": 48263.63,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 47658.43,
+     "helps_d": 47658.43,
+     "helps_r": 0,
+     "transactions": 10
+    },
+    {
+     "filer": "Maine Conservation Voters Action Fund",
+     "amount": 605.2,
+     "helps_d": 605.2,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SS",
   "registration": {
@@ -836,7 +852,23 @@
      "stance": "Support"
     }
    ],
-   "total": 3900.46
+   "total": 3900.46,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 2690.06,
+     "helps_d": 2690.06,
+     "helps_r": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Conservation Voters Action Fund",
+     "amount": 1210.4,
+     "helps_d": 1210.4,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SS",
   "registration": {
@@ -2686,7 +2718,23 @@
      "stance": "Oppose"
     }
    ],
-   "total": 6495.26
+   "total": 6495.26,
+   "by_filer": [
+    {
+     "filer": "Maine Conservation Voters Action Fund",
+     "amount": 3805.2,
+     "helps_d": 3805.2,
+     "helps_r": 0,
+     "transactions": 5
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 2690.06,
+     "helps_d": 2690.06,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SS",
   "registration": {
@@ -3299,7 +3347,16 @@
      "stance": "Support"
     }
    ],
-   "total": 974.72
+   "total": 974.72,
+   "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 974.72,
+     "helps_d": 0,
+     "helps_r": 974.72,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -3472,7 +3529,16 @@
      "stance": "Support"
     }
    ],
-   "total": 52772.53
+   "total": 52772.53,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 52772.53,
+     "helps_d": 52772.53,
+     "helps_r": 0,
+     "transactions": 10
+    }
+   ]
   },
   "office": "SS",
   "registration": {
@@ -4239,7 +4305,23 @@
      "stance": "Oppose"
     }
    ],
-   "total": 3900.46
+   "total": 3900.46,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 2690.06,
+     "helps_d": 2690.06,
+     "helps_r": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Conservation Voters Action Fund",
+     "amount": 1210.4,
+     "helps_d": 1210.4,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SS",
   "registration": {
@@ -4807,7 +4889,16 @@
      "stance": "Support"
     }
    ],
-   "total": 500
+   "total": 500,
+   "by_filer": [
+    {
+     "filer": "Leadership for Maine's Future PAC",
+     "amount": 500,
+     "helps_d": 0,
+     "helps_r": 500,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -4980,7 +5071,16 @@
      "stance": "Support"
     }
    ],
-   "total": 1120
+   "total": 1120,
+   "by_filer": [
+    {
+     "filer": "Maine Conservation Voters Action Fund",
+     "amount": 1120,
+     "helps_d": 1120,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -5520,7 +5620,23 @@
      "stance": "Support"
     }
    ],
-   "total": 516.15
+   "total": 516.15,
+   "by_filer": [
+    {
+     "filer": "MPA Campaign Vote!",
+     "amount": 432.81,
+     "helps_d": 432.81,
+     "helps_r": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "MPA Votes",
+     "amount": 83.34,
+     "helps_d": 83.34,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -5693,7 +5809,16 @@
      "stance": "Support"
     }
    ],
-   "total": 736
+   "total": 736,
+   "by_filer": [
+    {
+     "filer": "Maine Conservation Voters Action Fund",
+     "amount": 736,
+     "helps_d": 736,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -5853,7 +5978,23 @@
      "stance": "Support"
     }
    ],
-   "total": 2901.91
+   "total": 2901.91,
+   "by_filer": [
+    {
+     "filer": "Leadership for Maine's Future PAC",
+     "amount": 2250,
+     "helps_d": 0,
+     "helps_r": 2250,
+     "transactions": 3
+    },
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 651.91,
+     "helps_d": 0,
+     "helps_r": 651.91,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -6255,7 +6396,16 @@
      "stance": "Support"
     }
    ],
-   "total": 807.82
+   "total": 807.82,
+   "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 807.82,
+     "helps_d": 0,
+     "helps_r": 807.82,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -6356,7 +6506,30 @@
      "stance": "Support"
     }
    ],
-   "total": 46701.64
+   "total": 46701.64,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 46185.5,
+     "helps_d": 46185.5,
+     "helps_r": 0,
+     "transactions": 10
+    },
+    {
+     "filer": "MPA Campaign Vote!",
+     "amount": 432.81,
+     "helps_d": 432.81,
+     "helps_r": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "MPA Votes",
+     "amount": 83.33,
+     "helps_d": 83.33,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SS",
   "registration": {
@@ -6524,7 +6697,16 @@
      "stance": "Support"
     }
    ],
-   "total": 979.43
+   "total": 979.43,
+   "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 979.43,
+     "helps_d": 0,
+     "helps_r": 979.43,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -7808,7 +7990,16 @@
      "stance": "Support"
     }
    ],
-   "total": 684.35
+   "total": 684.35,
+   "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 684.35,
+     "helps_d": 0,
+     "helps_r": 684.35,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -7963,7 +8154,16 @@
      "stance": "Support"
     }
    ],
-   "total": 1033.84
+   "total": 1033.84,
+   "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 1033.84,
+     "helps_d": 0,
+     "helps_r": 1033.84,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -8349,7 +8549,16 @@
      "stance": "Support"
     }
    ],
-   "total": 960
+   "total": 960,
+   "by_filer": [
+    {
+     "filer": "Maine Conservation Voters Action Fund",
+     "amount": 960,
+     "helps_d": 960,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -9073,7 +9282,16 @@
      "stance": "Support"
     }
    ],
-   "total": 897.81
+   "total": 897.81,
+   "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 897.81,
+     "helps_d": 0,
+     "helps_r": 897.81,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -9688,7 +9906,16 @@
      "stance": "Support"
     }
    ],
-   "total": 769.63
+   "total": 769.63,
+   "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 769.63,
+     "helps_d": 0,
+     "helps_r": 769.63,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -10077,7 +10304,16 @@
      "stance": "Support"
     }
    ],
-   "total": 770.67
+   "total": 770.67,
+   "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 770.67,
+     "helps_d": 0,
+     "helps_r": 770.67,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -10467,7 +10703,16 @@
      "stance": "Support"
     }
    ],
-   "total": 54428.98
+   "total": 54428.98,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 54428.98,
+     "helps_d": 54428.98,
+     "helps_r": 0,
+     "transactions": 10
+    }
+   ]
   },
   "office": "SS",
   "registration": {
@@ -10791,7 +11036,16 @@
      "stance": "Support"
     }
    ],
-   "total": 694.29
+   "total": 694.29,
+   "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 694.29,
+     "helps_d": 0,
+     "helps_r": 694.29,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -11458,7 +11712,16 @@
      "stance": "Support"
     }
    ],
-   "total": 1939.83
+   "total": 1939.83,
+   "by_filer": [
+    {
+     "filer": "Leadership for Maine's Future PAC",
+     "amount": 1939.83,
+     "helps_d": 0,
+     "helps_r": 1939.83,
+     "transactions": 2
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -11855,7 +12118,16 @@
      "stance": "Support"
     }
    ],
-   "total": 907.23
+   "total": 907.23,
+   "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 907.23,
+     "helps_d": 0,
+     "helps_r": 907.23,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -12028,7 +12300,23 @@
      "stance": "Support"
     }
    ],
-   "total": 516.14
+   "total": 516.14,
+   "by_filer": [
+    {
+     "filer": "MPA Campaign Vote!",
+     "amount": 432.81,
+     "helps_d": 432.81,
+     "helps_r": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "MPA Votes",
+     "amount": 83.33,
+     "helps_d": 83.33,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -12261,7 +12549,23 @@
      "stance": "Support"
     }
    ],
-   "total": 516.14
+   "total": 516.14,
+   "by_filer": [
+    {
+     "filer": "MPA Campaign Vote!",
+     "amount": 432.81,
+     "helps_d": 432.81,
+     "helps_r": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "MPA Votes",
+     "amount": 83.33,
+     "helps_d": 83.33,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SS",
   "registration": {
@@ -13161,7 +13465,23 @@
      "stance": "Support"
     }
    ],
-   "total": 52691.44
+   "total": 52691.44,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 51481.04,
+     "helps_d": 51481.04,
+     "helps_r": 0,
+     "transactions": 10
+    },
+    {
+     "filer": "Maine Conservation Voters Action Fund",
+     "amount": 1210.4,
+     "helps_d": 1210.4,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SS",
   "registration": {
@@ -13565,7 +13885,16 @@
      "stance": "Support"
     }
    ],
-   "total": 796.83
+   "total": 796.83,
+   "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 796.83,
+     "helps_d": 0,
+     "helps_r": 796.83,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -13739,7 +14068,23 @@
      "stance": "Oppose"
     }
    ],
-   "total": 45624.03
+   "total": 45624.03,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 44413.63,
+     "helps_d": 44413.63,
+     "helps_r": 0,
+     "transactions": 10
+    },
+    {
+     "filer": "Maine Conservation Voters Action Fund",
+     "amount": 1210.4,
+     "helps_d": 1210.4,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SS",
   "registration": {
@@ -14362,7 +14707,16 @@
      "stance": "Support"
     }
    ],
-   "total": 384
+   "total": 384,
+   "by_filer": [
+    {
+     "filer": "Maine Conservation Voters Action Fund",
+     "amount": 384,
+     "helps_d": 384,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
@@ -14538,7 +14892,23 @@
      "stance": "Support"
     }
    ],
-   "total": 516.14
+   "total": 516.14,
+   "by_filer": [
+    {
+     "filer": "MPA Campaign Vote!",
+     "amount": 432.81,
+     "helps_d": 432.81,
+     "helps_r": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "MPA Votes",
+     "amount": 83.33,
+     "helps_d": 83.33,
+     "helps_r": 0,
+     "transactions": 1
+    }
+   ]
   },
   "office": "SR",
   "registration": {
