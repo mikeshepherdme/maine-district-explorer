@@ -3508,18 +3508,11 @@
    ],
    "spending": [
     {
-     "candidate": "Chester Grover",
-     "party": "R",
-     "stance": "Support",
-     "helps": "R",
-     "amount": 974.72
-    },
-    {
      "candidate": "Chester Grover III",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1184
+     "amount": 2158.72
     },
     {
      "candidate": "Wayne Farrin",
@@ -8590,18 +8583,11 @@
    ],
    "spending": [
     {
-     "candidate": "Dexter Bridges",
-     "party": "R",
-     "stance": "Support",
-     "helps": "R",
-     "amount": 1033.84
-    },
-    {
      "candidate": "Dexter Bridges Jr.",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1314
+     "amount": 2347.84
     },
     {
      "candidate": "Sharon Frost",
@@ -9783,7 +9769,7 @@
    ],
    "spending": [
     {
-     "candidate": "Charles Hippler",
+     "candidate": "Charles Hippler IV",
      "party": "R",
      "stance": "Support",
      "helps": "R",
