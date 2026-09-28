@@ -3242,18 +3242,23 @@
   "result_2024": {
    "candidates": [
     {
-     "name": "Morris, Joshua K.",
+     "name": "Wood, Stephen J.",
      "party": "R",
+     "votes": 3239
+    },
+    {
+     "name": "Girardin, Scott",
+     "party": "I",
      "votes": 2019
     }
    ],
-   "cast_votes": 2019,
+   "cast_votes": 5258,
    "dem_candidate": null,
    "dem_votes": 0,
-   "margin": -100,
-   "other_votes": 0,
-   "rep_candidate": "Morris, Joshua K.",
-   "rep_votes": 2019
+   "rep_candidate": "Wood, Stephen J.",
+   "rep_votes": 3239,
+   "other_votes": 2019,
+   "margin": -61.6
   }
  },
  "SR130": {
@@ -3573,23 +3578,28 @@
   "result_2022": {
    "candidates": [
     {
-     "name": "Fossel, Leslie T.",
-     "party": "I",
-     "votes": 3003
-    },
-    {
      "name": "Polewarczyk, Edward J.",
      "party": "R",
      "votes": 2055
+    },
+    {
+     "name": "Goodkowsky, Evan C.",
+     "party": "I",
+     "votes": 1773
+    },
+    {
+     "name": "Fossel, Leslie T.",
+     "party": "I",
+     "votes": 1230
     }
    ],
    "cast_votes": 5058,
    "dem_candidate": null,
    "dem_votes": 0,
-   "margin": -40.6,
-   "other_votes": 3003,
    "rep_candidate": "Polewarczyk, Edward J.",
-   "rep_votes": 2055
+   "rep_votes": 2055,
+   "other_votes": 3003,
+   "margin": -40.6
   },
   "result_2024": {
    "candidates": [
@@ -4890,44 +4900,44 @@
   "result_2022": {
    "candidates": [
     {
-     "name": "Wiseman, Phillip Ryan",
+     "name": "Greenwood, Randall Adam",
      "party": "R",
      "votes": 2449
     },
     {
-     "name": "Shagoury, Daniel Joseph",
-     "party": "D",
+     "name": "Ackley, Kent",
+     "party": "I",
      "votes": 2360
     }
    ],
    "cast_votes": 4809,
-   "dem_candidate": "Shagoury, Daniel Joseph",
-   "dem_votes": 2360,
-   "margin": -1.9,
-   "other_votes": 0,
-   "rep_candidate": "Wiseman, Phillip Ryan",
-   "rep_votes": 2449
+   "dem_candidate": null,
+   "dem_votes": 0,
+   "rep_candidate": "Greenwood, Randall Adam",
+   "rep_votes": 2449,
+   "other_votes": 2360,
+   "margin": -50.9
   },
   "result_2024": {
    "candidates": [
     {
-     "name": "Shagoury, Daniel Joseph",
-     "party": "D",
+     "name": "Greenwood, Randall Adam",
+     "party": "R",
      "votes": 3120
     },
     {
-     "name": "Boyd, Joe N.",
-     "party": "R",
+     "name": "Ackley, Kent F.",
+     "party": "I",
      "votes": 2558
     }
    ],
    "cast_votes": 5678,
-   "dem_candidate": "Shagoury, Daniel Joseph",
-   "dem_votes": 3120,
-   "margin": 9.9,
-   "other_votes": 0,
-   "rep_candidate": "Boyd, Joe N.",
-   "rep_votes": 2558
+   "dem_candidate": null,
+   "dem_votes": 0,
+   "rep_candidate": "Greenwood, Randall Adam",
+   "rep_votes": 3120,
+   "other_votes": 2558,
+   "margin": -54.9
   }
  },
  "SR17": {
@@ -5381,23 +5391,23 @@
   "result_2022": {
    "candidates": [
     {
-     "name": "Ness, Caleb Joshua",
-     "party": "R",
+     "name": "Riseman, Walter N.",
+     "party": "I",
      "votes": 2491
     },
     {
-     "name": "Burnett, Nathan Robert",
-     "party": "D",
+     "name": "Dodge, Donna",
+     "party": "R",
      "votes": 2299
     }
    ],
    "cast_votes": 4790,
-   "dem_candidate": "Burnett, Nathan Robert",
-   "dem_votes": 2299,
-   "margin": -4,
-   "other_votes": 0,
-   "rep_candidate": "Ness, Caleb Joshua",
-   "rep_votes": 2491
+   "dem_candidate": null,
+   "dem_votes": 0,
+   "rep_candidate": "Dodge, Donna",
+   "rep_votes": 2299,
+   "other_votes": 2491,
+   "margin": -48.0
   },
   "result_2024": {
    "candidates": [
@@ -5683,23 +5693,28 @@
   "result_2022": {
    "candidates": [
     {
-     "name": "Guerin, Stacey K.",
+     "name": "Black, Russell J.",
      "party": "R",
      "votes": 10737
     },
     {
-     "name": "Thurlow, Andrea I.",
+     "name": "Wheeler, Stanley A.",
      "party": "D",
+     "votes": 6420
+    },
+    {
+     "name": "Thomas, Douglas A.",
+     "party": "I",
      "votes": 2373
     }
    ],
-   "cast_votes": 13110,
-   "dem_candidate": "Thurlow, Andrea I.",
-   "dem_votes": 2373,
-   "margin": -63.8,
-   "other_votes": 0,
-   "rep_candidate": "Guerin, Stacey K.",
-   "rep_votes": 10737
+   "cast_votes": 19530,
+   "dem_candidate": "Wheeler, Stanley A.",
+   "dem_votes": 6420,
+   "rep_candidate": "Black, Russell J.",
+   "rep_votes": 10737,
+   "other_votes": 2373,
+   "margin": -22.1
   },
   "result_2024": {
    "candidates": [
@@ -10598,23 +10613,23 @@
   "result_2024": {
    "candidates": [
     {
-     "name": "Giroux, Eric Lee",
-     "party": "D",
+     "name": "Lance, Michael J.",
+     "party": "R",
      "votes": 2747
     },
     {
-     "name": "Henderson, Rachel A.",
-     "party": "R",
+     "name": "Nutt, Charlotte",
+     "party": "I",
      "votes": 2383
     }
    ],
    "cast_votes": 5130,
-   "dem_candidate": "Giroux, Eric Lee",
-   "dem_votes": 2747,
-   "margin": 7.1,
-   "other_votes": 0,
-   "rep_candidate": "Henderson, Rachel A.",
-   "rep_votes": 2383
+   "dem_candidate": null,
+   "dem_votes": 0,
+   "rep_candidate": "Lance, Michael J.",
+   "rep_votes": 2747,
+   "other_votes": 2383,
+   "margin": -53.5
   }
  },
  "SR122": {
@@ -11265,23 +11280,28 @@
   "result_2022": {
    "candidates": [
     {
-     "name": "Costain, Danny E.",
+     "name": "Griffin, Abigail W.",
      "party": "R",
      "votes": 2622
     },
     {
-     "name": "Todd, Donovan E. III",
+     "name": "Roma, Frank Lawrence",
      "party": "D",
+     "votes": 1394
+    },
+    {
+     "name": "Pietrowicz, Joshua James",
+     "party": "I",
      "votes": 237
     }
    ],
-   "cast_votes": 2859,
-   "dem_candidate": "Todd, Donovan E. III",
-   "dem_votes": 237,
-   "margin": -83.4,
-   "other_votes": 0,
-   "rep_candidate": "Costain, Danny E.",
-   "rep_votes": 2622
+   "cast_votes": 4253,
+   "dem_candidate": "Roma, Frank Lawrence",
+   "dem_votes": 1394,
+   "rep_candidate": "Griffin, Abigail W.",
+   "rep_votes": 2622,
+   "other_votes": 237,
+   "margin": -28.9
   },
   "result_2024": {
    "candidates": [
@@ -11451,44 +11471,49 @@
   "result_2022": {
    "candidates": [
     {
-     "name": "Faucher, Robert W.",
-     "party": "D",
+     "name": "Blier, Mark John",
+     "party": "R",
      "votes": 2434
     },
     {
-     "name": "Carlow, Nathan M.",
-     "party": "R",
+     "name": "Barden, Michael Thomas III",
+     "party": "I",
      "votes": 1913
     }
    ],
    "cast_votes": 4347,
-   "dem_candidate": "Faucher, Robert W.",
-   "dem_votes": 2434,
-   "margin": 12,
-   "other_votes": 0,
-   "rep_candidate": "Carlow, Nathan M.",
-   "rep_votes": 1913
+   "dem_candidate": null,
+   "dem_votes": 0,
+   "rep_candidate": "Blier, Mark John",
+   "rep_votes": 2434,
+   "other_votes": 1913,
+   "margin": -56.0
   },
   "result_2024": {
    "candidates": [
     {
-     "name": "Gleason, Elizabeth Jane",
-     "party": "D",
+     "name": "Blier, Mark John",
+     "party": "R",
      "votes": 2892
     },
     {
-     "name": "Carlow, Nathan  M.",
-     "party": "R",
+     "name": "McKinney, Michael Anthony",
+     "party": "D",
+     "votes": 1626
+    },
+    {
+     "name": "Barden, Michael Thomas",
+     "party": "I",
      "votes": 977
     }
    ],
-   "cast_votes": 3869,
-   "dem_candidate": "Gleason, Elizabeth Jane",
-   "dem_votes": 2892,
-   "margin": 49.5,
-   "other_votes": 0,
-   "rep_candidate": "Carlow, Nathan  M.",
-   "rep_votes": 977
+   "cast_votes": 5495,
+   "dem_candidate": "McKinney, Michael Anthony",
+   "dem_votes": 1626,
+   "rep_candidate": "Blier, Mark John",
+   "rep_votes": 2892,
+   "other_votes": 977,
+   "margin": -23.0
   }
  },
  "SR63": {
@@ -12171,23 +12196,23 @@
   "result_2022": {
    "candidates": [
     {
-     "name": "Fay, Jessica L.",
-     "party": "D",
+     "name": "Boyer, David W.",
+     "party": "R",
      "votes": 2434
     },
     {
-     "name": "Foster, Gregory E.",
-     "party": "R",
+     "name": "Taylor, Mary-Beth H.",
+     "party": "I",
      "votes": 1548
     }
    ],
    "cast_votes": 3982,
-   "dem_candidate": "Fay, Jessica L.",
-   "dem_votes": 2434,
-   "margin": 22.3,
-   "other_votes": 0,
-   "rep_candidate": "Foster, Gregory E.",
-   "rep_votes": 1548
+   "dem_candidate": null,
+   "dem_votes": 0,
+   "rep_candidate": "Boyer, David W.",
+   "rep_votes": 2434,
+   "other_votes": 1548,
+   "margin": -61.1
   },
   "result_2024": {
    "candidates": [
@@ -12523,44 +12548,44 @@
   "result_2022": {
    "candidates": [
     {
-     "name": "Matlack, Ann Higgins",
-     "party": "D",
+     "name": "Pluecker, William D.",
+     "party": "I",
      "votes": 2372
     },
     {
-     "name": "Sprague, Heather Anne",
+     "name": "Robinson, Crystal L.",
      "party": "R",
      "votes": 2017
     }
    ],
    "cast_votes": 4389,
-   "dem_candidate": "Matlack, Ann Higgins",
-   "dem_votes": 2372,
-   "margin": 8.1,
-   "other_votes": 0,
-   "rep_candidate": "Sprague, Heather Anne",
-   "rep_votes": 2017
+   "dem_candidate": null,
+   "dem_votes": 0,
+   "rep_candidate": "Robinson, Crystal L.",
+   "rep_votes": 2017,
+   "other_votes": 2372,
+   "margin": -46.0
   },
   "result_2024": {
    "candidates": [
     {
-     "name": "Matlack, Ann H.",
-     "party": "D",
+     "name": "Pluecker, William D.",
+     "party": "I",
      "votes": 2730
     },
     {
-     "name": "Sprague, Heather Anne",
+     "name": "Thombs, Ray A.",
      "party": "R",
      "votes": 2370
     }
    ],
    "cast_votes": 5100,
-   "dem_candidate": "Matlack, Ann H.",
-   "dem_votes": 2730,
-   "margin": 7.1,
-   "other_votes": 0,
-   "rep_candidate": "Sprague, Heather Anne",
-   "rep_votes": 2370
+   "dem_candidate": null,
+   "dem_votes": 0,
+   "rep_candidate": "Thombs, Ray A.",
+   "rep_votes": 2370,
+   "other_votes": 2730,
+   "margin": -46.5
   }
  },
  "SR13": {
@@ -13220,23 +13245,23 @@
   "result_2024": {
    "candidates": [
     {
-     "name": "Dorney, Ann E.",
-     "party": "D",
+     "name": "Caruso, Elizabeth M.",
+     "party": "R",
      "votes": 3475
     },
     {
-     "name": "Ducharme, John E.",
-     "party": "R",
+     "name": "Soma-Hernandez, Cynthia J.",
+     "party": "I",
      "votes": 1324
     }
    ],
    "cast_votes": 4799,
-   "dem_candidate": "Dorney, Ann E.",
-   "dem_votes": 3475,
-   "margin": 44.8,
-   "other_votes": 0,
-   "rep_candidate": "Ducharme, John E.",
-   "rep_votes": 1324
+   "dem_candidate": null,
+   "dem_votes": 0,
+   "rep_candidate": "Caruso, Elizabeth M.",
+   "rep_votes": 3475,
+   "other_votes": 1324,
+   "margin": -72.4
   }
  },
  "SR129": {
@@ -13890,18 +13915,23 @@
   "result_2022": {
    "candidates": [
     {
-     "name": "Bell, Arthur L.",
-     "party": "D",
+     "name": "Arata, Amy Bradstreet",
+     "party": "R",
      "votes": 2636
+    },
+    {
+     "name": "Gass, Anne B.",
+     "party": "I",
+     "votes": 2385
     }
    ],
-   "cast_votes": 2636,
-   "dem_candidate": "Bell, Arthur L.",
-   "dem_votes": 2636,
-   "margin": 100,
-   "other_votes": 0,
-   "rep_candidate": null,
-   "rep_votes": 0
+   "cast_votes": 5021,
+   "dem_candidate": null,
+   "dem_votes": 0,
+   "rep_candidate": "Arata, Amy Bradstreet",
+   "rep_votes": 2636,
+   "other_votes": 2385,
+   "margin": -52.5
   },
   "result_2024": {
    "candidates": [
@@ -14518,23 +14548,23 @@
   "result_2024": {
    "candidates": [
     {
-     "name": "Ducharme, John E.",
+     "name": "Soboleski, Michael A.",
      "party": "R",
      "votes": 3114
     },
     {
-     "name": "Dorney, Ann E.",
-     "party": "D",
+     "name": "Bond, Tiffany",
+     "party": "I",
      "votes": 2557
     }
    ],
    "cast_votes": 5671,
-   "dem_candidate": "Dorney, Ann E.",
-   "dem_votes": 2557,
-   "margin": -9.8,
-   "other_votes": 0,
-   "rep_candidate": "Ducharme, John E.",
-   "rep_votes": 3114
+   "dem_candidate": null,
+   "dem_votes": 0,
+   "rep_candidate": "Soboleski, Michael A.",
+   "rep_votes": 3114,
+   "other_votes": 2557,
+   "margin": -54.9
   }
  },
  "SR128": {
