@@ -212,6 +212,7 @@ section p.desc { margin: 0 0 10px; color: var(--text-secondary); font-size: 0.85
 .filer-top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
 .filer-name { font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
 .filer-amt { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.filer-leader { color: var(--text-secondary); font-size: 0.74rem; font-style: italic; margin-top: 1px; }
 .filer-meta { color: var(--text-muted); font-size: 0.72rem; margin-top: 1px; }
 .filer-bar { height: 4px; border-radius: 2px; background: var(--grid); margin-top: 4px; overflow: hidden; display: flex; }
 .filer-bar span { display: block; height: 100%; }
@@ -588,6 +589,7 @@ function renderDetail(key) {
         const tags = [f.helps_d > 0 ? '<span class="helps-tag D">helps D</span>' : '', f.helps_r > 0 ? '<span class="helps-tag R">helps R</span>' : '', other > 0.005 ? '<span class="helps-tag O">helps ind.</span>' : ''].join('');
         return `<div class="filer-row">
           <div class="filer-top"><span class="filer-name">${f.filer}${tags}</span><span class="filer-amt">${fmtMoney2(f.amount)}</span></div>
+          ${f.leader ? `<div class="filer-leader">${f.leader}</div>` : ''}
           <div class="filer-meta">${f.transactions} filing${f.transactions === 1 ? '' : 's'} &middot; ${pct(f.amount)}% of race total</div>
           <div class="filer-bar"><span class="d" style="width:${pct(f.helps_d || 0)}%"></span><span class="r" style="width:${pct(f.helps_r || 0)}%"></span><span class="o" style="width:${pct(other)}%"></span></div>
         </div>`;
@@ -728,7 +730,7 @@ async function init() {
     console.error(err);
   }
 
-  renderUpdateTag('2026-09-28T11:45:29Z');
+  renderUpdateTag('2026-09-28T11:52:05Z');
   buildCandidateIndex();
   renderMap();
   renderDistrictList();
