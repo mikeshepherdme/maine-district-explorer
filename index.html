@@ -221,6 +221,7 @@ section p.desc { margin: 0 0 10px; color: var(--text-secondary); font-size: 0.85
 .helps-tag { font-size: 0.66rem; font-weight: 600; padding: 0 6px; border-radius: 999px; margin-left: 6px; white-space: nowrap; }
 .helps-tag.D { background: color-mix(in srgb, var(--dem) 18%, transparent); color: var(--dem); }
 .helps-tag.R { background: color-mix(in srgb, var(--gop) 18%, transparent); color: var(--gop); }
+.helps-tag.O { background: color-mix(in srgb, var(--other) 18%, transparent); color: var(--other); }
 
 .district-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; max-height: 260px; overflow-y: auto; padding: 4px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-1); }
 .district-list-item {
@@ -382,8 +383,10 @@ function isIncumbent(cand, rec) {
 function partySplit(ie) {
   let d = 0, r = 0, other = 0;
   (ie.spending || []).forEach(s => {
-    const benefitsD = (s.stance === 'Support' && s.party === 'D') || (s.stance === 'Oppose' && s.party === 'R');
-    const benefitsR = (s.stance === 'Support' && s.party === 'R') || (s.stance === 'Oppose' && s.party === 'D');
+    // Prefer the stored ballot-aware beneficiary: opposing a Republican only helps
+    // the Democrat if a Democrat is actually on that district's ballot.
+    const benefitsD = s.helps ? s.helps === 'D' : (s.stance === 'Support' && s.party === 'D') || (s.stance === 'Oppose' && s.party === 'R');
+    const benefitsR = s.helps ? s.helps === 'R' : (s.stance === 'Support' && s.party === 'R') || (s.stance === 'Oppose' && s.party === 'D');
     if (benefitsD) d += s.amount;
     else if (benefitsR) r += s.amount;
     else other += s.amount;
@@ -582,7 +585,7 @@ function renderDetail(key) {
       const pct = (n) => ie.total ? (n / ie.total * 100).toFixed(1) : 0;
       filerHtml = `<div class="ie-subhead">Who&rsquo;s spending</div>` + ie.by_filer.map(f => {
         const other = Math.max(0, f.amount - (f.helps_d || 0) - (f.helps_r || 0));
-        const tags = [f.helps_d > 0 ? '<span class="helps-tag D">helps D</span>' : '', f.helps_r > 0 ? '<span class="helps-tag R">helps R</span>' : ''].join('');
+        const tags = [f.helps_d > 0 ? '<span class="helps-tag D">helps D</span>' : '', f.helps_r > 0 ? '<span class="helps-tag R">helps R</span>' : '', other > 0.005 ? '<span class="helps-tag O">helps ind.</span>' : ''].join('');
         return `<div class="filer-row">
           <div class="filer-top"><span class="filer-name">${f.filer}${tags}</span><span class="filer-amt">${fmtMoney2(f.amount)}</span></div>
           <div class="filer-meta">${f.transactions} filing${f.transactions === 1 ? '' : 's'} &middot; ${pct(f.amount)}% of race total</div>
@@ -725,7 +728,7 @@ async function init() {
     console.error(err);
   }
 
-  renderUpdateTag('2026-09-25T11:04:10Z');
+  renderUpdateTag('2026-09-28T11:45:29Z');
   buildCandidateIndex();
   renderMap();
   renderDistrictList();

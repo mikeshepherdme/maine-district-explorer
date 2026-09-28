@@ -21,41 +21,45 @@
   "chamber": "Senate",
   "district": 15,
   "ie": {
+   "office": "SS",
+   "district": 15,
+   "chamber": "Senate",
    "candidates": [
     "Amanda Heath (D)",
     "Kati McCormick (R)"
    ],
-   "chamber": "Senate",
-   "district": 15,
-   "office": "SS",
    "spending": [
     {
-     "amount": 45069.78,
      "candidate": "Amanda Heath",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 60358.93
     },
     {
-     "amount": 3193.85,
      "candidate": "Kati McCormick",
      "party": "R",
-     "stance": "Oppose"
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 6270.0
     }
    ],
-   "total": 48263.63,
+   "total": 66628.93,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 47658.43,
-     "helps_d": 47658.43,
+     "amount": 66023.73,
+     "helps_d": 66023.73,
      "helps_r": 0,
-     "transactions": 10
+     "helps_o": 0,
+     "transactions": 14
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
      "amount": 605.2,
      "helps_d": 605.2,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -449,7 +453,35 @@
   ],
   "chamber": "House",
   "district": 131,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 131,
+   "chamber": "House",
+   "candidates": [
+    "Kenneth Blow (I)",
+    "Robert Kelly (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Robert Kelly",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 549.19
+    }
+   ],
+   "total": 549.19,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 549.19,
+     "helps_d": 549.19,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 39.3,
@@ -830,26 +862,28 @@
   "chamber": "Senate",
   "district": 19,
   "ie": {
+   "office": "SS",
+   "district": 19,
+   "chamber": "Senate",
    "candidates": [
-    "David Duguay (Independent)",
+    "David Duguay (I)",
     "Joseph Martin (R)",
     "Peter Southam (D)"
    ],
-   "chamber": "Senate",
-   "district": 19,
-   "office": "SS",
    "spending": [
     {
-     "amount": 2555.43,
      "candidate": "Joseph Martin",
      "party": "R",
-     "stance": "Oppose"
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 2555.43
     },
     {
-     "amount": 1345.03,
      "candidate": "Peter Southam",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 1345.03
     }
    ],
    "total": 3900.46,
@@ -859,6 +893,7 @@
      "amount": 2690.06,
      "helps_d": 2690.06,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     },
     {
@@ -866,6 +901,7 @@
      "amount": 1210.4,
      "helps_d": 1210.4,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -947,7 +983,50 @@
   ],
   "chamber": "House",
   "district": 107,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 107,
+   "chamber": "House",
+   "candidates": [
+    "Joseph Campbell (D)",
+    "Mark Cooper (R)"
+   ],
+   "spending": [
+    {
+     "candidate": "Mark Cooper",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 727.26
+    },
+    {
+     "candidate": "Mark Cooper",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1054
+    }
+   ],
+   "total": 1781.26,
+   "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 1054,
+     "helps_d": 0,
+     "helps_r": 1054,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 727.26,
+     "helps_d": 727.26,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 32.4,
@@ -2098,7 +2177,35 @@
   ],
   "chamber": "House",
   "district": 67,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 67,
+   "chamber": "House",
+   "candidates": [
+    "Shawn Dixon (R)",
+    "Matthew Townsend (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Shawn Dixon",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 912
+    }
+   ],
+   "total": 912,
+   "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 912,
+     "helps_d": 0,
+     "helps_r": 912,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 24.6,
@@ -2254,7 +2361,35 @@
   ],
   "chamber": "House",
   "district": 88,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 88,
+   "chamber": "House",
+   "candidates": [
+    "Quentin Chapman (R)",
+    "Dana Staples (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Quentin Chapman",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 729.42
+    }
+   ],
+   "total": 729.42,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 729.42,
+     "helps_d": 729.42,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 29.6,
@@ -2697,25 +2832,27 @@
   "chamber": "Senate",
   "district": 18,
   "ie": {
+   "office": "SS",
+   "district": 18,
+   "chamber": "Senate",
    "candidates": [
     "John Andrews (R)",
     "Elizabeth Bosworth (D)"
    ],
-   "chamber": "Senate",
-   "district": 18,
-   "office": "SS",
    "spending": [
     {
-     "amount": 5150.23,
      "candidate": "Elizabeth Bosworth",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 5150.23
     },
     {
-     "amount": 1345.03,
      "candidate": "John Andrews",
      "party": "R",
-     "stance": "Oppose"
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 1345.03
     }
    ],
    "total": 6495.26,
@@ -2725,6 +2862,7 @@
      "amount": 3805.2,
      "helps_d": 3805.2,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 5
     },
     {
@@ -2732,6 +2870,7 @@
      "amount": 2690.06,
      "helps_d": 2690.06,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -2813,7 +2952,35 @@
   ],
   "chamber": "House",
   "district": 106,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 106,
+   "chamber": "House",
+   "candidates": [
+    "Barbara Bagshaw (R)",
+    "Bradley Youngs (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Barbara Bagshaw",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 696.39
+    }
+   ],
+   "total": 696.39,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 696.39,
+     "helps_d": 696.39,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 30.9,
@@ -3332,28 +3499,60 @@
   "chamber": "House",
   "district": 47,
   "ie": {
+   "office": "SR",
+   "district": 47,
+   "chamber": "House",
    "candidates": [
     "Wayne Farrin (D)",
-    "Chester Grover (R)"
+    "Chester Grover III (R)"
    ],
-   "chamber": "House",
-   "district": 47,
-   "office": "SR",
    "spending": [
     {
-     "amount": 974.72,
      "candidate": "Chester Grover",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 974.72
+    },
+    {
+     "candidate": "Chester Grover III",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1184
+    },
+    {
+     "candidate": "Wayne Farrin",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 789.02
     }
    ],
-   "total": 974.72,
+   "total": 2947.74,
    "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 1184,
+     "helps_d": 0,
+     "helps_r": 1184,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 974.72,
      "helps_d": 0,
      "helps_r": 974.72,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 789.02,
+     "helps_d": 789.02,
+     "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -3514,29 +3713,31 @@
   "chamber": "Senate",
   "district": 14,
   "ie": {
+   "office": "SS",
+   "district": 14,
+   "chamber": "Senate",
    "candidates": [
     "Craig Hickman (D)",
     "Steven McGee (R)"
    ],
-   "chamber": "Senate",
-   "district": 14,
-   "office": "SS",
    "spending": [
     {
-     "amount": 52772.53,
      "candidate": "Craig Hickman",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 76491.73
     }
    ],
-   "total": 52772.53,
+   "total": 76491.73,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 52772.53,
-     "helps_d": 52772.53,
+     "amount": 76491.73,
+     "helps_d": 76491.73,
      "helps_r": 0,
-     "transactions": 10
+     "helps_o": 0,
+     "transactions": 14
     }
    ]
   },
@@ -3901,7 +4102,35 @@
   ],
   "chamber": "House",
   "district": 37,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 37,
+   "chamber": "House",
+   "candidates": [
+    "Alan Orcutt (D)",
+    "Reagan Paul (R)"
+   ],
+   "spending": [
+    {
+     "candidate": "Reagan Paul",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 715.78
+    }
+   ],
+   "total": 715.78,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 715.78,
+     "helps_d": 715.78,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 27.4,
@@ -4284,25 +4513,27 @@
   "chamber": "Senate",
   "district": 33,
   "ie": {
+   "office": "SS",
+   "district": 33,
+   "chamber": "Senate",
    "candidates": [
     "Matthew Harrington (R)",
     "Mark Vigliotta (D)"
    ],
-   "chamber": "Senate",
-   "district": 33,
-   "office": "SS",
    "spending": [
     {
-     "amount": 1345.03,
      "candidate": "Mark Vigliotta",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 1345.03
     },
     {
-     "amount": 2555.43,
      "candidate": "Matthew Harrington",
      "party": "R",
-     "stance": "Oppose"
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 2555.43
     }
    ],
    "total": 3900.46,
@@ -4312,6 +4543,7 @@
      "amount": 2690.06,
      "helps_d": 2690.06,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     },
     {
@@ -4319,6 +4551,7 @@
      "amount": 1210.4,
      "helps_d": 1210.4,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -4717,7 +4950,35 @@
   ],
   "chamber": "House",
   "district": 17,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 17,
+   "chamber": "House",
+   "candidates": [
+    "Steven Bishop (R)",
+    "Ronald Russell (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Steven Bishop",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 659.77
+    }
+   ],
+   "total": 659.77,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 659.77,
+     "helps_d": 659.77,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 29.2,
@@ -4874,19 +5135,20 @@
   "chamber": "House",
   "district": 3,
   "ie": {
+   "office": "SR",
+   "district": 3,
+   "chamber": "House",
    "candidates": [
     "Susan Bernard (R)",
     "David McCrea (D)"
    ],
-   "chamber": "House",
-   "district": 3,
-   "office": "SR",
    "spending": [
     {
-     "amount": 500,
      "candidate": "Susan Bernard",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 500
     }
    ],
    "total": 500,
@@ -4896,6 +5158,7 @@
      "amount": 500,
      "helps_d": 0,
      "helps_r": 500,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -5056,28 +5319,45 @@
   "chamber": "House",
   "district": 83,
   "ie": {
+   "office": "SR",
+   "district": 83,
+   "chamber": "House",
    "candidates": [
     "Timothy Becker (D)",
     "Marygrace Cimino (R)"
    ],
-   "chamber": "House",
-   "district": 83,
-   "office": "SR",
    "spending": [
     {
-     "amount": 1120,
+     "candidate": "Marygrace Cimino",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 949.14
+    },
+    {
      "candidate": "Timothy Becker",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 1120
     }
    ],
-   "total": 1120,
+   "total": 2069.14,
    "by_filer": [
     {
      "filer": "Maine Conservation Voters Action Fund",
      "amount": 1120,
      "helps_d": 1120,
      "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 949.14,
+     "helps_d": 949.14,
+     "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -5605,28 +5885,38 @@
   "chamber": "House",
   "district": 94,
   "ie": {
+   "office": "SR",
+   "district": 94,
+   "chamber": "House",
    "candidates": [
     "Janet Beaudoin (R)",
     "Scott Harriman (D)"
    ],
-   "chamber": "House",
-   "district": 94,
-   "office": "SR",
    "spending": [
     {
-     "amount": 516.15,
      "candidate": "Scott Harriman",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 1385.59
     }
    ],
-   "total": 516.15,
+   "total": 1385.59,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 869.44,
+     "helps_d": 869.44,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "MPA Campaign Vote!",
      "amount": 432.81,
      "helps_d": 432.81,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     },
     {
@@ -5634,6 +5924,7 @@
      "amount": 83.34,
      "helps_d": 83.34,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -5794,28 +6085,45 @@
   "chamber": "House",
   "district": 82,
   "ie": {
+   "office": "SR",
+   "district": 82,
+   "chamber": "House",
    "candidates": [
     "Christopher Lewey (D)",
     "Caleb Ness (R)"
    ],
-   "chamber": "House",
-   "district": 82,
-   "office": "SR",
    "spending": [
     {
-     "amount": 736,
+     "candidate": "Caleb Ness",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 1038.18
+    },
+    {
      "candidate": "Christopher Lewey",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 736
     }
    ],
-   "total": 736,
+   "total": 1774.18,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1038.18,
+     "helps_d": 1038.18,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "Maine Conservation Voters Action Fund",
      "amount": 736,
      "helps_d": 736,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -5963,35 +6271,53 @@
   "chamber": "House",
   "district": 2,
   "ie": {
+   "office": "SR",
+   "district": 2,
+   "chamber": "House",
    "candidates": [
     "Roger Albert (R)",
     "Roland Martin (D)"
    ],
-   "chamber": "House",
-   "district": 2,
-   "office": "SR",
    "spending": [
     {
-     "amount": 2901.91,
      "candidate": "Roger Albert",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 2901.91
+    },
+    {
+     "candidate": "Roger Albert",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 720.8
     }
    ],
-   "total": 2901.91,
+   "total": 3622.71,
    "by_filer": [
     {
      "filer": "Leadership for Maine's Future PAC",
      "amount": 2250,
      "helps_d": 0,
      "helps_r": 2250,
+     "helps_o": 0,
      "transactions": 3
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 720.8,
+     "helps_d": 720.8,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     },
     {
      "filer": "People Over Politics PAC",
      "amount": 651.91,
      "helps_d": 0,
      "helps_r": 651.91,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -6381,28 +6707,53 @@
   "chamber": "House",
   "district": 20,
   "ie": {
+   "office": "SR",
+   "district": 20,
+   "chamber": "House",
    "candidates": [
     "Patrick Jude (R)",
     "Dani O'Halloran (D)"
    ],
-   "chamber": "House",
-   "district": 20,
-   "office": "SR",
    "spending": [
     {
-     "amount": 807.82,
+     "candidate": "Dani O'Halloran",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 453.69
+    },
+    {
      "candidate": "Patrick Jude",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1678.82
     }
    ],
-   "total": 807.82,
+   "total": 2132.51,
    "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 871,
+     "helps_d": 0,
+     "helps_r": 871,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 807.82,
      "helps_d": 0,
      "helps_r": 807.82,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 453.69,
+     "helps_d": 453.69,
+     "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -6485,41 +6836,45 @@
   "chamber": "Senate",
   "district": 8,
   "ie": {
+   "office": "SS",
+   "district": 8,
+   "chamber": "Senate",
    "candidates": [
     "Leo Kenney (R)",
     "Michael Tipping (D)"
    ],
-   "chamber": "Senate",
-   "district": 8,
-   "office": "SS",
    "spending": [
     {
-     "amount": 8991,
      "candidate": "Leo Kenney",
      "party": "R",
-     "stance": "Oppose"
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 16803.55
     },
     {
-     "amount": 37710.64,
      "candidate": "Michael Tipping",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 50263.64
     }
    ],
-   "total": 46701.64,
+   "total": 67067.19,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 46185.5,
-     "helps_d": 46185.5,
+     "amount": 66551.05,
+     "helps_d": 66551.05,
      "helps_r": 0,
-     "transactions": 10
+     "helps_o": 0,
+     "transactions": 14
     },
     {
      "filer": "MPA Campaign Vote!",
      "amount": 432.81,
      "helps_d": 432.81,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     },
     {
@@ -6527,6 +6882,7 @@
      "amount": 83.33,
      "helps_d": 83.33,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -6682,28 +7038,53 @@
   "chamber": "House",
   "district": 98,
   "ie": {
+   "office": "SR",
+   "district": 98,
+   "chamber": "House",
    "candidates": [
     "William St. Michel (R)",
     "Kilton Webb (D)"
    ],
-   "chamber": "House",
-   "district": 98,
-   "office": "SR",
    "spending": [
     {
-     "amount": 979.43,
+     "candidate": "Kilton Webb",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 679.16
+    },
+    {
      "candidate": "William St. Michel",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 2151.43
     }
    ],
-   "total": 979.43,
+   "total": 2830.59,
    "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 1172,
+     "helps_d": 0,
+     "helps_r": 1172,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 979.43,
      "helps_d": 0,
      "helps_r": 979.43,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 679.16,
+     "helps_d": 679.16,
+     "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -7167,7 +7548,36 @@
   ],
   "chamber": "House",
   "district": 141,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 141,
+   "chamber": "House",
+   "candidates": [
+    "Marc Boisse (R)",
+    "Rebecca Flood Andrews (D)",
+    "David Mongeau II (I)"
+   ],
+   "spending": [
+    {
+     "candidate": "Marc Boisse",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1070
+    }
+   ],
+   "total": 1070,
+   "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 1070,
+     "helps_d": 0,
+     "helps_r": 1070,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 25.3,
@@ -7975,28 +8385,60 @@
   "chamber": "House",
   "district": 142,
   "ie": {
+   "office": "SR",
+   "district": 142,
+   "chamber": "House",
    "candidates": [
     "Ayn Hanselmann (D)",
     "Domingo Torres (R)"
    ],
-   "chamber": "House",
-   "district": 142,
-   "office": "SR",
    "spending": [
     {
-     "amount": 684.35,
+     "candidate": "Ayn Hanselmann",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 192.02
+    },
+    {
      "candidate": "Domingo Torres",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1345.35
+    },
+    {
+     "candidate": "Domingo Torres",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 192.02
     }
    ],
-   "total": 684.35,
+   "total": 1729.39,
    "by_filer": [
     {
      "filer": "People Over Politics PAC",
      "amount": 684.35,
      "helps_d": 0,
      "helps_r": 684.35,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 661,
+     "helps_d": 0,
+     "helps_r": 661,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 384.04,
+     "helps_d": 384.04,
+     "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -8139,28 +8581,60 @@
   "chamber": "House",
   "district": 58,
   "ie": {
-   "candidates": [
-    "Dexter Bridges (R)",
-    "Sharon Frost (Independent)"
-   ],
-   "chamber": "House",
-   "district": 58,
    "office": "SR",
+   "district": 58,
+   "chamber": "House",
+   "candidates": [
+    "Dexter Bridges Jr. (R)",
+    "Sharon Frost (I)"
+   ],
    "spending": [
     {
-     "amount": 1033.84,
      "candidate": "Dexter Bridges",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1033.84
+    },
+    {
+     "candidate": "Dexter Bridges Jr.",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1314
+    },
+    {
+     "candidate": "Sharon Frost",
+     "party": "I",
+     "stance": "Support",
+     "helps": "O",
+     "amount": 1022.94
     }
    ],
-   "total": 1033.84,
+   "total": 3370.78,
    "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 1314,
+     "helps_d": 0,
+     "helps_r": 1314,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 1033.84,
      "helps_d": 0,
      "helps_r": 1033.84,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Strong Maine Communities PAC",
+     "amount": 1022.94,
+     "helps_d": 0,
+     "helps_r": 0,
+     "helps_o": 1022.94,
      "transactions": 1
     }
    ]
@@ -8534,28 +9008,60 @@
   "chamber": "House",
   "district": 81,
   "ie": {
+   "office": "SR",
+   "district": 81,
+   "chamber": "House",
    "candidates": [
     "Christopher Easton (D)",
     "Peter Wood (R)"
    ],
-   "chamber": "House",
-   "district": 81,
-   "office": "SR",
    "spending": [
     {
-     "amount": 960,
      "candidate": "Christopher Easton",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 960
+    },
+    {
+     "candidate": "Peter Wood",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 1119.32
+    },
+    {
+     "candidate": "Peter Wood",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1168
     }
    ],
-   "total": 960,
+   "total": 3247.32,
    "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 1168,
+     "helps_d": 0,
+     "helps_r": 1168,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1119.32,
+     "helps_d": 1119.32,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "Maine Conservation Voters Action Fund",
      "amount": 960,
      "helps_d": 960,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -9267,28 +9773,52 @@
   "chamber": "House",
   "district": 55,
   "ie": {
+   "office": "SR",
+   "district": 55,
+   "chamber": "House",
    "candidates": [
     "Maureen AuCoin (D)",
-    "Charles Hippler (R)"
+    "Charles Hippler IV (R)"
    ],
-   "chamber": "House",
-   "district": 55,
-   "office": "SR",
    "spending": [
     {
-     "amount": 897.81,
      "candidate": "Charles Hippler",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 897.81
+    },
+    {
+     "candidate": "Charles Hippler IV",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 348.19
+    },
+    {
+     "candidate": "Maureen AuCoin",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 348.2
     }
    ],
-   "total": 897.81,
+   "total": 1594.2,
    "by_filer": [
     {
      "filer": "People Over Politics PAC",
      "amount": 897.81,
      "helps_d": 0,
      "helps_r": 897.81,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 696.39,
+     "helps_d": 696.39,
+     "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -9891,28 +10421,52 @@
   "chamber": "House",
   "district": 96,
   "ie": {
+   "office": "SR",
+   "district": 96,
+   "chamber": "House",
    "candidates": [
     "Kerryl Clement (R)",
     "Luke Jensen (D)"
    ],
-   "chamber": "House",
-   "district": 96,
-   "office": "SR",
    "spending": [
     {
-     "amount": 769.63,
      "candidate": "Kerryl Clement",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 769.63
+    },
+    {
+     "candidate": "Kerryl Clement",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 612.43
+    },
+    {
+     "candidate": "Luke Jensen",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 612.44
     }
    ],
-   "total": 769.63,
+   "total": 1994.5,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1224.87,
+     "helps_d": 1224.87,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 769.63,
      "helps_d": 0,
      "helps_r": 769.63,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -10289,28 +10843,60 @@
   "chamber": "House",
   "district": 59,
   "ie": {
+   "office": "SR",
+   "district": 59,
+   "chamber": "House",
    "candidates": [
     "Katrina Couch Ray-Saulis (D)",
     "John Reny (R)"
    ],
-   "chamber": "House",
-   "district": 59,
-   "office": "SR",
    "spending": [
     {
-     "amount": 770.67,
      "candidate": "John Reny",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1426.67
+    },
+    {
+     "candidate": "John Reny",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 335.27
+    },
+    {
+     "candidate": "Katrina Couch Ray-Saulis",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 335.27
     }
    ],
-   "total": 770.67,
+   "total": 2097.21,
    "by_filer": [
     {
      "filer": "People Over Politics PAC",
      "amount": 770.67,
      "helps_d": 0,
      "helps_r": 770.67,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 670.54,
+     "helps_d": 670.54,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 656,
+     "helps_d": 0,
+     "helps_r": 656,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -10465,7 +11051,42 @@
   ],
   "chamber": "House",
   "district": 143,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 143,
+   "chamber": "House",
+   "candidates": [
+    "John Henkelman (D)",
+    "Melissa Simpson (R)"
+   ],
+   "spending": [
+    {
+     "candidate": "John Henkelman",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 202.79
+    },
+    {
+     "candidate": "Melissa Simpson",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 202.79
+    }
+   ],
+   "total": 405.58,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 405.58,
+     "helps_d": 405.58,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 28.8,
@@ -10682,35 +11303,38 @@
   "chamber": "Senate",
   "district": 26,
   "ie": {
+   "office": "SS",
+   "district": 26,
+   "chamber": "Senate",
    "candidates": [
     "Kenneth Cianchette (R)",
     "Timothy Nangle (D)"
    ],
-   "chamber": "Senate",
-   "district": 26,
-   "office": "SS",
    "spending": [
     {
-     "amount": 28300.55,
      "candidate": "Kenneth Cianchette",
      "party": "R",
-     "stance": "Oppose"
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 41270.45
     },
     {
-     "amount": 26128.43,
      "candidate": "Timothy Nangle",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 29625.33
     }
    ],
-   "total": 54428.98,
+   "total": 70895.78,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 54428.98,
-     "helps_d": 54428.98,
+     "amount": 70895.78,
+     "helps_d": 70895.78,
      "helps_r": 0,
-     "transactions": 10
+     "helps_o": 0,
+     "transactions": 14
     }
    ]
   },
@@ -11021,28 +11645,60 @@
   "chamber": "House",
   "district": 75,
   "ie": {
+   "office": "SR",
+   "district": 75,
+   "chamber": "House",
    "candidates": [
     "Randall Gauvin (R)",
     "H. Landry (D)"
    ],
-   "chamber": "House",
-   "district": 75,
-   "office": "SR",
    "spending": [
     {
-     "amount": 694.29,
+     "candidate": "H. Landry",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 250.54
+    },
+    {
      "candidate": "Randall Gauvin",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1581.29
+    },
+    {
+     "candidate": "Randall Gauvin",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 250.54
     }
    ],
-   "total": 694.29,
+   "total": 2082.37,
    "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 887,
+     "helps_d": 0,
+     "helps_r": 887,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 694.29,
      "helps_d": 0,
      "helps_r": 694.29,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 501.08,
+     "helps_d": 501.08,
+     "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -11697,19 +12353,20 @@
   "chamber": "House",
   "district": 7,
   "ie": {
+   "office": "SR",
+   "district": 7,
+   "chamber": "House",
    "candidates": [
     "Jantzen Craine (R)",
     "Matthew Rush (D)"
    ],
-   "chamber": "House",
-   "district": 7,
-   "office": "SR",
    "spending": [
     {
-     "amount": 1939.83,
      "candidate": "Jantzen Craine",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1939.83
     }
    ],
    "total": 1939.83,
@@ -11719,6 +12376,7 @@
      "amount": 1939.83,
      "helps_d": 0,
      "helps_r": 1939.83,
+     "helps_o": 0,
      "transactions": 2
     }
    ]
@@ -11790,7 +12448,42 @@
   ],
   "chamber": "House",
   "district": 44,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 44,
+   "chamber": "House",
+   "candidates": [
+    "Shawn Saindon (I)",
+    "Ray Thombs Jr. (R)"
+   ],
+   "spending": [
+    {
+     "candidate": "Ray Thombs Jr.",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "O",
+     "amount": 443.99
+    },
+    {
+     "candidate": "Shawn Saindon",
+     "party": "I",
+     "stance": "Support",
+     "helps": "O",
+     "amount": 444
+    }
+   ],
+   "total": 887.99,
+   "by_filer": [
+    {
+     "filer": "Strong Maine Communities PAC",
+     "amount": 887.99,
+     "helps_d": 0,
+     "helps_r": 0,
+     "helps_o": 887.99,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 27.2,
@@ -11868,7 +12561,50 @@
   ],
   "chamber": "House",
   "district": 13,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 13,
+   "chamber": "House",
+   "candidates": [
+    "Michael Cunningham II (D)",
+    "Russell White (R)"
+   ],
+   "spending": [
+    {
+     "candidate": "Russell White",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 589.4
+    },
+    {
+     "candidate": "Russell White",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1026
+    }
+   ],
+   "total": 1615.4,
+   "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 1026,
+     "helps_d": 0,
+     "helps_r": 1026,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 589.4,
+     "helps_d": 589.4,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 28.6,
@@ -12103,28 +12839,53 @@
   "chamber": "House",
   "district": 52,
   "ie": {
+   "office": "SR",
+   "district": 52,
+   "chamber": "House",
    "candidates": [
     "Sally Cluchey (D)",
     "David Guilmette (R)"
    ],
-   "chamber": "House",
-   "district": 52,
-   "office": "SR",
    "spending": [
     {
-     "amount": 907.23,
      "candidate": "David Guilmette",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 2007.23
+    },
+    {
+     "candidate": "Sally Cluchey",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 694.23
     }
    ],
-   "total": 907.23,
+   "total": 2701.46,
    "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 1100,
+     "helps_d": 0,
+     "helps_r": 1100,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 907.23,
      "helps_d": 0,
      "helps_r": 907.23,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 694.23,
+     "helps_d": 694.23,
+     "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -12285,19 +13046,20 @@
   "chamber": "House",
   "district": 25,
   "ie": {
+   "office": "SR",
+   "district": 25,
+   "chamber": "House",
    "candidates": [
     "Laurie Osher (D)",
     "Anthony Weaver (R)"
    ],
-   "chamber": "House",
-   "district": 25,
-   "office": "SR",
    "spending": [
     {
-     "amount": 516.14,
      "candidate": "Laurie Osher",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 516.14
     }
    ],
    "total": 516.14,
@@ -12307,6 +13069,7 @@
      "amount": 432.81,
      "helps_d": 432.81,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     },
     {
@@ -12314,6 +13077,7 @@
      "amount": 83.33,
      "helps_d": 83.33,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -12534,19 +13298,20 @@
   "chamber": "Senate",
   "district": 21,
   "ie": {
+   "office": "SS",
+   "district": 21,
+   "chamber": "Senate",
    "candidates": [
     "Shanna Cox (D)",
-    "Eryn Soule (Unenrolled)"
+    "Eryn Soule (I)"
    ],
-   "chamber": "Senate",
-   "district": 21,
-   "office": "SS",
    "spending": [
     {
-     "amount": 516.14,
      "candidate": "Shanna Cox",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 516.14
     }
    ],
    "total": 516.14,
@@ -12556,6 +13321,7 @@
      "amount": 432.81,
      "helps_d": 432.81,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     },
     {
@@ -12563,6 +13329,7 @@
      "amount": 83.33,
      "helps_d": 83.33,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -13149,7 +13916,42 @@
   ],
   "chamber": "House",
   "district": 145,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 145,
+   "chamber": "House",
+   "candidates": [
+    "Caleb Chase (R)",
+    "Kristin Davis (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Caleb Chase",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 189.86
+    },
+    {
+     "candidate": "Kristin Davis",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 189.87
+    }
+   ],
+   "total": 379.73,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 379.73,
+     "helps_d": 379.73,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 31.6,
@@ -13444,41 +14246,45 @@
   "chamber": "Senate",
   "district": 20,
   "ie": {
+   "office": "SS",
+   "district": 20,
+   "chamber": "Senate",
    "candidates": [
     "Bruce Bickford (R)",
     "Michael Scott (D)"
    ],
-   "chamber": "Senate",
-   "district": 20,
-   "office": "SS",
    "spending": [
     {
-     "amount": 28372.26,
      "candidate": "Bruce Bickford",
      "party": "R",
-     "stance": "Oppose"
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 41478.56
     },
     {
-     "amount": 24319.18,
      "candidate": "Michael Scott",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 30646.18
     }
    ],
-   "total": 52691.44,
+   "total": 72124.74,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 51481.04,
-     "helps_d": 51481.04,
+     "amount": 70914.34,
+     "helps_d": 70914.34,
      "helps_r": 0,
-     "transactions": 10
+     "helps_o": 0,
+     "transactions": 14
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
      "amount": 1210.4,
      "helps_d": 1210.4,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -13870,19 +14676,20 @@
   "chamber": "House",
   "district": 108,
   "ie": {
+   "office": "SR",
+   "district": 108,
+   "chamber": "House",
    "candidates": [
     "Kelly Dearborn (R)",
     "Parnell Terry (D)"
    ],
-   "chamber": "House",
-   "district": 108,
-   "office": "SR",
    "spending": [
     {
-     "amount": 796.83,
      "candidate": "Kelly Dearborn",
      "party": "R",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "R",
+     "amount": 796.83
     }
    ],
    "total": 796.83,
@@ -13892,6 +14699,7 @@
      "amount": 796.83,
      "helps_d": 0,
      "helps_r": 796.83,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -14047,41 +14855,45 @@
   "chamber": "Senate",
   "district": 16,
   "ie": {
+   "office": "SS",
+   "district": 16,
+   "chamber": "Senate",
    "candidates": [
     "Scott Cyrway (R)",
     "Patric Moore (D)"
    ],
-   "chamber": "Senate",
-   "district": 16,
-   "office": "SS",
    "spending": [
     {
-     "amount": 22627.96,
      "candidate": "Patric Moore",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 31625.16
     },
     {
-     "amount": 22996.07,
      "candidate": "Scott Cyrway",
      "party": "R",
-     "stance": "Oppose"
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 31993.27
     }
    ],
-   "total": 45624.03,
+   "total": 63618.43,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 44413.63,
-     "helps_d": 44413.63,
+     "amount": 62408.03,
+     "helps_d": 62408.03,
      "helps_r": 0,
-     "transactions": 10
+     "helps_o": 0,
+     "transactions": 14
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
      "amount": 1210.4,
      "helps_d": 1210.4,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -14319,7 +15131,35 @@
   ],
   "chamber": "House",
   "district": 45,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 45,
+   "chamber": "House",
+   "candidates": [
+    "Clinton Collamore (I)",
+    "Rebecca Stephens (R)"
+   ],
+   "spending": [
+    {
+     "candidate": "Rebecca Stephens",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1055
+    }
+   ],
+   "total": 1055,
+   "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 1055,
+     "helps_d": 0,
+     "helps_r": 1055,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 29,
@@ -14470,7 +15310,35 @@
   ],
   "chamber": "House",
   "district": 86,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 86,
+   "chamber": "House",
+   "candidates": [
+    "Abigail Geer (D)",
+    "Rolf Olsen Jr. (R)"
+   ],
+   "spending": [
+    {
+     "candidate": "Rolf Olsen Jr.",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 1207.64
+    }
+   ],
+   "total": 1207.64,
+   "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1207.64,
+     "helps_d": 1207.64,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 28.4,
@@ -14692,28 +15560,45 @@
   "chamber": "House",
   "district": 90,
   "ie": {
+   "office": "SR",
+   "district": 90,
+   "chamber": "House",
    "candidates": [
     "Pamela Hart (D)",
     "James Sorcek (R)"
    ],
-   "chamber": "House",
-   "district": 90,
-   "office": "SR",
    "spending": [
     {
-     "amount": 384,
+     "candidate": "James Sorcek",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 445.49
+    },
+    {
      "candidate": "Pamela Hart",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 829.49
     }
    ],
-   "total": 384,
+   "total": 1274.98,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 890.98,
+     "helps_d": 890.98,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "Maine Conservation Voters Action Fund",
      "amount": 384,
      "helps_d": 384,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
@@ -14877,19 +15762,20 @@
   "chamber": "House",
   "district": 28,
   "ie": {
+   "office": "SR",
+   "district": 28,
+   "chamber": "House",
    "candidates": [
     "Irene Gifford (R)",
     "Gordon Street (D)"
    ],
-   "chamber": "House",
-   "district": 28,
-   "office": "SR",
    "spending": [
     {
-     "amount": 516.14,
      "candidate": "Gordon Street",
      "party": "D",
-     "stance": "Support"
+     "stance": "Support",
+     "helps": "D",
+     "amount": 516.14
     }
    ],
    "total": 516.14,
@@ -14899,6 +15785,7 @@
      "amount": 432.81,
      "helps_d": 432.81,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     },
     {
@@ -14906,6 +15793,7 @@
      "amount": 83.33,
      "helps_d": 83.33,
      "helps_r": 0,
+     "helps_o": 0,
      "transactions": 1
     }
    ]
