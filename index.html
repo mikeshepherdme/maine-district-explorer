@@ -129,6 +129,36 @@ header p.sub { margin: 0; color: var(--text-secondary); font-size: 0.9rem; }
 .legend-gradient { width: 140px; height: 10px; border-radius: 5px; background: linear-gradient(to right, var(--gop), var(--neutral-fill), var(--dem)); }
 .legend-outline-swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; border: 1.6px solid var(--accent-outline); background: var(--neutral-fill); vertical-align: -3px; }
 
+.view-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--grid); margin-bottom: 14px; }
+.view-tab {
+  font: inherit; font-size: 0.88rem; font-weight: 600; padding: 8px 14px; background: none; border: none;
+  border-bottom: 2px solid transparent; margin-bottom: -1px; color: var(--text-secondary); cursor: pointer;
+}
+.view-tab.active { color: var(--text-primary); border-bottom-color: var(--text-primary); }
+.view-tab:not(.active):hover { color: var(--text-primary); }
+.spender-list { display: flex; flex-direction: column; }
+.spender-row { border-bottom: 1px solid var(--grid); padding: 10px 2px; }
+.spender-row:last-child { border-bottom: none; }
+.spender-row summary { list-style: none; cursor: pointer; }
+.spender-row summary::-webkit-details-marker { display: none; }
+.spender-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.spender-name { font-weight: 700; font-size: 0.9rem; min-width: 0; overflow-wrap: anywhere; }
+.spender-name::before { content: '\25B8'; display: inline-block; width: 1em; color: var(--text-muted); transition: transform .15s; }
+.spender-row[open] .spender-name::before { transform: rotate(90deg); }
+.spender-amt { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.spender-leader { color: var(--text-secondary); font-size: 0.76rem; font-style: italic; margin: 2px 0 0 1em; }
+.spender-meta { color: var(--text-muted); font-size: 0.74rem; margin: 2px 0 0 1em; }
+.spender-bar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; background: var(--neutral-fill); margin: 6px 0 0 1em; }
+.spender-bar span { display: block; height: 100%; }
+.spender-bar .d { background: var(--dem); }
+.spender-bar .r { background: var(--gop); }
+.spender-bar .o { background: var(--other); }
+.spender-races { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 2px 1em; }
+.race-chip {
+  font: inherit; font-size: 0.74rem; padding: 3px 9px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); font-variant-numeric: tabular-nums;
+}
+.race-chip:hover { background: var(--grid); }
 .top-spending-list { display: flex; flex-direction: column; gap: 2px; }
 .ts-row {
   display: grid; grid-template-columns: 20px minmax(60px,84px) 1fr minmax(56px,76px);
@@ -269,9 +299,20 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
   </div>
 
   <section>
+    <div class="view-tabs" role="tablist" aria-label="Spending view">
+      <button class="view-tab active" type="button" role="tab" aria-selected="true" data-view="races">By race</button>
+      <button class="view-tab" type="button" role="tab" aria-selected="false" data-view="spenders">By outside spender</button>
+    </div>
+    <div id="view-spenders" hidden>
+      <h2>Outside spenders</h2>
+      <p class="desc">Every committee reporting independent expenditures in Maine House and Senate races, Sept. 1, 2026&ndash;present, ranked by total. Bar color shows which side the money helps. Open a spender to see its races; click a race to jump to its detail.</p>
+      <div class="spender-list" id="spender-list"><div class="state-msg">Loading&hellip;</div></div>
+    </div>
+    <div id="view-races">
     <h2 id="top-spending-heading">Top-spending races</h2>
     <p class="desc">Legislative races ranked by total independent-expenditure spending, Sept. 1, 2026&ndash;present. <span style="color:var(--dem);font-weight:600">Blue</span> = spending that helps the Democratic candidate &middot; <span style="color:var(--gop);font-weight:600">red</span> = helps the Republican candidate. Click a race to jump to its detail.</p>
     <div class="top-spending-list" id="top-spending-list"><div class="state-msg">Loading&hellip;</div></div>
+    </div>
   </section>
 
   <section>
@@ -411,7 +452,7 @@ function renderTopSpending() {
     .sort((a, b) => b.total - a.total)
     .slice(0, 12);
 
-  if (!rows.length) { el.innerHTML = '<div class="ts-empty">No independent expenditures recorded yet for this chamber.</div>'; return; }
+  if (!rows.length) { el.innerHTML = '<div class="ts-empty">No independent expenditures recorded yet for this chamber.</div>'; renderSpenders(); return; }
 
   const max = rows[0].total;
   el.innerHTML = rows.map((r, i) => {
@@ -439,6 +480,7 @@ function renderTopSpending() {
       document.getElementById('detail-heading').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+  renderSpenders();
 }
 
 function renderMap() {
@@ -626,6 +668,65 @@ function selectDistrict(key) {
   renderDistrictList();
 }
 
+function renderSpenders() {
+  const el = document.getElementById('spender-list');
+  if (!el) return;
+  const agg = {};
+  Object.keys(districtData).forEach(key => {
+    const rec = districtData[key];
+    if (!rec.ie || !rec.ie.by_filer) return;
+    rec.ie.by_filer.forEach(f => {
+      const a = agg[f.filer] || (agg[f.filer] = { filer: f.filer, leader: f.leader || '', total: 0, d: 0, r: 0, o: 0, ss: 0, sr: 0, races: [] });
+      a.total += f.amount; a.d += f.helps_d || 0; a.r += f.helps_r || 0;
+      a.o += Math.max(0, f.amount - (f.helps_d || 0) - (f.helps_r || 0));
+      if (rec.office === 'SS') a.ss += f.amount; else a.sr += f.amount;
+      if (f.leader) a.leader = f.leader;
+      a.races.push({ key, office: rec.office, district: rec.district, amount: f.amount });
+    });
+  });
+  const rows = Object.values(agg).sort((x, y) => y.total - x.total);
+  if (!rows.length) { el.innerHTML = '<div class="ts-empty">No independent expenditures recorded yet.</div>'; return; }
+  const max = rows[0].total;
+  const pct = (n) => max ? (n / max * 100).toFixed(2) : 0;
+  el.innerHTML = rows.map((a, i) => {
+    const tags = [a.d > 0.005 ? '<span class="helps-tag D">helps D</span>' : '', a.r > 0.005 ? '<span class="helps-tag R">helps R</span>' : '', a.o > 0.005 ? '<span class="helps-tag O">helps ind.</span>' : ''].join('');
+    const split = [a.ss ? `Senate ${fmtMoney(a.ss)}` : '', a.sr ? `House ${fmtMoney(a.sr)}` : ''].filter(Boolean).join(' &middot; ');
+    const chips = a.races.sort((x, y) => y.amount - x.amount).map(r =>
+      `<button class="race-chip" type="button" data-key="${r.key}">${r.office === 'SS' ? 'Senate' : 'House'} ${r.district} &middot; ${fmtMoney(r.amount)}</button>`).join('');
+    return `<details class="spender-row">
+      <summary>
+        <div class="spender-top"><span class="spender-name">${a.filer}${tags}</span><span class="spender-amt">${fmtMoney(a.total)}</span></div>
+        ${a.leader ? `<div class="spender-leader">${a.leader}</div>` : ''}
+        <div class="spender-meta">${a.races.length} race${a.races.length === 1 ? '' : 's'} &middot; ${split}</div>
+        <div class="spender-bar"><span class="d" style="width:${pct(a.d)}%"></span><span class="r" style="width:${pct(a.r)}%"></span><span class="o" style="width:${pct(a.o)}%"></span></div>
+      </summary>
+      <div class="spender-races">${chips}</div>
+    </details>`;
+  }).join('');
+  el.querySelectorAll('.race-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.key;
+      const office = key.startsWith('SS') ? 'SS' : 'SR';
+      if (office !== chamber) setChamber(office);
+      selectDistrict(key);
+      document.getElementById('detail-heading').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+}
+
+function setView(view) {
+  document.querySelectorAll('.view-tab').forEach(t => {
+    const on = t.dataset.view === view;
+    t.classList.toggle('active', on);
+    t.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+  document.getElementById('view-races').hidden = view !== 'races';
+  document.getElementById('view-spenders').hidden = view !== 'spenders';
+  try { localStorage.setItem('explorer-view', view); } catch (e) {}
+}
+document.querySelectorAll('.view-tab').forEach(t => t.addEventListener('click', () => setView(t.dataset.view)));
+try { const v = localStorage.getItem('explorer-view'); if (v === 'spenders') setView('spenders'); } catch (e) {}
+
 function setChamber(next) {
   chamber = next;
   document.getElementById('btn-senate').classList.toggle('active', chamber === 'SS');
@@ -730,7 +831,7 @@ async function init() {
     console.error(err);
   }
 
-  renderUpdateTag('2026-09-28T11:52:05Z');
+  renderUpdateTag('2026-09-28T15:45:47Z');
   buildCandidateIndex();
   renderMap();
   renderDistrictList();
