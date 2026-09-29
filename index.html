@@ -236,6 +236,23 @@ section p.desc { margin: 0 0 10px; color: var(--text-secondary); font-size: 0.85
 .ie-row:last-child { border-bottom: none; }
 .ie-total { font-weight: 600; margin-top: 6px; font-size: 0.85rem; }
 .no-ie { color: var(--text-muted); font-size: 0.82rem; }
+.ie-wide { border-top: 1px solid var(--grid); padding-top: 14px; margin-top: 16px; }
+.ie-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.ie-head h4 { margin: 0; }
+.ie-headtotal { font-size: 1.15rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.ie-split-bar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; background: var(--neutral-fill); margin: 8px 0 5px; }
+.ie-split-bar span { display: block; height: 100%; }
+.ie-split-bar .d { background: var(--dem); } .ie-split-bar .r { background: var(--gop); } .ie-split-bar .o { background: var(--other); }
+.ie-split-labels { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.76rem; color: var(--text-secondary); margin-bottom: 12px; font-variant-numeric: tabular-nums; }
+.ie-split-labels .D { color: var(--dem); font-weight: 600; } .ie-split-labels .R { color: var(--gop); font-weight: 600; } .ie-split-labels .O { color: var(--other); font-weight: 600; }
+.ie-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 12px 32px; }
+.ie-col > .ie-subhead:first-child { margin-top: 0; }
+@media (max-width: 640px) { .ie-body { grid-template-columns: 1fr; } }
+.tooltip .tip-line { font-weight: 600; margin-top: 3px; white-space: nowrap; }
+.tooltip .tip-who { font-weight: 400; color: #52514e; }
+.tooltip .tip-sw { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; vertical-align: 0; }
+.tooltip .tip-sw.d { background: #2a78d6; } .tooltip .tip-sw.r { background: #e34948; } .tooltip .tip-sw.o { background: #4a3aa7; }
+.tooltip .tip-top { font-weight: 400; color: #52514e; margin-top: 5px; padding-top: 4px; border-top: 1px solid rgba(0,0,0,0.1); }
 .ie-subhead { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); font-weight: 600; margin: 12px 0 4px; }
 .filer-row { padding: 5px 0; border-bottom: 1px solid var(--grid); font-size: 0.82rem; }
 .filer-row:last-child { border-bottom: none; }
@@ -269,7 +286,7 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
 .tooltip {
   position: fixed; background: #ffffff; color: #0b0b0b; font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   font-weight: 700; font-size: 0.72rem; padding: 6px 9px; border-radius: 6px; pointer-events: none; z-index: 50;
-  max-width: 220px; line-height: 1.4; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.25); border: 1px solid rgba(0,0,0,0.08);
+  max-width: 320px; line-height: 1.4; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.25); border: 1px solid rgba(0,0,0,0.08);
 }
 </style>
 </head>
@@ -304,8 +321,8 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
       <button class="view-tab" type="button" role="tab" aria-selected="false" data-view="spenders">By outside spender</button>
     </div>
     <div id="view-spenders" hidden>
-      <h2>Outside spenders</h2>
-      <p class="desc">Every committee reporting independent expenditures in Maine House and Senate races, Sept. 1, 2026&ndash;present, ranked by total. Bar color shows which side the money helps. Open a spender to see its races; click a race to jump to its detail.</p>
+      <h2 id="spender-heading">Outside spenders</h2>
+      <p class="desc">Every committee reporting independent expenditures in races for the selected chamber, Sept. 1, 2026&ndash;present, ranked by total. Use the Senate/House toggle above to switch chambers. Bar color shows which side the money helps. Open a spender to see its races; click a race to jump to its detail.</p>
       <div class="spender-list" id="spender-list"><div class="state-msg">Loading&hellip;</div></div>
     </div>
     <div id="view-races">
@@ -382,7 +399,7 @@ const tooltip = document.getElementById('tooltip');
 function showTip(evt, html) {
   tooltip.innerHTML = html;
   tooltip.style.display = 'block';
-  tooltip.style.left = Math.min(evt.clientX + 14, window.innerWidth - 230) + 'px';
+  tooltip.style.left = Math.min(evt.clientX + 14, window.innerWidth - 330) + 'px';
   tooltip.style.top = (evt.clientY + 14) + 'px';
 }
 function hideTip() { tooltip.style.display = 'none'; }
@@ -436,6 +453,19 @@ function partySplit(ie) {
   return { d, r, other };
 }
 
+function rankingTip(key) {
+  const rec = districtData[key];
+  if (!rec || !rec.ie) return '';
+  const ie = rec.ie, s = partySplit(ie), t = ie.total || 1;
+  const pc = (n) => (n / t * 100).toFixed(0) + '%';
+  const cand = (p) => (rec.candidates_2026 || []).filter(c => p === 'O' ? (c.party !== 'D' && c.party !== 'R') : c.party === p).map(c => c.name).join(', ');
+  const line = (label, cls, amt, who) => amt > 0.005 ? `<div class="tip-line"><span class="tip-sw ${cls}"></span>${label}${who ? ` <span class="tip-who">(${who})</span>` : ''}: ${fmtMoney(amt)} &middot; ${pc(amt)}</div>` : '';
+  const top = (ie.by_filer || []).slice(0, 2).map(f => `${f.filer} ${fmtMoney(f.amount)}`).join('<br>');
+  return `<strong>${rec.office === 'SS' ? 'Senate' : 'House'} District ${rec.district} &middot; ${fmtMoney(ie.total)}</strong>`
+    + line('Helps D', 'd', s.d, cand('D')) + line('Helps R', 'r', s.r, cand('R')) + line('Helps ind.', 'o', s.other, cand('O'))
+    + (top ? `<div class="tip-top">Top spenders:<br>${top}</div>` : '');
+}
+
 function renderTopSpending() {
   const el = document.getElementById('top-spending-list');
   const heading = document.getElementById('top-spending-heading');
@@ -472,6 +502,8 @@ function renderTopSpending() {
   }).join('');
 
   el.querySelectorAll('.ts-row').forEach(row => {
+    row.addEventListener('mousemove', (evt) => showTip(evt, rankingTip(row.dataset.key)));
+    row.addEventListener('mouseleave', hideTip);
     row.addEventListener('click', () => {
       const key = row.dataset.key;
       const office = key.startsWith('SS') ? 'SS' : 'SR';
@@ -621,7 +653,8 @@ function renderDetail(key) {
 
   const ie = rec.ie;
   let ieBlock;
-  if (ie && ie.spending && ie.spending.length) {
+  const ieWide = !!(ie && ie.spending && ie.spending.length);
+  if (ieWide) {
     const rows = ie.spending.map(s => `<div class="ie-row"><span>${s.stance} ${s.candidate} (${s.party})</span><span>${fmtMoney2(s.amount)}</span></div>`).join('');
     let filerHtml = '';
     if (ie.by_filer && ie.by_filer.length) {
@@ -637,11 +670,17 @@ function renderDetail(key) {
         </div>`;
       }).join('');
     }
-    ieBlock = `<div class="detail-block">
-      <h4>2026 IE spending</h4>
-      ${rows}
-      <div class="ie-total">Total: ${fmtMoney(ie.total)}</div>
-      ${filerHtml}
+    const split = partySplit(ie);
+    const sp = (n) => ie.total ? (n / ie.total * 100).toFixed(2) : 0;
+    const splitLabels = [split.d > 0.005 ? `<span><span class="D">Helps D</span> ${fmtMoney(split.d)}</span>` : '', split.r > 0.005 ? `<span><span class="R">Helps R</span> ${fmtMoney(split.r)}</span>` : '', split.other > 0.005 ? `<span><span class="O">Helps ind.</span> ${fmtMoney(split.other)}</span>` : ''].join('');
+    ieBlock = `<div class="detail-block ie-wide">
+      <div class="ie-head"><h4>2026 IE spending</h4><span class="ie-headtotal">${fmtMoney(ie.total)}</span></div>
+      <div class="ie-split-bar"><span class="d" style="width:${sp(split.d)}%"></span><span class="r" style="width:${sp(split.r)}%"></span><span class="o" style="width:${sp(split.other)}%"></span></div>
+      <div class="ie-split-labels">${splitLabels}</div>
+      <div class="ie-body">
+        <div class="ie-col"><div class="ie-subhead">By candidate</div>${rows}</div>
+        ${filerHtml ? `<div class="ie-col">${filerHtml}</div>` : ''}
+      </div>
     </div>`;
   } else {
     ieBlock = `<div class="detail-block"><h4>2026 IE spending</h4><div class="no-ie">No independent expenditures recorded this cycle for this district.</div></div>`;
@@ -657,8 +696,9 @@ function renderDetail(key) {
       ${regBlock}
       ${resultBlock('2022 result', rec.result_2022)}
       ${resultBlock('2024 result', rec.result_2024)}
-      ${ieBlock}
-    </div>`;
+      ${ieWide ? '' : ieBlock}
+    </div>
+    ${ieWide ? ieBlock : ''}`;
 }
 
 function selectDistrict(key) {
@@ -672,9 +712,16 @@ function renderSpenders() {
   const el = document.getElementById('spender-list');
   if (!el) return;
   const agg = {};
+  const otherCh = {};
+  const heading = document.getElementById('spender-heading');
+  if (heading) heading.textContent = `Outside spenders in ${chamber === 'SS' ? 'Senate' : 'House'} races`;
   Object.keys(districtData).forEach(key => {
     const rec = districtData[key];
     if (!rec.ie || !rec.ie.by_filer) return;
+    if (!key.startsWith(chamber)) {
+      rec.ie.by_filer.forEach(f => { otherCh[f.filer] = (otherCh[f.filer] || 0) + f.amount; });
+      return;
+    }
     rec.ie.by_filer.forEach(f => {
       const a = agg[f.filer] || (agg[f.filer] = { filer: f.filer, leader: f.leader || '', total: 0, d: 0, r: 0, o: 0, ss: 0, sr: 0, races: [] });
       a.total += f.amount; a.d += f.helps_d || 0; a.r += f.helps_r || 0;
@@ -685,19 +732,20 @@ function renderSpenders() {
     });
   });
   const rows = Object.values(agg).sort((x, y) => y.total - x.total);
-  if (!rows.length) { el.innerHTML = '<div class="ts-empty">No independent expenditures recorded yet.</div>'; return; }
+  if (!rows.length) { el.innerHTML = `<div class="ts-empty">No independent expenditures recorded yet in ${chamber === 'SS' ? 'Senate' : 'House'} races.</div>`; return; }
   const max = rows[0].total;
   const pct = (n) => max ? (n / max * 100).toFixed(2) : 0;
   el.innerHTML = rows.map((a, i) => {
     const tags = [a.d > 0.005 ? '<span class="helps-tag D">helps D</span>' : '', a.r > 0.005 ? '<span class="helps-tag R">helps R</span>' : '', a.o > 0.005 ? '<span class="helps-tag O">helps ind.</span>' : ''].join('');
-    const split = [a.ss ? `Senate ${fmtMoney(a.ss)}` : '', a.sr ? `House ${fmtMoney(a.sr)}` : ''].filter(Boolean).join(' &middot; ');
+    const oc = otherCh[a.filer] || 0;
+    const split = oc > 0.005 ? `also ${fmtMoney(oc)} in ${chamber === 'SS' ? 'House' : 'Senate'} races` : '';
     const chips = a.races.sort((x, y) => y.amount - x.amount).map(r =>
       `<button class="race-chip" type="button" data-key="${r.key}">${r.office === 'SS' ? 'Senate' : 'House'} ${r.district} &middot; ${fmtMoney(r.amount)}</button>`).join('');
     return `<details class="spender-row">
       <summary>
         <div class="spender-top"><span class="spender-name">${a.filer}${tags}</span><span class="spender-amt">${fmtMoney(a.total)}</span></div>
         ${a.leader ? `<div class="spender-leader">${a.leader}</div>` : ''}
-        <div class="spender-meta">${a.races.length} race${a.races.length === 1 ? '' : 's'} &middot; ${split}</div>
+        <div class="spender-meta">${a.races.length} ${chamber === 'SS' ? 'Senate' : 'House'} race${a.races.length === 1 ? '' : 's'}${split ? ` &middot; ${split}` : ''}</div>
         <div class="spender-bar"><span class="d" style="width:${pct(a.d)}%"></span><span class="r" style="width:${pct(a.r)}%"></span><span class="o" style="width:${pct(a.o)}%"></span></div>
       </summary>
       <div class="spender-races">${chips}</div>
