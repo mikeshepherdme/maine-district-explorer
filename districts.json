@@ -468,18 +468,18 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 549.19
+     "amount": 921.8
     }
    ],
-   "total": 549.19,
+   "total": 921.8,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 549.19,
-     "helps_d": 549.19,
+     "amount": 921.8,
+     "helps_d": 921.8,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     }
    ]
   },
@@ -995,6 +995,13 @@
    ],
    "spending": [
     {
+     "candidate": "Joseph Campbell",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 337.08
+    },
+    {
      "candidate": "Mark Cooper",
      "party": "R",
      "stance": "Oppose",
@@ -1009,8 +1016,16 @@
      "amount": 1054
     }
    ],
-   "total": 1781.26,
+   "total": 2118.34,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1064.34,
+     "helps_d": 1064.34,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 2
+    },
     {
      "filer": "Prosper Maine PAC",
      "amount": 1054,
@@ -1019,14 +1034,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Principal officer: Brenda Hankins"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 727.26,
-     "helps_d": 727.26,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 1
     }
    ]
   },
@@ -2375,6 +2382,13 @@
    ],
    "spending": [
     {
+     "candidate": "Dana Staples",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 399.25
+    },
+    {
      "candidate": "Quentin Chapman",
      "party": "R",
      "stance": "Oppose",
@@ -2382,15 +2396,15 @@
      "amount": 729.42
     }
    ],
-   "total": 729.42,
+   "total": 1128.67,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 729.42,
-     "helps_d": 729.42,
+     "amount": 1128.67,
+     "helps_d": 1128.67,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     }
    ]
   },
@@ -2972,17 +2986,24 @@
      "stance": "Oppose",
      "helps": "D",
      "amount": 696.39
+    },
+    {
+     "candidate": "Bradley Youngs",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 392.59
     }
    ],
-   "total": 696.39,
+   "total": 1088.98,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 696.39,
-     "helps_d": 696.39,
+     "amount": 1088.98,
+     "helps_d": 1088.98,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     }
    ]
   },
@@ -3529,11 +3550,19 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 789.02
+     "amount": 1214.92
     }
    ],
-   "total": 2947.74,
+   "total": 3373.64,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1214.92,
+     "helps_d": 1214.92,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 2
+    },
     {
      "filer": "Prosper Maine PAC",
      "amount": 1184,
@@ -3551,14 +3580,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 789.02,
-     "helps_d": 789.02,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 1
     }
    ]
   },
@@ -4122,6 +4143,13 @@
    ],
    "spending": [
     {
+     "candidate": "Alan Orcutt",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 465.86
+    },
+    {
      "candidate": "Reagan Paul",
      "party": "R",
      "stance": "Oppose",
@@ -4129,15 +4157,15 @@
      "amount": 715.78
     }
    ],
-   "total": 715.78,
+   "total": 1181.64,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 715.78,
-     "helps_d": 715.78,
+     "amount": 1181.64,
+     "helps_d": 1181.64,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     }
    ]
   },
@@ -4644,7 +4672,35 @@
   ],
   "chamber": "Senate",
   "district": 9,
-  "ie": null,
+  "ie": {
+   "office": "SS",
+   "district": 9,
+   "chamber": "Senate",
+   "candidates": [
+    "Stephen Carey (I)",
+    "Amy Roeder (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Stephen Carey",
+     "party": "I",
+     "stance": "Support",
+     "helps": "O",
+     "amount": 27038.78
+    }
+   ],
+   "total": 27038.78,
+   "by_filer": [
+    {
+     "filer": "Maine Senate Republicans",
+     "amount": 27038.78,
+     "helps_d": 0,
+     "helps_r": 0,
+     "helps_o": 27038.78,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SS",
   "registration": {
    "dem_pct": 34.4,
@@ -4971,6 +5027,13 @@
    ],
    "spending": [
     {
+     "candidate": "Ronald Russell",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 425.9
+    },
+    {
      "candidate": "Steven Bishop",
      "party": "R",
      "stance": "Oppose",
@@ -4978,15 +5041,15 @@
      "amount": 659.77
     }
    ],
-   "total": 659.77,
+   "total": 1085.67,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 659.77,
-     "helps_d": 659.77,
+     "amount": 1085.67,
+     "helps_d": 1085.67,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     }
    ]
   },
@@ -5351,11 +5414,19 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 1120
+     "amount": 1468.18
     }
    ],
-   "total": 2069.14,
+   "total": 2417.32,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1297.32,
+     "helps_d": 1297.32,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 2
+    },
     {
      "filer": "Maine Conservation Voters Action Fund",
      "amount": 1120,
@@ -5364,14 +5435,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Principal officer: Maureen Drouin"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 949.14,
-     "helps_d": 949.14,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 1
     }
    ]
   },
@@ -5916,18 +5979,18 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 1385.59
+     "amount": 1896.97
     }
    ],
-   "total": 1385.59,
+   "total": 1896.97,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 869.44,
-     "helps_d": 869.44,
+     "amount": 1380.82,
+     "helps_d": 1380.82,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     },
     {
      "filer": "MPA Campaign Vote!",
@@ -6125,18 +6188,18 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 736
+     "amount": 1147.46
     }
    ],
-   "total": 1774.18,
+   "total": 2185.64,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 1038.18,
-     "helps_d": 1038.18,
+     "amount": 1449.64,
+     "helps_d": 1449.64,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
@@ -6313,9 +6376,16 @@
      "stance": "Oppose",
      "helps": "D",
      "amount": 720.8
+    },
+    {
+     "candidate": "Roland Martin",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 494.73
     }
    ],
-   "total": 3622.71,
+   "total": 4117.44,
    "by_filer": [
     {
      "filer": "Leadership for Maine's Future PAC",
@@ -6328,11 +6398,11 @@
     },
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 720.8,
-     "helps_d": 720.8,
+     "amount": 1215.53,
+     "helps_d": 1215.53,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     },
     {
      "filer": "People Over Politics PAC",
@@ -6743,7 +6813,7 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 453.69
+     "amount": 835.18
     },
     {
      "candidate": "Patrick Jude",
@@ -6753,7 +6823,7 @@
      "amount": 1678.82
     }
    ],
-   "total": 2132.51,
+   "total": 2514.0,
    "by_filer": [
     {
      "filer": "Prosper Maine PAC",
@@ -6765,6 +6835,14 @@
      "leader": "Principal officer: Brenda Hankins"
     },
     {
+     "filer": "Maine Democratic State Committee",
+     "amount": 835.18,
+     "helps_d": 835.18,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 2
+    },
+    {
      "filer": "People Over Politics PAC",
      "amount": 807.82,
      "helps_d": 0,
@@ -6772,14 +6850,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 453.69,
-     "helps_d": 453.69,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 1
     }
    ]
   },
@@ -7078,7 +7148,7 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 679.16
+     "amount": 1121.71
     },
     {
      "candidate": "William St. Michel",
@@ -7088,7 +7158,7 @@
      "amount": 2151.43
     }
    ],
-   "total": 2830.59,
+   "total": 3273.14,
    "by_filer": [
     {
      "filer": "Prosper Maine PAC",
@@ -7100,6 +7170,14 @@
      "leader": "Principal officer: Brenda Hankins"
     },
     {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1121.71,
+     "helps_d": 1121.71,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 2
+    },
+    {
      "filer": "People Over Politics PAC",
      "amount": 979.43,
      "helps_d": 0,
@@ -7107,14 +7185,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 679.16,
-     "helps_d": 679.16,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 1
     }
    ]
   },
@@ -8428,6 +8498,13 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
+     "amount": 550.2
+    },
+    {
+     "candidate": "Domingo Torres",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
      "amount": 192.02
     },
     {
@@ -8436,17 +8513,18 @@
      "stance": "Support",
      "helps": "R",
      "amount": 1345.35
-    },
-    {
-     "candidate": "Domingo Torres",
-     "party": "R",
-     "stance": "Oppose",
-     "helps": "D",
-     "amount": 192.02
     }
    ],
-   "total": 1729.39,
+   "total": 2087.57,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 742.22,
+     "helps_d": 742.22,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 2
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 684.35,
@@ -8464,14 +8542,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Principal officer: Brenda Hankins"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 384.04,
-     "helps_d": 384.04,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 1
     }
    ]
   },
@@ -9049,7 +9119,7 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 960
+     "amount": 1409.21
     },
     {
      "candidate": "Peter Wood",
@@ -9066,8 +9136,16 @@
      "amount": 1168
     }
    ],
-   "total": 3247.32,
+   "total": 3696.53,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1568.53,
+     "helps_d": 1568.53,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 2
+    },
     {
      "filer": "Prosper Maine PAC",
      "amount": 1168,
@@ -9076,14 +9154,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Principal officer: Brenda Hankins"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 1119.32,
-     "helps_d": 1119.32,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 1
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
@@ -9724,7 +9794,35 @@
   ],
   "chamber": "Senate",
   "district": 11,
-  "ie": null,
+  "ie": {
+   "office": "SS",
+   "district": 11,
+   "chamber": "Senate",
+   "candidates": [
+    "Glenn Curry (D)",
+    "Ryan Otis (R)"
+   ],
+   "spending": [
+    {
+     "candidate": "Ryan Otis",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 15548.87
+    }
+   ],
+   "total": 15548.87,
+   "by_filer": [
+    {
+     "filer": "Maine Senate Republicans",
+     "amount": 15548.87,
+     "helps_d": 0,
+     "helps_r": 15548.87,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SS",
   "registration": {
    "dem_pct": 32.6,
@@ -9814,27 +9912,35 @@
     {
      "candidate": "Charles Hippler IV",
      "party": "R",
-     "stance": "Support",
-     "helps": "R",
-     "amount": 897.81
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 348.19
     },
     {
      "candidate": "Charles Hippler IV",
      "party": "R",
-     "stance": "Oppose",
-     "helps": "D",
-     "amount": 348.19
+     "stance": "Support",
+     "helps": "R",
+     "amount": 897.81
     },
     {
      "candidate": "Maureen AuCoin",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 348.2
+     "amount": 772.99
     }
    ],
-   "total": 1594.2,
+   "total": 2018.99,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1121.18,
+     "helps_d": 1121.18,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 2
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 897.81,
@@ -9843,14 +9949,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 696.39,
-     "helps_d": 696.39,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 1
     }
    ]
   },
@@ -10463,34 +10561,34 @@
     {
      "candidate": "Kerryl Clement",
      "party": "R",
-     "stance": "Support",
-     "helps": "R",
-     "amount": 769.63
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 612.43
     },
     {
      "candidate": "Kerryl Clement",
      "party": "R",
-     "stance": "Oppose",
-     "helps": "D",
-     "amount": 612.43
+     "stance": "Support",
+     "helps": "R",
+     "amount": 769.63
     },
     {
      "candidate": "Luke Jensen",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 612.44
+     "amount": 1103.84
     }
    ],
-   "total": 1994.5,
+   "total": 2485.9,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 1224.87,
-     "helps_d": 1224.87,
+     "amount": 1716.27,
+     "helps_d": 1716.27,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     },
     {
      "filer": "People Over Politics PAC",
@@ -10886,27 +10984,35 @@
     {
      "candidate": "John Reny",
      "party": "R",
-     "stance": "Support",
-     "helps": "R",
-     "amount": 1426.67
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 335.27
     },
     {
      "candidate": "John Reny",
      "party": "R",
-     "stance": "Oppose",
-     "helps": "D",
-     "amount": 335.27
+     "stance": "Support",
+     "helps": "R",
+     "amount": 1426.67
     },
     {
      "candidate": "Katrina Couch Ray-Saulis",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 335.27
+     "amount": 787.81
     }
    ],
-   "total": 2097.21,
+   "total": 2549.75,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1123.08,
+     "helps_d": 1123.08,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 2
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 770.67,
@@ -10915,14 +11021,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 670.54,
-     "helps_d": 670.54,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 1
     },
     {
      "filer": "Prosper Maine PAC",
@@ -11099,7 +11197,7 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 202.79
+     "amount": 505.46
     },
     {
      "candidate": "Melissa Simpson",
@@ -11109,15 +11207,15 @@
      "amount": 202.79
     }
    ],
-   "total": 405.58,
+   "total": 708.25,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 405.58,
-     "helps_d": 405.58,
+     "amount": 708.25,
+     "helps_d": 708.25,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     }
    ]
   },
@@ -11702,6 +11800,13 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
+     "amount": 579.85
+    },
+    {
+     "candidate": "Randall Gauvin",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
      "amount": 250.54
     },
     {
@@ -11710,16 +11815,9 @@
      "stance": "Support",
      "helps": "R",
      "amount": 1581.29
-    },
-    {
-     "candidate": "Randall Gauvin",
-     "party": "R",
-     "stance": "Oppose",
-     "helps": "D",
-     "amount": 250.54
     }
    ],
-   "total": 2082.37,
+   "total": 2411.68,
    "by_filer": [
     {
      "filer": "Prosper Maine PAC",
@@ -11731,6 +11829,14 @@
      "leader": "Principal officer: Brenda Hankins"
     },
     {
+     "filer": "Maine Democratic State Committee",
+     "amount": 830.39,
+     "helps_d": 830.39,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 2
+    },
+    {
      "filer": "People Over Politics PAC",
      "amount": 694.29,
      "helps_d": 0,
@@ -11738,14 +11844,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 501.08,
-     "helps_d": 501.08,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 1
     }
    ]
   },
@@ -12619,6 +12717,13 @@
    ],
    "spending": [
     {
+     "candidate": "Michael Cunningham II",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 418.13
+    },
+    {
      "candidate": "Russell White",
      "party": "R",
      "stance": "Oppose",
@@ -12633,7 +12738,7 @@
      "amount": 1026
     }
    ],
-   "total": 1615.4,
+   "total": 2033.53,
    "by_filer": [
     {
      "filer": "Prosper Maine PAC",
@@ -12646,11 +12751,11 @@
     },
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 589.4,
-     "helps_d": 589.4,
+     "amount": 1007.53,
+     "helps_d": 1007.53,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     }
    ]
   },
@@ -12908,10 +13013,10 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 694.23
+     "amount": 1052.41
     }
    ],
-   "total": 2701.46,
+   "total": 3059.64,
    "by_filer": [
     {
      "filer": "Prosper Maine PAC",
@@ -12923,6 +13028,14 @@
      "leader": "Principal officer: Brenda Hankins"
     },
     {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1052.41,
+     "helps_d": 1052.41,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 2
+    },
+    {
      "filer": "People Over Politics PAC",
      "amount": 907.23,
      "helps_d": 0,
@@ -12930,14 +13043,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 694.23,
-     "helps_d": 694.23,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 1
     }
    ]
   },
@@ -13997,18 +14102,18 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 189.87
+     "amount": 442.58
     }
    ],
-   "total": 379.73,
+   "total": 632.44,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 379.73,
-     "helps_d": 379.73,
+     "amount": 632.44,
+     "helps_d": 632.44,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     }
    ]
   },
@@ -15384,6 +15489,13 @@
    ],
    "spending": [
     {
+     "candidate": "Abigail Geer",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 390.37
+    },
+    {
      "candidate": "Rolf Olsen Jr.",
      "party": "R",
      "stance": "Oppose",
@@ -15391,15 +15503,15 @@
      "amount": 1207.64
     }
    ],
-   "total": 1207.64,
+   "total": 1598.01,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 1207.64,
-     "helps_d": 1207.64,
+     "amount": 1598.01,
+     "helps_d": 1598.01,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     }
    ]
   },
@@ -15644,18 +15756,18 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 829.49
+     "amount": 1226.52
     }
    ],
-   "total": 1274.98,
+   "total": 1672.01,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 890.98,
-     "helps_d": 890.98,
+     "amount": 1288.01,
+     "helps_d": 1288.01,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1
+     "transactions": 2
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
