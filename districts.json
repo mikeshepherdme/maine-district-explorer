@@ -3627,7 +3627,7 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 2158.72
+     "amount": 3133.44
     },
     {
      "candidate": "Wayne Farrin",
@@ -3637,8 +3637,17 @@
      "amount": 1214.92
     }
    ],
-   "total": 3373.64,
+   "total": 4348.36,
    "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 1949.44,
+     "helps_d": 0,
+     "helps_r": 1949.44,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
+    },
     {
      "filer": "Maine Democratic State Committee",
      "amount": 1214.92,
@@ -3655,15 +3664,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Principal officer: Brenda Hankins"
-    },
-    {
-     "filer": "People Over Politics PAC",
-     "amount": 974.72,
-     "helps_d": 0,
-     "helps_r": 974.72,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     }
    ]
   },
@@ -6508,16 +6508,16 @@
     {
      "candidate": "Roger Albert",
      "party": "R",
-     "stance": "Support",
-     "helps": "R",
-     "amount": 2901.91
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 720.8
     },
     {
      "candidate": "Roger Albert",
      "party": "R",
-     "stance": "Oppose",
-     "helps": "D",
-     "amount": 720.8
+     "stance": "Support",
+     "helps": "R",
+     "amount": 3553.82
     },
     {
      "candidate": "Roland Martin",
@@ -6527,7 +6527,7 @@
      "amount": 494.73
     }
    ],
-   "total": 4117.44,
+   "total": 4769.35,
    "by_filer": [
     {
      "filer": "Leadership for Maine's Future PAC",
@@ -6539,21 +6539,21 @@
      "leader": "Led by Rep. Kenneth Fredette, R-Newport"
     },
     {
+     "filer": "People Over Politics PAC",
+     "amount": 1303.82,
+     "helps_d": 0,
+     "helps_r": 1303.82,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
+    },
+    {
      "filer": "Maine Democratic State Committee",
      "amount": 1215.53,
      "helps_d": 1215.53,
      "helps_r": 0,
      "helps_o": 0,
      "transactions": 2
-    },
-    {
-     "filer": "People Over Politics PAC",
-     "amount": 651.91,
-     "helps_d": 0,
-     "helps_r": 651.91,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     }
    ]
   },
@@ -6962,11 +6962,20 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1932.67
+     "amount": 2740.49
     }
    ],
-   "total": 2767.85,
+   "total": 3575.67,
    "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 1615.64,
+     "helps_d": 0,
+     "helps_r": 1615.64,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
+    },
     {
      "filer": "Prosper Maine PAC",
      "amount": 871,
@@ -6983,15 +6992,6 @@
      "helps_r": 0,
      "helps_o": 0,
      "transactions": 2
-    },
-    {
-     "filer": "People Over Politics PAC",
-     "amount": 807.82,
-     "helps_d": 0,
-     "helps_r": 807.82,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
      "filer": "Common Sense for Maine",
@@ -7320,11 +7320,20 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 2151.43
+     "amount": 3130.86
     }
    ],
-   "total": 3748.14,
+   "total": 4727.57,
    "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 1958.86,
+     "helps_d": 0,
+     "helps_r": 1958.86,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
+    },
     {
      "filer": "Prosper Maine PAC",
      "amount": 1172,
@@ -7341,15 +7350,6 @@
      "helps_r": 0,
      "helps_o": 0,
      "transactions": 2
-    },
-    {
-     "filer": "People Over Politics PAC",
-     "amount": 979.43,
-     "helps_d": 0,
-     "helps_r": 979.43,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
@@ -8750,11 +8750,20 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1345.35
+     "amount": 2029.7
     }
    ],
-   "total": 2087.57,
+   "total": 2771.92,
    "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 1368.7,
+     "helps_d": 0,
+     "helps_r": 1368.7,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
+    },
     {
      "filer": "Maine Democratic State Committee",
      "amount": 742.22,
@@ -8762,15 +8771,6 @@
      "helps_r": 0,
      "helps_o": 0,
      "transactions": 2
-    },
-    {
-     "filer": "People Over Politics PAC",
-     "amount": 684.35,
-     "helps_d": 0,
-     "helps_r": 684.35,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
      "filer": "Prosper Maine PAC",
@@ -8934,7 +8934,7 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 2347.84
+     "amount": 3381.68
     },
     {
      "candidate": "Sharon Frost",
@@ -8944,8 +8944,17 @@
      "amount": 1022.94
     }
    ],
-   "total": 3370.78,
+   "total": 4404.62,
    "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 2067.68,
+     "helps_d": 0,
+     "helps_r": 2067.68,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
+    },
     {
      "filer": "Prosper Maine PAC",
      "amount": 1314,
@@ -8954,15 +8963,6 @@
      "helps_o": 0,
      "transactions": 1,
      "leader": "Principal officer: Brenda Hankins"
-    },
-    {
-     "filer": "People Over Politics PAC",
-     "amount": 1033.84,
-     "helps_d": 0,
-     "helps_r": 1033.84,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
      "filer": "Strong Maine Communities PAC",
@@ -10159,7 +10159,7 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 897.81
+     "amount": 1795.62
     },
     {
      "candidate": "Maureen AuCoin",
@@ -10169,8 +10169,17 @@
      "amount": 772.99
     }
    ],
-   "total": 2018.99,
+   "total": 2916.8,
    "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 1795.62,
+     "helps_d": 0,
+     "helps_r": 1795.62,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
+    },
     {
      "filer": "Maine Democratic State Committee",
      "amount": 1121.18,
@@ -10178,15 +10187,6 @@
      "helps_r": 0,
      "helps_o": 0,
      "transactions": 2
-    },
-    {
-     "filer": "People Over Politics PAC",
-     "amount": 897.81,
-     "helps_d": 0,
-     "helps_r": 897.81,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     }
    ]
   },
@@ -10808,7 +10808,7 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1023.48
+     "amount": 1793.11
     },
     {
      "candidate": "Luke Jensen",
@@ -10818,7 +10818,7 @@
      "amount": 1103.84
     }
    ],
-   "total": 2739.75,
+   "total": 3509.38,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
@@ -10830,11 +10830,11 @@
     },
     {
      "filer": "People Over Politics PAC",
-     "amount": 769.63,
+     "amount": 1539.26,
      "helps_d": 0,
-     "helps_r": 769.63,
+     "helps_r": 1539.26,
      "helps_o": 0,
-     "transactions": 1,
+     "transactions": 2,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
@@ -11267,7 +11267,7 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1426.67
+     "amount": 2197.34
     },
     {
      "candidate": "Katrina Couch Ray-Saulis",
@@ -11277,8 +11277,17 @@
      "amount": 787.81
     }
    ],
-   "total": 2549.75,
+   "total": 3320.42,
    "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 1541.34,
+     "helps_d": 0,
+     "helps_r": 1541.34,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
+    },
     {
      "filer": "Maine Democratic State Committee",
      "amount": 1123.08,
@@ -11286,15 +11295,6 @@
      "helps_r": 0,
      "helps_o": 0,
      "transactions": 2
-    },
-    {
-     "filer": "People Over Politics PAC",
-     "amount": 770.67,
-     "helps_d": 0,
-     "helps_r": 770.67,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
      "filer": "Prosper Maine PAC",
@@ -12103,11 +12103,20 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1835.14
+     "amount": 2529.43
     }
    ],
-   "total": 2665.53,
+   "total": 3359.82,
    "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 1388.58,
+     "helps_d": 0,
+     "helps_r": 1388.58,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
+    },
     {
      "filer": "Prosper Maine PAC",
      "amount": 887,
@@ -12124,15 +12133,6 @@
      "helps_r": 0,
      "helps_o": 0,
      "transactions": 2
-    },
-    {
-     "filer": "People Over Politics PAC",
-     "amount": 694.29,
-     "helps_d": 0,
-     "helps_r": 694.29,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
      "filer": "Common Sense for Maine",
@@ -13318,7 +13318,7 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 2261.08
+     "amount": 3168.31
     },
     {
      "candidate": "Sally Cluchey",
@@ -13328,8 +13328,17 @@
      "amount": 1052.41
     }
    ],
-   "total": 3313.49,
+   "total": 4220.72,
    "by_filer": [
+    {
+     "filer": "People Over Politics PAC",
+     "amount": 1814.46,
+     "helps_d": 0,
+     "helps_r": 1814.46,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
+    },
     {
      "filer": "Prosper Maine PAC",
      "amount": 1100,
@@ -13346,15 +13355,6 @@
      "helps_r": 0,
      "helps_o": 0,
      "transactions": 2
-    },
-    {
-     "filer": "People Over Politics PAC",
-     "amount": 907.23,
-     "helps_d": 0,
-     "helps_r": 907.23,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
      "filer": "Common Sense for Maine",
@@ -15218,18 +15218,18 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 796.83
+     "amount": 1593.66
     }
    ],
-   "total": 796.83,
+   "total": 1593.66,
    "by_filer": [
     {
      "filer": "People Over Politics PAC",
-     "amount": 796.83,
+     "amount": 1593.66,
      "helps_d": 0,
-     "helps_r": 796.83,
+     "helps_r": 1593.66,
      "helps_o": 0,
-     "transactions": 1,
+     "transactions": 2,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     }
    ]
