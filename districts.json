@@ -34,25 +34,33 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 60358.93
+     "amount": 66355.98
     },
     {
      "candidate": "Kati McCormick",
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 6270.0
+     "amount": 12267.04
     }
    ],
-   "total": 66628.93,
+   "total": 78623.02,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 66023.73,
-     "helps_d": 66023.73,
+     "amount": 72271.37,
+     "helps_d": 72271.37,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 14
+     "transactions": 15
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 5746.45,
+     "helps_d": 5746.45,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
@@ -560,7 +568,42 @@
   ],
   "chamber": "House",
   "district": 85,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 85,
+   "chamber": "House",
+   "candidates": [
+    "Adrienne Paul (R)",
+    "Paul Welch (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Adrienne Paul",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 828.07
+    },
+    {
+     "candidate": "Paul Welch",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 828.08
+    }
+   ],
+   "total": 1656.15,
+   "by_filer": [
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1656.15,
+     "helps_d": 1656.15,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 27.7,
@@ -999,41 +1042,49 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 337.08
+     "amount": 1193.21
     },
     {
      "candidate": "Mark Cooper",
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 727.26
+     "amount": 2303.43
     },
     {
      "candidate": "Mark Cooper",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1054
+     "amount": 5413.0
     }
    ],
-   "total": 2118.34,
+   "total": 8909.64,
    "by_filer": [
     {
-     "filer": "Maine Democratic State Committee",
-     "amount": 1064.34,
-     "helps_d": 1064.34,
-     "helps_r": 0,
+     "filer": "Prosper Maine PAC",
+     "amount": 5413.0,
+     "helps_d": 0,
+     "helps_r": 5413.0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 2,
+     "leader": "Principal officer: Brenda Hankins"
     },
     {
-     "filer": "Prosper Maine PAC",
-     "amount": 1054,
-     "helps_d": 0,
-     "helps_r": 1054,
+     "filer": "Maine Democratic State Committee",
+     "amount": 1784.39,
+     "helps_d": 1784.39,
+     "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1,
-     "leader": "Principal officer: Brenda Hankins"
+     "transactions": 3
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1712.25,
+     "helps_d": 1712.25,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     }
    ]
   },
@@ -2253,23 +2304,53 @@
    ],
    "spending": [
     {
+     "candidate": "Matthew Townsend",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 572.35
+    },
+    {
+     "candidate": "Shawn Dixon",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 572.34
+    },
+    {
      "candidate": "Shawn Dixon",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 912
+     "amount": 7395.18
     }
    ],
-   "total": 912,
+   "total": 8539.87,
    "by_filer": [
     {
      "filer": "Prosper Maine PAC",
-     "amount": 912,
+     "amount": 5176.0,
      "helps_d": 0,
-     "helps_r": 912,
+     "helps_r": 5176.0,
      "helps_o": 0,
-     "transactions": 1,
+     "transactions": 2,
      "leader": "Principal officer: Brenda Hankins"
+    },
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2219.18,
+     "helps_d": 0,
+     "helps_r": 2219.18,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1144.69,
+     "helps_d": 1144.69,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     }
    ]
   },
@@ -2442,25 +2523,33 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 399.25
+     "amount": 1071.27
     },
     {
      "candidate": "Quentin Chapman",
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 729.42
+     "amount": 2262.26
     }
    ],
-   "total": 1128.67,
+   "total": 3333.53,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 1128.67,
-     "helps_d": 1128.67,
+     "amount": 1989.49,
+     "helps_d": 1989.49,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 3
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1344.04,
+     "helps_d": 1344.04,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     }
    ]
   },
@@ -2919,18 +3008,26 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 5150.23
+     "amount": 8447.81
     },
     {
      "candidate": "John Andrews",
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 1345.03
+     "amount": 4642.6
     }
    ],
-   "total": 6495.26,
+   "total": 13090.41,
    "by_filer": [
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 6595.15,
+     "helps_d": 6595.15,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "Maine Conservation Voters Action Fund",
      "amount": 3805.2,
@@ -3041,25 +3138,33 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 696.39
+     "amount": 2353.04
     },
     {
      "candidate": "Bradley Youngs",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 392.59
+     "amount": 1281.79
     }
    ],
-   "total": 1088.98,
+   "total": 3634.83,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 1088.98,
-     "helps_d": 1088.98,
+     "amount": 1856.43,
+     "helps_d": 1856.43,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 3
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1778.4,
+     "helps_d": 1778.4,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     }
    ]
   },
@@ -3228,6 +3333,13 @@
    ],
    "spending": [
     {
+     "candidate": "Andrew Gattine",
+     "party": "D",
+     "stance": "Oppose",
+     "helps": "R",
+     "amount": 8250.0
+    },
+    {
      "candidate": "Ethan Mongue",
      "party": "R",
      "stance": "Support",
@@ -3235,8 +3347,17 @@
      "amount": 253.85
     }
    ],
-   "total": 253.85,
+   "total": 8503.85,
    "by_filer": [
+    {
+     "filer": "Win Back Maine",
+     "amount": 8250.0,
+     "helps_d": 0,
+     "helps_r": 8250.0,
+     "helps_o": 0,
+     "transactions": 1,
+     "leader": "Leadership PAC of Rep. Katrina Smith, R-Palermo"
+    },
     {
      "filer": "Common Sense for Maine",
      "amount": 253.85,
@@ -3625,20 +3746,68 @@
     {
      "candidate": "Chester Grover III",
      "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 782.14
+    },
+    {
+     "candidate": "Chester Grover III",
+     "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 3133.44
+     "amount": 10511.76
+    },
+    {
+     "candidate": "Wayne Farrin",
+     "party": "D",
+     "stance": "Oppose",
+     "helps": "R",
+     "amount": 8250.0
     },
     {
      "candidate": "Wayne Farrin",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 1214.92
+     "amount": 3500.89
     }
    ],
-   "total": 4348.36,
+   "total": 23044.79,
    "by_filer": [
+    {
+     "filer": "Win Back Maine",
+     "amount": 8250.0,
+     "helps_d": 0,
+     "helps_r": 8250.0,
+     "helps_o": 0,
+     "transactions": 1,
+     "leader": "Leadership PAC of Rep. Katrina Smith, R-Palermo"
+    },
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 6208.0,
+     "helps_d": 0,
+     "helps_r": 6208.0,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Principal officer: Brenda Hankins"
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 2718.74,
+     "helps_d": 2718.74,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
+    },
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2354.32,
+     "helps_d": 0,
+     "helps_r": 2354.32,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 1949.44,
@@ -3649,21 +3818,12 @@
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
-     "filer": "Maine Democratic State Committee",
-     "amount": 1214.92,
-     "helps_d": 1214.92,
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1564.29,
+     "helps_d": 1564.29,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
-    },
-    {
-     "filer": "Prosper Maine PAC",
-     "amount": 1184,
-     "helps_d": 0,
-     "helps_r": 1184,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Principal officer: Brenda Hankins"
+     "transactions": 1
     }
    ]
   },
@@ -3848,18 +4008,18 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 76491.73
+     "amount": 83614.23
     }
    ],
-   "total": 83741.73,
+   "total": 90864.23,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 76491.73,
-     "helps_d": 76491.73,
+     "amount": 83614.23,
+     "helps_d": 83614.23,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 14
+     "transactions": 15
     },
     {
      "filer": "Maine Senate Republicans",
@@ -4099,7 +4259,42 @@
   ],
   "chamber": "House",
   "district": 140,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 140,
+   "chamber": "House",
+   "candidates": [
+    "Wayne Parry (R)",
+    "Kirstan Watson (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Kirstan Watson",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 843.78
+    },
+    {
+     "candidate": "Wayne Parry",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 843.77
+    }
+   ],
+   "total": 1687.55,
+   "by_filer": [
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1687.55,
+     "helps_d": 1687.55,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 28,
@@ -4253,18 +4448,18 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 715.78
+     "amount": 1972.36
     }
    ],
-   "total": 1181.64,
+   "total": 2438.22,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 1181.64,
-     "helps_d": 1181.64,
+     "amount": 2438.22,
+     "helps_d": 2438.22,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 3
     }
    ]
   },
@@ -4493,7 +4688,42 @@
   ],
   "chamber": "House",
   "district": 76,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 76,
+   "chamber": "House",
+   "candidates": [
+    "Trevor Doiron (D)",
+    "Sheila Lyman (R)"
+   ],
+   "spending": [
+    {
+     "candidate": "Sheila Lyman",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 657.04
+    },
+    {
+     "candidate": "Trevor Doiron",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 657.05
+    }
+   ],
+   "total": 1314.09,
+   "by_filer": [
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1314.09,
+     "helps_d": 1314.09,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 29.3,
@@ -5165,18 +5395,33 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 659.77
+     "amount": 1917.79
+    },
+    {
+     "candidate": "Steven Bishop",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 10787.5
     }
    ],
-   "total": 1085.67,
+   "total": 13131.19,
    "by_filer": [
     {
+     "filer": "Mainers for Economic Opportunity",
+     "amount": 10787.5,
+     "helps_d": 0,
+     "helps_r": 10787.5,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
      "filer": "Maine Democratic State Committee",
-     "amount": 1085.67,
-     "helps_d": 1085.67,
+     "amount": 2343.69,
+     "helps_d": 2343.69,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 3
     }
    ]
   },
@@ -5349,11 +5594,19 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 500
+     "amount": 2972.87
     }
    ],
-   "total": 500,
+   "total": 2972.87,
    "by_filer": [
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2472.87,
+     "helps_d": 0,
+     "helps_r": 2472.87,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "Leadership for Maine's Future PAC",
      "amount": 500,
@@ -5442,7 +5695,42 @@
   ],
   "chamber": "House",
   "district": 137,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 137,
+   "chamber": "House",
+   "candidates": [
+    "Nathan Carlow (R)",
+    "Charles Tilburg (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Charles Tilburg",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 828.3
+    },
+    {
+     "candidate": "Nathan Carlow",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 828.29
+    }
+   ],
+   "total": 1656.59,
+   "by_filer": [
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1656.59,
+     "helps_d": 1656.59,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 28.5,
@@ -5534,7 +5822,14 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 949.14
+     "amount": 1865.27
+    },
+    {
+     "candidate": "Marygrace Cimino",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 2679.14
     },
     {
      "candidate": "Timothy Becker",
@@ -5544,15 +5839,23 @@
      "amount": 1468.18
     }
    ],
-   "total": 2417.32,
+   "total": 6012.59,
    "by_filer": [
     {
+     "filer": "Renew the American Dream",
+     "amount": 2679.14,
+     "helps_d": 0,
+     "helps_r": 2679.14,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
      "filer": "Maine Democratic State Committee",
-     "amount": 1297.32,
-     "helps_d": 1297.32,
+     "amount": 2213.45,
+     "helps_d": 2213.45,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 3
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
@@ -6104,27 +6407,50 @@
     {
      "candidate": "Janet Beaudoin",
      "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 693.19
+    },
+    {
+     "candidate": "Janet Beaudoin",
+     "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 253.85
+     "amount": 2648.48
     },
     {
      "candidate": "Scott Harriman",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 1896.97
+     "amount": 4035.24
     }
    ],
-   "total": 2150.82,
+   "total": 7376.91,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 1380.82,
-     "helps_d": 1380.82,
+     "amount": 2825.89,
+     "helps_d": 2825.89,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 3
+    },
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2394.63,
+     "helps_d": 0,
+     "helps_r": 2394.63,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1386.39,
+     "helps_d": 1386.39,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     },
     {
      "filer": "MPA Campaign Vote!",
@@ -6323,25 +6649,48 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 1038.18
+     "amount": 2797.83
+    },
+    {
+     "candidate": "Caleb Ness",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 2368.55
     },
     {
      "candidate": "Christopher Lewey",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 1147.46
+     "amount": 1954.36
     }
    ],
-   "total": 2185.64,
+   "total": 7120.74,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 1449.64,
-     "helps_d": 1449.64,
+     "amount": 2402.4,
+     "helps_d": 2402.4,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 3
+    },
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2368.55,
+     "helps_d": 0,
+     "helps_r": 2368.55,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1613.79,
+     "helps_d": 1613.79,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
@@ -6510,14 +6859,14 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 720.8
+     "amount": 2070.75
     },
     {
      "candidate": "Roger Albert",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 3553.82
+     "amount": 6211.6
     },
     {
      "candidate": "Roland Martin",
@@ -6527,8 +6876,24 @@
      "amount": 494.73
     }
    ],
-   "total": 4769.35,
+   "total": 8777.08,
    "by_filer": [
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2657.78,
+     "helps_d": 0,
+     "helps_r": 2657.78,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 2565.48,
+     "helps_d": 2565.48,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
+    },
     {
      "filer": "Leadership for Maine's Future PAC",
      "amount": 2250,
@@ -6546,14 +6911,6 @@
      "helps_o": 0,
      "transactions": 2,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 1215.53,
-     "helps_d": 1215.53,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 2
     }
    ]
   },
@@ -6953,20 +7310,44 @@
     {
      "candidate": "Dani O'Halloran",
      "party": "D",
+     "stance": "Oppose",
+     "helps": "R",
+     "amount": 2065.5
+    },
+    {
+     "candidate": "Dani O'Halloran",
+     "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 835.18
+     "amount": 1908.86
     },
     {
      "candidate": "Patrick Jude",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 2740.49
+     "amount": 4805.99
     }
    ],
-   "total": 3575.67,
+   "total": 8780.35,
    "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 5002.0,
+     "helps_d": 0,
+     "helps_r": 5002.0,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Principal officer: Brenda Hankins"
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1908.86,
+     "helps_d": 1908.86,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 1615.64,
@@ -6975,23 +7356,6 @@
      "helps_o": 0,
      "transactions": 2,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Prosper Maine PAC",
-     "amount": 871,
-     "helps_d": 0,
-     "helps_r": 871,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Principal officer: Brenda Hankins"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 835.18,
-     "helps_d": 835.18,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 2
     },
     {
      "filer": "Common Sense for Maine",
@@ -7311,20 +7675,76 @@
     {
      "candidate": "Kilton Webb",
      "party": "D",
+     "stance": "Oppose",
+     "helps": "R",
+     "amount": 10566.0
+    },
+    {
+     "candidate": "Kilton Webb",
+     "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 1596.71
+     "amount": 3806.57
+    },
+    {
+     "candidate": "William St. Michel",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 830.2
     },
     {
      "candidate": "William St. Michel",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 3130.86
+     "amount": 19086.57
     }
    ],
-   "total": 4727.57,
+   "total": 34289.34,
    "by_filer": [
+    {
+     "filer": "Mainers for Economic Opportunity",
+     "amount": 10787.5,
+     "helps_d": 0,
+     "helps_r": 10787.5,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Win Back Maine",
+     "amount": 8250.0,
+     "helps_d": 0,
+     "helps_r": 8250.0,
+     "helps_o": 0,
+     "transactions": 1,
+     "leader": "Leadership PAC of Rep. Katrina Smith, R-Palermo"
+    },
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 5804.0,
+     "helps_d": 0,
+     "helps_r": 5804.0,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Principal officer: Brenda Hankins"
+    },
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2852.21,
+     "helps_d": 0,
+     "helps_r": 2852.21,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 2501.37,
+     "helps_d": 2501.37,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 1958.86,
@@ -7335,21 +7755,12 @@
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
-     "filer": "Prosper Maine PAC",
-     "amount": 1172,
-     "helps_d": 0,
-     "helps_r": 1172,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Principal officer: Brenda Hankins"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 1121.71,
-     "helps_d": 1121.71,
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1660.4,
+     "helps_d": 1660.4,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 1
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
@@ -7864,18 +8275,18 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1323.85
+     "amount": 5935.85
     }
    ],
-   "total": 1323.85,
+   "total": 5935.85,
    "by_filer": [
     {
      "filer": "Prosper Maine PAC",
-     "amount": 1070,
+     "amount": 5682.0,
      "helps_d": 0,
-     "helps_r": 1070,
+     "helps_r": 5682.0,
      "helps_o": 0,
-     "transactions": 1,
+     "transactions": 2,
      "leader": "Principal officer: Brenda Hankins"
     },
     {
@@ -8736,25 +9147,50 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 550.2
+     "amount": 1296.92
     },
     {
      "candidate": "Domingo Torres",
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 192.02
+     "amount": 1588.4
     },
     {
      "candidate": "Domingo Torres",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 2029.7
+     "amount": 5479.7
     }
    ],
-   "total": 2771.92,
+   "total": 8365.02,
    "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 4111.0,
+     "helps_d": 0,
+     "helps_r": 4111.0,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Principal officer: Brenda Hankins"
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1493.44,
+     "helps_d": 1493.44,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1391.88,
+     "helps_d": 1391.88,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 1368.7,
@@ -8763,23 +9199,6 @@
      "helps_o": 0,
      "transactions": 2,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 742.22,
-     "helps_d": 742.22,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 2
-    },
-    {
-     "filer": "Prosper Maine PAC",
-     "amount": 661,
-     "helps_d": 0,
-     "helps_r": 661,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Principal officer: Brenda Hankins"
     }
    ]
   },
@@ -8932,20 +9351,69 @@
     {
      "candidate": "Dexter Bridges Jr.",
      "party": "R",
+     "stance": "Oppose",
+     "helps": "O",
+     "amount": 754.09
+    },
+    {
+     "candidate": "Dexter Bridges Jr.",
+     "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 3381.68
+     "amount": 8312.77
+    },
+    {
+     "candidate": "Sharon Frost",
+     "party": "I",
+     "stance": "Oppose",
+     "helps": "O",
+     "amount": 10841.0
     },
     {
      "candidate": "Sharon Frost",
      "party": "I",
      "stance": "Support",
      "helps": "O",
-     "amount": 1022.94
+     "amount": 3286.42
     }
    ],
-   "total": 4404.62,
+   "total": 23194.28,
    "by_filer": [
+    {
+     "filer": "Win Back Maine",
+     "amount": 8250.0,
+     "helps_d": 0,
+     "helps_r": 0,
+     "helps_o": 8250.0,
+     "transactions": 1,
+     "leader": "Leadership PAC of Rep. Katrina Smith, R-Palermo"
+    },
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 6496.0,
+     "helps_d": 0,
+     "helps_r": 3905.0,
+     "helps_o": 2591.0,
+     "transactions": 2,
+     "leader": "Principal officer: Brenda Hankins"
+    },
+    {
+     "filer": "Strong Maine Communities PAC",
+     "amount": 2532.32,
+     "helps_d": 0,
+     "helps_r": 0,
+     "helps_o": 2532.32,
+     "transactions": 2,
+     "leader": "Led by Rep. Marc Malon, D-Biddeford"
+    },
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2340.09,
+     "helps_d": 0,
+     "helps_r": 2340.09,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 2067.68,
@@ -8956,22 +9424,12 @@
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
-     "filer": "Prosper Maine PAC",
-     "amount": 1314,
-     "helps_d": 0,
-     "helps_r": 1314,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Principal officer: Brenda Hankins"
-    },
-    {
-     "filer": "Strong Maine Communities PAC",
-     "amount": 1022.94,
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1508.19,
      "helps_d": 0,
      "helps_r": 0,
-     "helps_o": 1022.94,
-     "transactions": 1,
-     "leader": "Led by Rep. Marc Malon, D-Biddeford"
+     "helps_o": 1508.19,
+     "transactions": 1
     }
    ]
   },
@@ -9195,7 +9653,42 @@
   ],
   "chamber": "House",
   "district": 78,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 78,
+   "chamber": "House",
+   "candidates": [
+    "Rachel Henderson (R)",
+    "Woodleigh Hughes (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Rachel Henderson",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 733.14
+    },
+    {
+     "candidate": "Woodleigh Hughes",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 733.15
+    }
+   ],
+   "total": 1466.29,
+   "by_filer": [
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1466.29,
+     "helps_d": 1466.29,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 29.2,
@@ -9357,41 +9850,49 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 1409.21
+     "amount": 2176.61
     },
     {
      "candidate": "Peter Wood",
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 1119.32
+     "amount": 2846.65
     },
     {
      "candidate": "Peter Wood",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1168
+     "amount": 5940.0
     }
    ],
-   "total": 3696.53,
+   "total": 10963.26,
    "by_filer": [
     {
-     "filer": "Maine Democratic State Committee",
-     "amount": 1568.53,
-     "helps_d": 1568.53,
-     "helps_r": 0,
+     "filer": "Prosper Maine PAC",
+     "amount": 5940.0,
+     "helps_d": 0,
+     "helps_r": 5940.0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 2,
+     "leader": "Principal officer: Brenda Hankins"
     },
     {
-     "filer": "Prosper Maine PAC",
-     "amount": 1168,
-     "helps_d": 0,
-     "helps_r": 1168,
+     "filer": "Maine Democratic State Committee",
+     "amount": 2528.47,
+     "helps_d": 2528.47,
+     "helps_r": 0,
      "helps_o": 0,
-     "transactions": 1,
-     "leader": "Principal officer: Brenda Hankins"
+     "transactions": 3
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1534.79,
+     "helps_d": 1534.79,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
@@ -10152,25 +10653,41 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 348.19
+     "amount": 2231.45
     },
     {
      "candidate": "Charles Hippler IV",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1795.62
+     "amount": 4164.17
     },
     {
      "candidate": "Maureen AuCoin",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 772.99
+     "amount": 1531.11
     }
    ],
-   "total": 2916.8,
+   "total": 7926.73,
    "by_filer": [
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2368.55,
+     "helps_d": 0,
+     "helps_r": 2368.55,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 2246.32,
+     "helps_d": 2246.32,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 1795.62,
@@ -10181,12 +10698,12 @@
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
-     "filer": "Maine Democratic State Committee",
-     "amount": 1121.18,
-     "helps_d": 1121.18,
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1516.24,
+     "helps_d": 1516.24,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 1
     }
    ]
   },
@@ -10415,7 +10932,42 @@
   ],
   "chamber": "House",
   "district": 43,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 43,
+   "chamber": "House",
+   "candidates": [
+    "Christopher Austin (R)",
+    "Rhiannon Hampson (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Christopher Austin",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 882.77
+    },
+    {
+     "candidate": "Rhiannon Hampson",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 882.78
+    }
+   ],
+   "total": 1765.55,
+   "by_filer": [
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1765.55,
+     "helps_d": 1765.55,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 35.9,
@@ -10553,7 +11105,42 @@
   ],
   "chamber": "House",
   "district": 38,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 38,
+   "chamber": "House",
+   "candidates": [
+    "Benjamin Hymes (R)",
+    "Kayla Miller (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Benjamin Hymes",
+     "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 685.82
+    },
+    {
+     "candidate": "Kayla Miller",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 685.82
+    }
+   ],
+   "total": 1371.64,
+   "by_filer": [
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1371.64,
+     "helps_d": 1371.64,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 26,
@@ -10801,32 +11388,40 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 612.43
+     "amount": 2047.69
     },
     {
      "candidate": "Kerryl Clement",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1793.11
+     "amount": 4133.2
     },
     {
      "candidate": "Luke Jensen",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 1103.84
+     "amount": 1760.89
     }
    ],
-   "total": 3509.38,
+   "total": 7941.78,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 1716.27,
-     "helps_d": 1716.27,
+     "amount": 2494.49,
+     "helps_d": 2494.49,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 3
+    },
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2340.09,
+     "helps_d": 0,
+     "helps_r": 2340.09,
+     "helps_o": 0,
+     "transactions": 1
     },
     {
      "filer": "People Over Politics PAC",
@@ -10836,6 +11431,14 @@
      "helps_o": 0,
      "transactions": 2,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1314.09,
+     "helps_d": 1314.09,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     },
     {
      "filer": "Common Sense for Maine",
@@ -11260,25 +11863,66 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 335.27
+     "amount": 2166.61
     },
     {
      "candidate": "John Reny",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 2197.34
+     "amount": 19040.5
     },
     {
      "candidate": "Katrina Couch Ray-Saulis",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 787.81
+     "amount": 1578.06
     }
    ],
-   "total": 3320.42,
+   "total": 22785.17,
    "by_filer": [
+    {
+     "filer": "Mainers for Economic Opportunity",
+     "amount": 10787.5,
+     "helps_d": 0,
+     "helps_r": 10787.5,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 4630.0,
+     "helps_d": 0,
+     "helps_r": 4630.0,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Principal officer: Brenda Hankins"
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 2164.18,
+     "helps_d": 2164.18,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
+    },
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2081.66,
+     "helps_d": 0,
+     "helps_r": 2081.66,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1580.49,
+     "helps_d": 1580.49,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 1541.34,
@@ -11287,23 +11931,6 @@
      "helps_o": 0,
      "transactions": 2,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 1123.08,
-     "helps_d": 1123.08,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 2
-    },
-    {
-     "filer": "Prosper Maine PAC",
-     "amount": 656,
-     "helps_d": 0,
-     "helps_r": 656,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Principal officer: Brenda Hankins"
     }
    ]
   },
@@ -11471,25 +12098,48 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 505.46
+     "amount": 1257.88
     },
     {
      "candidate": "Melissa Simpson",
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 202.79
+     "amount": 1599.12
+    },
+    {
+     "candidate": "Melissa Simpson",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 2114.86
     }
    ],
-   "total": 708.25,
+   "total": 4971.86,
    "by_filer": [
     {
-     "filer": "Maine Democratic State Committee",
-     "amount": 708.25,
-     "helps_d": 708.25,
+     "filer": "Renew the American Dream",
+     "amount": 2114.86,
+     "helps_d": 0,
+     "helps_r": 2114.86,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1504.84,
+     "helps_d": 1504.84,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1352.16,
+     "helps_d": 1352.16,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
     }
    ]
   },
@@ -11727,7 +12377,7 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 41270.45
+     "amount": 48016.29
     },
     {
      "candidate": "Kenneth Cianchette",
@@ -11744,15 +12394,15 @@
      "amount": 29625.33
     }
    ],
-   "total": 71403.47,
+   "total": 78149.31,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 70895.78,
-     "helps_d": 70895.78,
+     "amount": 77641.62,
+     "helps_d": 77641.62,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 14
+     "transactions": 15
     },
     {
      "filer": "Common Sense for Maine",
@@ -11924,7 +12574,35 @@
   ],
   "chamber": "House",
   "district": 63,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 63,
+   "chamber": "House",
+   "candidates": [
+    "Paul Flynn (R)",
+    "Taylor West (D)"
+   ],
+   "spending": [
+    {
+     "candidate": "Paul Flynn",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 2252.37
+    }
+   ],
+   "total": 2252.37,
+   "by_filer": [
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2252.37,
+     "helps_d": 0,
+     "helps_r": 2252.37,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 26.5,
@@ -12087,27 +12765,67 @@
     {
      "candidate": "H. Landry",
      "party": "D",
+     "stance": "Oppose",
+     "helps": "R",
+     "amount": 1920.0
+    },
+    {
+     "candidate": "H. Landry",
+     "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 579.85
+     "amount": 1358.92
     },
     {
      "candidate": "Randall Gauvin",
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 250.54
+     "amount": 2017.56
     },
     {
      "candidate": "Randall Gauvin",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 2529.43
+     "amount": 6623.56
     }
    ],
-   "total": 3359.82,
+   "total": 11920.04,
    "by_filer": [
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 4727.0,
+     "helps_d": 0,
+     "helps_r": 4727.0,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Principal officer: Brenda Hankins"
+    },
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2174.13,
+     "helps_d": 0,
+     "helps_r": 2174.13,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1818.34,
+     "helps_d": 1818.34,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1558.14,
+     "helps_d": 1558.14,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 1388.58,
@@ -12116,23 +12834,6 @@
      "helps_o": 0,
      "transactions": 2,
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
-    },
-    {
-     "filer": "Prosper Maine PAC",
-     "amount": 887,
-     "helps_d": 0,
-     "helps_r": 887,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Principal officer: Brenda Hankins"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 830.39,
-     "helps_d": 830.39,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 2
     },
     {
      "filer": "Common Sense for Maine",
@@ -12904,7 +13605,7 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "O",
-     "amount": 443.99
+     "amount": 2262.72
     },
     {
      "candidate": "Ray Thombs Jr.",
@@ -12918,11 +13619,27 @@
      "party": "I",
      "stance": "Support",
      "helps": "O",
-     "amount": 444
+     "amount": 1077.97
     }
    ],
-   "total": 1141.84,
+   "total": 3594.54,
    "by_filer": [
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1267.94,
+     "helps_d": 0,
+     "helps_r": 0,
+     "helps_o": 1267.94,
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1184.76,
+     "helps_d": 0,
+     "helps_r": 0,
+     "helps_o": 1184.76,
+     "transactions": 1
+    },
     {
      "filer": "Strong Maine Communities PAC",
      "amount": 887.99,
@@ -13040,34 +13757,34 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 589.4
+     "amount": 1877.58
     },
     {
      "candidate": "Russell White",
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1026
+     "amount": 5549.0
     }
    ],
-   "total": 2033.53,
+   "total": 7844.71,
    "by_filer": [
     {
      "filer": "Prosper Maine PAC",
-     "amount": 1026,
+     "amount": 5549.0,
      "helps_d": 0,
-     "helps_r": 1026,
+     "helps_r": 5549.0,
      "helps_o": 0,
-     "transactions": 1,
+     "transactions": 2,
      "leader": "Principal officer: Brenda Hankins"
     },
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 1007.53,
-     "helps_d": 1007.53,
+     "amount": 2295.71,
+     "helps_d": 2295.71,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 3
     }
    ]
   },
@@ -13316,20 +14033,67 @@
     {
      "candidate": "David Guilmette",
      "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 719.34
+    },
+    {
+     "candidate": "David Guilmette",
+     "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 3168.31
+     "amount": 18464.23
+    },
+    {
+     "candidate": "Sally Cluchey",
+     "party": "D",
+     "stance": "Oppose",
+     "helps": "R",
+     "amount": 2137.5
     },
     {
      "candidate": "Sally Cluchey",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 1052.41
+     "amount": 3172.48
     }
    ],
-   "total": 4220.72,
+   "total": 24493.55,
    "by_filer": [
+    {
+     "filer": "Mainers for Economic Opportunity",
+     "amount": 10787.5,
+     "helps_d": 0,
+     "helps_r": 10787.5,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Prosper Maine PAC",
+     "amount": 5375.0,
+     "helps_d": 0,
+     "helps_r": 5375.0,
+     "helps_o": 0,
+     "transactions": 2,
+     "leader": "Principal officer: Brenda Hankins"
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 2453.13,
+     "helps_d": 2453.13,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
+    },
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2370.92,
+     "helps_d": 0,
+     "helps_r": 2370.92,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "People Over Politics PAC",
      "amount": 1814.46,
@@ -13340,21 +14104,12 @@
      "leader": "Led by former Rep. Austin Theriault, R-Fort Kent"
     },
     {
-     "filer": "Prosper Maine PAC",
-     "amount": 1100,
-     "helps_d": 0,
-     "helps_r": 1100,
-     "helps_o": 0,
-     "transactions": 1,
-     "leader": "Principal officer: Brenda Hankins"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 1052.41,
-     "helps_d": 1052.41,
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1438.69,
+     "helps_d": 1438.69,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 1
     },
     {
      "filer": "Common Sense for Maine",
@@ -14338,7 +15093,35 @@
   ],
   "chamber": "House",
   "district": 104,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 104,
+   "chamber": "House",
+   "candidates": [
+    "L. Pfeifle (I)",
+    "R. Winslow (R)"
+   ],
+   "spending": [
+    {
+     "candidate": "R. Winslow",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 2368.55
+    }
+   ],
+   "total": 2368.55,
+   "by_filer": [
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2368.55,
+     "helps_d": 0,
+     "helps_r": 2368.55,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 27.1,
@@ -14430,25 +15213,48 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 189.86
+     "amount": 1878.64
+    },
+    {
+     "candidate": "Caleb Chase",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 2159.91
     },
     {
      "candidate": "Kristin Davis",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 442.58
+     "amount": 1508.28
     }
    ],
-   "total": 632.44,
+   "total": 5546.83,
    "by_filer": [
     {
-     "filer": "Maine Democratic State Committee",
-     "amount": 632.44,
-     "helps_d": 632.44,
+     "filer": "Renew the American Dream",
+     "amount": 2159.91,
+     "helps_d": 0,
+     "helps_r": 2159.91,
+     "helps_o": 0,
+     "transactions": 1
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 2131.4,
+     "helps_d": 2131.4,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 1
+    },
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 1255.52,
+     "helps_d": 1255.52,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
     }
    ]
   },
@@ -14541,13 +15347,35 @@
     {
      "candidate": "Suzanne Andresen",
      "party": "R",
+     "stance": "Oppose",
+     "helps": "D",
+     "amount": 897.75
+    },
+    {
+     "candidate": "Suzanne Andresen",
+     "party": "R",
      "stance": "Support",
      "helps": "R",
      "amount": 253.85
+    },
+    {
+     "candidate": "Trent Vellella",
+     "party": "D",
+     "stance": "Support",
+     "helps": "D",
+     "amount": 897.75
     }
    ],
-   "total": 253.85,
+   "total": 2049.35,
    "by_filer": [
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1795.5,
+     "helps_d": 1795.5,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "Common Sense for Maine",
      "amount": 253.85,
@@ -14787,25 +15615,25 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 41478.56
+     "amount": 44959.6
     },
     {
      "candidate": "Michael Scott",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 32071.18
+     "amount": 35552.22
     }
    ],
-   "total": 73549.74,
+   "total": 80511.82,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 70914.34,
-     "helps_d": 70914.34,
+     "amount": 77876.42,
+     "helps_d": 77876.42,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 14
+     "transactions": 15
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
@@ -15398,25 +16226,33 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 31625.16
+     "amount": 37606.4
     },
     {
      "candidate": "Scott Cyrway",
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 31993.27
+     "amount": 37974.51
     }
    ],
-   "total": 63618.43,
+   "total": 75580.91,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 62408.03,
-     "helps_d": 62408.03,
+     "amount": 67970.91,
+     "helps_d": 67970.91,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 14
+     "transactions": 15
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 6399.6,
+     "helps_d": 6399.6,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     },
     {
      "filer": "Maine Conservation Voters Action Fund",
@@ -15584,7 +16420,35 @@
   ],
   "chamber": "House",
   "district": 149,
-  "ie": null,
+  "ie": {
+   "office": "SR",
+   "district": 149,
+   "chamber": "House",
+   "candidates": [
+    "Mallory Cook (D)",
+    "Timothy Towne (R)"
+   ],
+   "spending": [
+    {
+     "candidate": "Timothy Towne",
+     "party": "R",
+     "stance": "Support",
+     "helps": "R",
+     "amount": 2430.19
+    }
+   ],
+   "total": 2430.19,
+   "by_filer": [
+    {
+     "filer": "Renew the American Dream",
+     "amount": 2430.19,
+     "helps_d": 0,
+     "helps_r": 2430.19,
+     "helps_o": 0,
+     "transactions": 1
+    }
+   ]
+  },
   "office": "SR",
   "registration": {
    "dem_pct": 36.1,
@@ -15676,18 +16540,18 @@
      "party": "R",
      "stance": "Support",
      "helps": "R",
-     "amount": 1055
+     "amount": 5624.0
     }
    ],
-   "total": 1055,
+   "total": 5624.0,
    "by_filer": [
     {
      "filer": "Prosper Maine PAC",
-     "amount": 1055,
+     "amount": 5624.0,
      "helps_d": 0,
-     "helps_r": 1055,
+     "helps_r": 5624.0,
      "helps_o": 0,
-     "transactions": 1,
+     "transactions": 2,
      "leader": "Principal officer: Brenda Hankins"
     }
    ]
@@ -15856,25 +16720,33 @@
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 390.37
+     "amount": 1298.35
     },
     {
      "candidate": "Rolf Olsen Jr.",
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 1207.64
+     "amount": 2990.8
     }
    ],
-   "total": 1598.01,
+   "total": 4289.15,
    "by_filer": [
     {
      "filer": "Maine Democratic State Committee",
-     "amount": 1598.01,
-     "helps_d": 1598.01,
+     "amount": 2473.2,
+     "helps_d": 2473.2,
      "helps_r": 0,
      "helps_o": 0,
-     "transactions": 2
+     "transactions": 3
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1815.95,
+     "helps_d": 1815.95,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
     }
    ]
   },
@@ -16112,18 +16984,34 @@
      "party": "R",
      "stance": "Oppose",
      "helps": "D",
-     "amount": 445.49
+     "amount": 1969.71
     },
     {
      "candidate": "Pamela Hart",
      "party": "D",
      "stance": "Support",
      "helps": "D",
-     "amount": 2176.52
+     "amount": 2849.27
     }
    ],
-   "total": 2622.01,
+   "total": 4818.98,
    "by_filer": [
+    {
+     "filer": "Maine Democratic State Committee",
+     "amount": 2139.49,
+     "helps_d": 2139.49,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 3
+    },
+    {
+     "filer": "Planned Parenthood Maine Action Fund PAC",
+     "amount": 1345.49,
+     "helps_d": 1345.49,
+     "helps_r": 0,
+     "helps_o": 0,
+     "transactions": 1
+    },
     {
      "filer": "Maine Conservation Voters Action Fund",
      "amount": 1334,
@@ -16132,14 +17020,6 @@
      "helps_o": 0,
      "transactions": 2,
      "leader": "Principal officer: Maureen Drouin"
-    },
-    {
-     "filer": "Maine Democratic State Committee",
-     "amount": 1288.01,
-     "helps_d": 1288.01,
-     "helps_r": 0,
-     "helps_o": 0,
-     "transactions": 2
     }
    ]
   },
