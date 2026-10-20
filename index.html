@@ -278,6 +278,9 @@ section p.desc { margin: 0 0 10px; color: var(--text-secondary); font-size: 0.85
 }
 .district-list-item:hover { background: var(--grid); }
 .district-list-item.selected { background: var(--text-primary); color: var(--surface-1); }
+.district-list-item .dl-rank { display: inline-block; min-width: 1.6em; font-size: 0.7rem; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.district-list-item .dl-amt { font-variant-numeric: tabular-nums; font-size: 0.74rem; }
+.district-list-item.selected .dl-rank { color: inherit; }
 .district-list-item .swatch { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; }
 
 footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-top: 1px solid var(--grid); padding-top: 14px; }
@@ -340,7 +343,7 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
 
   <section>
     <h2>All districts</h2>
-    <p class="desc">Sorted by district number. Colored dot matches the map's registration shading.</p>
+    <p class="desc">Ranked by total outside (independent-expenditure) spending, Sept. 1, 2026&ndash;present; districts with none follow in number order. Colored square matches the map's registration shading. Hover for the candidates.</p>
     <div class="district-list" id="district-list"><div class="state-msg">Loading&hellip;</div></div>
   </section>
 
@@ -567,23 +570,44 @@ function renderMap() {
   svg.call(zoom);
 }
 
+function fmtShort(n) {
+  if (n >= 1e6) return '$' + (n / 1e6).toFixed(2) + 'M';
+  if (n >= 1e3) return '$' + Math.round(n / 1e3) + 'K';
+  return '$' + Math.round(n);
+}
+
+function listTip(key) {
+  const rec = districtData[key];
+  if (!rec) return '';
+  const cands = rec.candidates_2026 || [];
+  const candHtml = cands.length
+    ? cands.map(c => `<div class="tip-line"><span class="tip-sw ${c.party === 'D' ? 'd' : c.party === 'R' ? 'r' : 'o'}"></span>${c.name} <span class="tip-who">(${c.party})</span></div>`).join('')
+    : '<div class="tip-line tip-who">No 2026 candidates on file</div>';
+  const ieLine = rec.ie && rec.ie.total ? `<div class="tip-top">Outside spending: ${fmtMoney(rec.ie.total)}</div>` : '<div class="tip-top">No outside spending recorded</div>';
+  return `<strong>${rec.office === 'SS' ? 'Senate' : 'House'} District ${rec.district}</strong>${candHtml}${ieLine}`;
+}
+
 function renderDistrictList() {
   const el = document.getElementById('district-list');
+  const ieTotal = (k) => (districtData[k].ie && districtData[k].ie.total) || 0;
   const keys = Object.keys(districtData)
     .filter(k => k.startsWith(chamber))
-    .sort((a, b) => parseInt(a.slice(2)) - parseInt(b.slice(2)));
+    .sort((a, b) => (ieTotal(b) - ieTotal(a)) || (parseInt(a.slice(2)) - parseInt(b.slice(2))));
   if (!keys.length) { el.innerHTML = '<div class="state-msg">No data.</div>'; return; }
-  el.innerHTML = keys.map(key => {
+  el.innerHTML = keys.map((key, i) => {
     const rec = districtData[key];
     const score = rec.registration ? regRatioScore(rec.registration) : 0;
     const num = key.slice(2);
+    const tot = ieTotal(key);
     return `<div class="district-list-item${key === selectedKey ? ' selected' : ''}" data-key="${key}">
-      <span><span class="swatch" style="background:${marginColor(score)}"></span>${chamber} ${num}</span>
-      ${rec.ie ? '&#9679;' : ''}
+      <span><span class="dl-rank">${tot ? i + 1 : ''}</span><span class="swatch" style="background:${marginColor(score)}"></span>${chamber} ${num}</span>
+      <span class="dl-amt">${tot ? fmtShort(tot) : '&mdash;'}</span>
     </div>`;
   }).join('');
   el.querySelectorAll('.district-list-item').forEach(item => {
     item.addEventListener('click', () => selectDistrict(item.dataset.key));
+    item.addEventListener('mousemove', (evt) => showTip(evt, listTip(item.dataset.key)));
+    item.addEventListener('mouseleave', hideTip);
   });
 }
 
