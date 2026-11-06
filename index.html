@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MPI State House Explorer</title>
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>MPI State House Explorer</title>
 <style>
 .viz-root {
   color-scheme: light;
@@ -161,7 +163,7 @@ header p.sub { margin: 0; color: var(--text-secondary); font-size: 0.9rem; }
 .race-chip:hover { background: var(--grid); }
 .top-spending-list { display: flex; flex-direction: column; gap: 2px; }
 .ts-row {
-  display: grid; grid-template-columns: 20px minmax(60px,84px) 1fr minmax(56px,76px);
+  display: grid; grid-template-columns: 20px minmax(60px,128px) 1fr minmax(56px,76px);
   align-items: center; gap: 8px; padding: 6px 6px; border-radius: 8px; cursor: pointer;
 }
 .ts-row:hover { background: var(--grid); }
@@ -291,9 +293,52 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
   font-weight: 700; font-size: 0.72rem; padding: 6px 9px; border-radius: 6px; pointer-events: none; z-index: 50;
   max-width: 320px; line-height: 1.4; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.25); border: 1px solid rgba(0,0,0,0.08);
 }
+
+/* 2026 results: seat counter + spending totals */
+.results-hero { margin: 0 0 26px; }
+.hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 10px; }
+.seat-card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; cursor: pointer; text-align: left; font: inherit; color: inherit; }
+.seat-card:hover { border-color: var(--baseline); }
+.seat-card.active { border-color: var(--text-primary); box-shadow: inset 0 0 0 1px var(--text-primary); }
+.seat-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 0.8rem; color: var(--text-secondary); font-weight: 700; }
+.seat-head .seat-total { font-weight: 600; color: var(--text-muted); font-size: 0.74rem; }
+.seat-nums { display: flex; gap: 18px; margin: 8px 0 10px; align-items: baseline; flex-wrap: wrap; }
+.seat-num { font-size: 2rem; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1; }
+.seat-num small { font-size: 0.72rem; font-weight: 700; margin-left: 4px; letter-spacing: 0.02em; }
+.seat-num.D { color: var(--dem); } .seat-num.R { color: var(--gop); } .seat-num.other { color: var(--other); }
+.seat-bar { position: relative; display: flex; height: 12px; border-radius: 6px; background: var(--neutral-fill); }
+.seat-bar span { height: 100%; }
+.seat-bar span:first-child { border-radius: 6px 0 0 6px; } .seat-bar span:last-of-type { border-radius: 0 6px 6px 0; }
+.seat-bar .d { background: var(--dem); } .seat-bar .r { background: var(--gop); } .seat-bar .o { background: var(--other); }
+.seat-majority { position: absolute; top: -4px; bottom: -4px; width: 2px; margin-left: -1px; background: var(--text-primary); border-radius: 1px; }
+.seat-foot { font-size: 0.76rem; color: var(--text-secondary); margin-top: 9px; line-height: 1.45; }
+.money-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 12px; }
+.money-tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+.money-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); font-weight: 600; }
+.money-val { font-size: 1.4rem; font-weight: 800; font-variant-numeric: tabular-nums; margin-top: 4px; }
+.money-sub { font-size: 0.75rem; color: var(--text-secondary); margin-top: 3px; line-height: 1.4; }
+.won-badge { display: inline-block; font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; padding: 1px 7px; border-radius: 999px; background: var(--text-primary); color: var(--surface-1); vertical-align: 2px; margin-left: 4px; }
+.flip-pill { font-size: 0.66rem; font-weight: 700; padding: 0 6px; border-radius: 999px; border: 1px solid currentColor; margin-left: 4px; white-space: nowrap; }
+.flip-pill.D { color: var(--dem); } .flip-pill.R { color: var(--gop); } .flip-pill.other { color: var(--other); }
+.cand2026-vote { font-size: 0.8rem; margin-top: 5px; font-variant-numeric: tabular-nums; color: var(--text-primary); font-weight: 600; }
+.cand2026-vote span { color: var(--text-muted); font-weight: 400; }
+.cand2026-card.lost .cand2026-name { color: var(--text-secondary); }
+.res-note { font-size: 0.72rem; color: var(--text-muted); margin-top: 6px; line-height: 1.4; }
+.result-row .votes { color: var(--text-muted); font-weight: 400; margin-right: 6px; font-variant-numeric: tabular-nums; }
+.result-row.won .cand { font-weight: 700; }
+.dl-win { display: inline-block; min-width: 1.1em; font-size: 0.66rem; font-weight: 800; margin-right: 3px; }
+.dl-win.D { color: var(--dem); } .dl-win.R { color: var(--gop); } .dl-win.other { color: var(--other); }
+.ts-win { font-size: 0.66rem; font-weight: 800; margin-left: 6px; }
+.ts-win.D { color: var(--dem); } .ts-win.R { color: var(--gop); } .ts-win.other { color: var(--other); }
+.map-controls { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; font-size: 0.8rem; color: var(--text-secondary); flex-wrap: wrap; }
+.map-controls .toggle-btn { padding: 5px 12px; font-size: 0.8rem; }
+.district-path.flip { stroke: var(--accent-outline); stroke-width: 1.8; }
+.legend-sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; margin-right: 4px; }
+.legend-sw.D { background: var(--dem); } .legend-sw.R { background: var(--gop); } .legend-sw.other { background: var(--other); }
 </style>
 </head>
 <body>
+
 <div class="viz-root">
 <div class="page">
   <div class="update-tag" id="update-tag" hidden></div>
@@ -302,10 +347,20 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
       <img class="brand-logo" src="bdn-logo.webp" alt="Bangor Daily News">
       <div>
         <h1>MPI State House Explorer</h1>
-        <p class="sub">Click any State House or Senate district for its registration, election history, and 2026 independent-expenditure detail.</p>
+        <p class="sub">Click any State House or Senate district for its 2026 result, registration, election history, and campaign and independent-expenditure spending.</p>
       </div>
     </div>
   </header>
+
+  <section class="results-hero" id="results-hero" hidden>
+    <h2>2026 election results</h2>
+    <p class="desc">Unofficial Nov. 3 results tallied by the Bangor Daily News from Decision Desk HQ returns. A seat is called when DDHQ or the BDN desk calls it, or when every town has reported. Click a chamber to switch the page to it.</p>
+    <div class="hero-grid">
+      <button class="seat-card" type="button" id="seat-SR" data-office="SR"></button>
+      <button class="seat-card" type="button" id="seat-SS" data-office="SS"></button>
+    </div>
+    <div class="money-strip" id="money-strip"></div>
+  </section>
 
   <div class="toolbar">
     <div class="toggle-group">
@@ -325,12 +380,12 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
     </div>
     <div id="view-spenders" hidden>
       <h2 id="spender-heading">Outside spenders</h2>
-      <p class="desc">Every committee reporting independent expenditures in races for the selected chamber, Sept. 1, 2026&ndash;present, ranked by total. Use the Senate/House toggle above to switch chambers. Bar color shows which side the money helps. Open a spender to see its races; click a race to jump to its detail.</p>
+      <p class="desc">Every committee reporting independent expenditures in races for the selected chamber, Sept. 1&ndash;Nov. 3, 2026, ranked by total. Use the Senate/House toggle above to switch chambers. Bar color shows which side the money helps. Open a spender to see its races; click a race to jump to its detail.</p>
       <div class="spender-list" id="spender-list"><div class="state-msg">Loading&hellip;</div></div>
     </div>
     <div id="view-races">
     <h2 id="top-spending-heading">Top-spending races</h2>
-    <p class="desc">Legislative races ranked by total independent-expenditure spending, Sept. 1, 2026&ndash;present. <span style="color:var(--dem);font-weight:600">Blue</span> = spending that helps the Democratic candidate &middot; <span style="color:var(--gop);font-weight:600">red</span> = helps the Republican candidate. Click a race to jump to its detail.</p>
+    <p class="desc">Legislative races ranked by total independent-expenditure spending, Sept. 1&ndash;Nov. 3, 2026. <span style="color:var(--dem);font-weight:600">Blue</span> = spending that helps the Democratic candidate &middot; <span style="color:var(--gop);font-weight:600">red</span> = helps the Republican candidate. The letter after each district is the party that won it. Click a race to jump to its detail.</p>
     <div class="top-spending-list" id="top-spending-list"><div class="state-msg">Loading&hellip;</div></div>
     </div>
   </section>
@@ -343,18 +398,31 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
 
   <section>
     <h2>All districts</h2>
-    <p class="desc">Ranked by total outside (independent-expenditure) spending, Sept. 1, 2026&ndash;present; districts with none follow in number order. Colored square matches the map's registration shading. Hover for the candidates.</p>
+    <p class="desc">Ranked by total outside (independent-expenditure) spending, Sept. 1&ndash;Nov. 3, 2026; districts with none follow in number order. The letter is the party that won the seat; the colored square matches the map's registration shading. Hover for the result.</p>
     <div class="district-list" id="district-list"><div class="state-msg">Loading&hellip;</div></div>
   </section>
 
   <section>
     <h2>Map</h2>
-    <p class="desc">Click any district for its registration, election history, and 2026 independent-expenditure detail.</p>
+    <p class="desc">Click any district for its 2026 result, registration, election history, and spending detail.</p>
+    <div class="map-controls">
+      <span>Color by:</span>
+      <div class="toggle-group">
+        <button class="toggle-btn active" type="button" id="mode-result" data-mode="result">2026 winner</button>
+        <button class="toggle-btn" type="button" id="mode-reg" data-mode="reg">Registration</button>
+      </div>
+    </div>
     <div class="map-wrap" id="map-wrap">
       <div class="map-hint">Scroll/pinch to zoom &middot; drag to pan</div>
       <div class="state-msg">Loading map&hellip;</div>
     </div>
-    <div class="legend-row">
+    <div class="legend-row" id="legend-result">
+      <span><span class="legend-sw D"></span>Democrat</span>
+      <span><span class="legend-sw R"></span>Republican</span>
+      <span><span class="legend-sw other"></span>Independent</span>
+      <span style="margin-left:14px"><span class="legend-outline-swatch"></span> Bold outline = seat changed party from the 2024 result</span>
+    </div>
+    <div class="legend-row" id="legend-reg" hidden>
       <span>Colored by voter registration: R+ &larr;</span>
       <span class="legend-gradient"></span>
       <span>&rarr; D+</span>
@@ -363,7 +431,7 @@ footer { color: var(--text-muted); font-size: 0.75rem; line-height: 1.5; border-
   </section>
 
   <footer>
-    District boundaries: Maine Office of the Secretary of State / Maine GeoLibrary, 2021 redistricting (simplified for display). Registration: active voter enrollment by district, March 7, 2026. Election results: 2022 and 2024 general elections, aggregated from town-level returns. IE spending: independent expenditures reported to the Maine Ethics Commission, Sept. 1, 2026&ndash;present. Incumbent labels are inferred by matching each 2026 candidate to the 2024 election winner in that district. This is a static export, not a live feed; check back for periodic updates.
+    District boundaries: Maine Office of the Secretary of State / Maine GeoLibrary, 2021 redistricting (simplified for display). Registration: active voter enrollment by district, March 7, 2026. Election results: 2026 results are unofficial, from Decision Desk HQ returns as tallied and called by the Bangor Daily News (some races were called before every town reported; vote counts may change with the official canvass); 2022 and 2024 general elections aggregated from town-level returns. Candidate fundraising and spending: totals reported to the Maine Ethics Commission as of Nov. 6, 2026. IE spending: independent expenditures reported to the Maine Ethics Commission, Sept. 1&ndash;Nov. 3, 2026; amended filings replace the originals they supersede. Incumbent labels are inferred by matching each 2026 candidate to the 2024 election winner in that district. This is a static export, not a live feed; check back for periodic updates.
   </footer>
 </div>
 </div>
@@ -391,6 +459,103 @@ function renderUpdateTag(iso) {
   el.textContent = text;
   el.hidden = false;
 }
+
+// ---- 2026 results helpers ----
+// Short party letter for display: D, R, or I for any independent/unenrolled/third-party candidate.
+function shortParty(p) { return p === 'D' || p === 'R' ? p : 'I'; }
+function pcls(p) { return p === 'D' ? 'D' : p === 'R' ? 'R' : 'other'; }
+function res26(key) { const r = districtData[key]; return r && r.result_2026 ? r.result_2026 : null; }
+function winnerShare(res) {
+  const w = res && res.candidates && res.candidates.find(c => c.winner);
+  return w && res.cast_votes ? w.votes / res.cast_votes * 100 : null;
+}
+// Names in result_2026 are the 2026 roster names, so the candidate cards can match on them exactly.
+function candResult(rec, name) {
+  const res = rec.result_2026;
+  return res && res.candidates ? res.candidates.find(c => c.name === name) : null;
+}
+
+const MONEY_SHORT = (n) => n >= 1e6 ? '$' + (n / 1e6).toFixed(2) + ' million' : fmtMoney(n);
+
+function renderHero() {
+  const hero = document.getElementById('results-hero');
+  const keys = Object.keys(districtData);
+  if (!keys.some(k => districtData[k].result_2026)) { hero.hidden = true; return; }
+  hero.hidden = false;
+
+  ['SR', 'SS'].forEach(office => {
+    const ks = keys.filter(k => k.startsWith(office));
+    const n = ks.length;
+    const maj = Math.floor(n / 2) + 1;
+    const won = { D: 0, R: 0, other: 0 }, prior = { D: 0, R: 0, other: 0 };
+    let flips = 0;
+    ks.forEach(k => {
+      const r = districtData[k].result_2026;
+      if (!r) return;
+      won[pcls(r.winner_party)]++;
+      if (r.party_2024) prior[pcls(r.party_2024)]++;
+      if (r.flip) flips++;
+    });
+    const label = office === 'SR' ? 'House' : 'Senate';
+    const nums = [['D', 'D', 'Democrats'], ['R', 'R', 'Republicans'], ['other', 'I', 'Independents']]
+      .filter(([c]) => c !== 'other' || won.other > 0)
+      .map(([c, l]) => `<div class="seat-num ${c}">${won[c]}<small>${l}</small></div>`).join('');
+    const pct = (x) => (x / n * 100).toFixed(2);
+    const delta = (c, l) => {
+      const d = won[c] - prior[c];
+      return d ? `${l} ${d > 0 ? '+' : '−'}${Math.abs(d)}` : '';
+    };
+    const deltas = [delta('D', 'D'), delta('R', 'R'), delta('other', 'Ind.')].filter(Boolean).join(', ');
+    const leader = won.D >= maj ? 'Democrats' : won.R >= maj ? 'Republicans' : null;
+    const el = document.getElementById('seat-' + office);
+    el.classList.toggle('active', chamber === office);
+    el.innerHTML = `
+      <div class="seat-head"><span>Maine ${label}</span><span class="seat-total">${n} seats &middot; ${maj} for a majority</span></div>
+      <div class="seat-nums">${nums}</div>
+      <div class="seat-bar" aria-hidden="true">
+        <span class="d" style="width:${pct(won.D)}%"></span><span class="o" style="width:${pct(won.other)}%"></span><span class="r" style="width:${pct(won.R)}%"></span>
+        <i class="seat-majority" style="left:${pct(maj)}%"></i>
+      </div>
+      <div class="seat-foot">${leader ? `${leader} won a majority. ` : 'No party won a majority. '}${flips} seat${flips === 1 ? '' : 's'} changed party from the 2024 result${deltas ? ` (${deltas})` : ''}.</div>`;
+  });
+
+  let candSpent = 0, candRaised = 0, nCand = 0;
+  const ie = { SR: 0, SS: 0 }, cs = { SR: 0, SS: 0 };
+  keys.forEach(k => {
+    const rec = districtData[k], o = k.slice(0, 2);
+    (rec.candidates_2026 || []).forEach(c => {
+      if (typeof c.total_disbursed === 'number') { candSpent += c.total_disbursed; cs[o] += c.total_disbursed; nCand++; }
+      if (typeof c.total_received === 'number') candRaised += c.total_received;
+    });
+    if (rec.ie && rec.ie.total) ie[o] += rec.ie.total;
+  });
+  const ieTot = ie.SR + ie.SS;
+  document.getElementById('money-strip').innerHTML = `
+    <div class="money-tile"><div class="money-label">Candidates spent</div><div class="money-val">${fmtMoney(candSpent)}</div>
+      <div class="money-sub">${nCand} candidates &middot; raised ${MONEY_SHORT(candRaised)}<br>House ${MONEY_SHORT(cs.SR)} &middot; Senate ${MONEY_SHORT(cs.SS)}</div></div>
+    <div class="money-tile"><div class="money-label">Outside groups spent</div><div class="money-val">${fmtMoney(ieTot)}</div>
+      <div class="money-sub">Independent expenditures, Sept. 1&ndash;Nov. 3<br>House ${MONEY_SHORT(ie.SR)} &middot; Senate ${MONEY_SHORT(ie.SS)}</div></div>
+    <div class="money-tile"><div class="money-label">Total spending</div><div class="money-val">${fmtMoney(candSpent + ieTot)}</div>
+      <div class="money-sub">Candidates plus outside groups<br>House ${MONEY_SHORT(cs.SR + ie.SR)} &middot; Senate ${MONEY_SHORT(cs.SS + ie.SS)}</div></div>`;
+}
+
+document.querySelectorAll('.seat-card').forEach(card => {
+  card.addEventListener('click', () => { if (card.dataset.office !== chamber) setChamber(card.dataset.office); });
+});
+
+let mapMode = 'result';
+try { const m = localStorage.getItem('explorer-mapmode'); if (m === 'reg' || m === 'result') mapMode = m; } catch (e) {}
+function setMapMode(m) {
+  mapMode = m;
+  try { localStorage.setItem('explorer-mapmode', m); } catch (e) {}
+  document.getElementById('mode-result').classList.toggle('active', m === 'result');
+  document.getElementById('mode-reg').classList.toggle('active', m === 'reg');
+  document.getElementById('legend-result').hidden = m !== 'result';
+  document.getElementById('legend-reg').hidden = m !== 'reg';
+  renderMap();
+}
+document.getElementById('mode-result').addEventListener('click', () => setMapMode('result'));
+document.getElementById('mode-reg').addEventListener('click', () => setMapMode('reg'));
 
 let chamber = 'SS';
 let boundaries = { SS: null, SR: null };
@@ -464,9 +629,12 @@ function rankingTip(key) {
   const cand = (p) => (rec.candidates_2026 || []).filter(c => p === 'O' ? (c.party !== 'D' && c.party !== 'R') : c.party === p).map(c => c.name).join(', ');
   const line = (label, cls, amt, who) => amt > 0.005 ? `<div class="tip-line"><span class="tip-sw ${cls}"></span>${label}${who ? ` <span class="tip-who">(${who})</span>` : ''}: ${fmtMoney(amt)} &middot; ${pc(amt)}</div>` : '';
   const top = (ie.by_filer || []).slice(0, 2).map(f => `${f.filer} ${fmtMoney(f.amount)}`).join('<br>');
+  const res = rec.result_2026;
+  const share = winnerShare(res);
+  const winHtml = res ? `<div class="tip-top">Won: ${res.winner} (${shortParty(res.winner_party)})${res.uncontested ? ', unopposed' : share !== null ? `, ${fmtPct(share)}` : ''}${res.flip ? ` &middot; flipped from ${shortParty(res.party_2024)}` : ''}</div>` : '';
   return `<strong>${rec.office === 'SS' ? 'Senate' : 'House'} District ${rec.district} &middot; ${fmtMoney(ie.total)}</strong>`
     + line('Helps D', 'd', s.d, cand('D')) + line('Helps R', 'r', s.r, cand('R')) + line('Helps ind.', 'o', s.other, cand('O'))
-    + (top ? `<div class="tip-top">Top spenders:<br>${top}</div>` : '');
+    + winHtml + (top ? `<div class="tip-top">Top spenders:<br>${top}</div>` : '');
 }
 
 function renderTopSpending() {
@@ -496,9 +664,11 @@ function renderTopSpending() {
       { cls: 'other', pct: max ? r.split.other / max * 100 : 0 },
     ].filter(s => s.pct > 0.5);
     const barHtml = segs.map(s => `<div class="ts-seg ${s.cls}" style="width:${s.pct}%"></div>`).join('');
+    const res = res26(r.key);
+    const win = res ? `<span class="ts-win ${pcls(res.winner_party)}">${shortParty(res.winner_party)}${res.flip ? ' flip' : ''}</span>` : '';
     return `<div class="ts-row" data-key="${r.key}">
       <div class="ts-rank">${i + 1}</div>
-      <div class="ts-label">${chamberLabel} ${r.district}</div>
+      <div class="ts-label">${chamberLabel} ${r.district}${win}</div>
       <div class="ts-bar-wrap"><div class="ts-bar">${barHtml}</div></div>
       <div class="ts-amount">${fmtMoney(r.total)}</div>
     </div>`;
@@ -542,13 +712,19 @@ function renderMap() {
     .attr('class', d => {
       const key = districtKey(chamber, d.properties.DISTRICTN);
       const rec = districtData[key];
-      const tracked = rec && rec.ie;
-      return 'district-path' + (tracked ? ' tracked' : '') + (key === selectedKey ? ' selected' : '');
+      const res = rec && rec.result_2026;
+      const outlined = mapMode === 'result' ? (res && res.flip) : (rec && rec.ie);
+      return 'district-path' + (outlined ? (mapMode === 'result' ? ' flip' : ' tracked') : '') + (key === selectedKey ? ' selected' : '');
     })
     .attr('d', path)
     .style('fill', d => {
       const key = districtKey(chamber, d.properties.DISTRICTN);
       const rec = districtData[key];
+      if (mapMode === 'result') {
+        const res = rec && rec.result_2026;
+        if (!res) return 'var(--neutral-fill)';
+        return res.winner_party === 'D' ? 'var(--dem)' : res.winner_party === 'R' ? 'var(--gop)' : 'var(--other)';
+      }
       const score = rec && rec.registration ? regRatioScore(rec.registration) : 0;
       return marginColor(score);
     })
@@ -557,9 +733,12 @@ function renderMap() {
       const key = districtKey(chamber, d.properties.DISTRICTN);
       const rec = districtData[key];
       const reg = rec && rec.registration;
-      const label = `${chamber} ${d.properties.DISTRICTN}`;
+      const res = rec && rec.result_2026;
+      const label = `${chamber === 'SS' ? 'Senate' : 'House'} District ${d.properties.DISTRICTN}`;
+      const share = winnerShare(res);
+      const winLine = res ? `Won: ${res.winner} (${shortParty(res.winner_party)})${res.uncontested ? ', unopposed' : share !== null ? `, ${fmtPct(share)}` : ''}${res.flip ? ` &middot; flipped from ${shortParty(res.party_2024)}` : ''}<br>` : '';
       const regLine = reg ? `Reg: D ${reg.dem_pct}% &middot; R ${reg.gop_pct}%` : '';
-      showTip(evt, `<strong>${label}</strong><br>${regLine}${rec && rec.ie ? '<br>IE spending recorded' : ''}`);
+      showTip(evt, `<strong>${label}</strong><br>${winLine}${regLine}${rec && rec.ie ? `<br>Outside spending: ${fmtMoney(rec.ie.total)}` : ''}`);
     })
     .on('mouseleave', hideTip)
     .on('click', (evt, d) => selectDistrict(districtKey(chamber, d.properties.DISTRICTN)));
@@ -583,8 +762,11 @@ function listTip(key) {
   const candHtml = cands.length
     ? cands.map(c => `<div class="tip-line"><span class="tip-sw ${c.party === 'D' ? 'd' : c.party === 'R' ? 'r' : 'o'}"></span>${c.name} <span class="tip-who">(${c.party})</span></div>`).join('')
     : '<div class="tip-line tip-who">No 2026 candidates on file</div>';
+  const res = rec.result_2026;
+  const share = winnerShare(res);
+  const winHtml = res ? `<div class="tip-top">Won: ${res.winner} (${shortParty(res.winner_party)})${res.uncontested ? ', unopposed' : share !== null ? `, ${fmtPct(share)}` : ''}${res.flip ? ` &middot; flipped from ${shortParty(res.party_2024)}` : ''}</div>` : '';
   const ieLine = rec.ie && rec.ie.total ? `<div class="tip-top">Outside spending: ${fmtMoney(rec.ie.total)}</div>` : '<div class="tip-top">No outside spending recorded</div>';
-  return `<strong>${rec.office === 'SS' ? 'Senate' : 'House'} District ${rec.district}</strong>${candHtml}${ieLine}`;
+  return `<strong>${rec.office === 'SS' ? 'Senate' : 'House'} District ${rec.district}</strong>${candHtml}${winHtml}${ieLine}`;
 }
 
 function renderDistrictList() {
@@ -599,8 +781,10 @@ function renderDistrictList() {
     const score = rec.registration ? regRatioScore(rec.registration) : 0;
     const num = key.slice(2);
     const tot = ieTotal(key);
+    const res = rec.result_2026;
+    const win = res ? `<span class="dl-win ${pcls(res.winner_party)}" title="Won by ${shortParty(res.winner_party)}">${shortParty(res.winner_party)}</span>` : '';
     return `<div class="district-list-item${key === selectedKey ? ' selected' : ''}" data-key="${key}">
-      <span><span class="dl-rank">${tot ? i + 1 : ''}</span><span class="swatch" style="background:${marginColor(score)}"></span>${chamber} ${num}</span>
+      <span><span class="dl-rank">${tot ? i + 1 : ''}</span><span class="swatch" style="background:${marginColor(score)}"></span>${win}${chamber} ${num}</span>
       <span class="dl-amt">${tot ? fmtShort(tot) : '&mdash;'}</span>
     </div>`;
   }).join('');
@@ -621,17 +805,55 @@ function renderDetail(key) {
   heading.textContent = label;
 
   const partyClass = (p) => p === 'D' ? 'D' : p === 'R' ? 'R' : 'other';
-  const cands2026 = rec.candidates_2026 || [];
+  const res2026 = rec.result_2026;
+  // Winner first, then by votes, so the card row reads like the result.
+  const cands2026 = (rec.candidates_2026 || []).slice().sort((a, b) => {
+    const ra = candResult(rec, a.name), rb = candResult(rec, b.name);
+    if (!ra || !rb) return 0;
+    return (rb.winner - ra.winner) || (rb.votes - ra.votes);
+  });
+  const candVote = (c) => {
+    const cr = candResult(rec, c.name);
+    if (!cr || !res2026) return '';
+    if (res2026.uncontested) return `<div class="cand2026-vote">Unopposed</div>`;
+    const pct = res2026.cast_votes ? fmtPct(cr.votes / res2026.cast_votes * 100) : '&mdash;';
+    return `<div class="cand2026-vote">${pct} <span>&middot; ${cr.votes.toLocaleString('en-US')} votes</span></div>`;
+  };
   const cand2026Section = `
     <div class="cand2026-section">
-      <h4>2026 candidates</h4>
-      ${cands2026.length ? `<div class="cand2026-row">${cands2026.map(c => `
-        <div class="cand2026-card ${partyClass(c.party)}">
-          <div class="cand2026-name">${c.name}${isIncumbent(c, rec) ? ' <span class="incumbent-badge">Incumbent</span>' : ''}</div>
+      <h4>2026 candidates${res2026 ? ' &middot; unofficial results' : ''}</h4>
+      ${cands2026.length ? `<div class="cand2026-row">${cands2026.map(c => {
+        const cr = candResult(rec, c.name);
+        const lost = res2026 && cr && !cr.winner;
+        return `
+        <div class="cand2026-card ${partyClass(c.party)}${lost ? ' lost' : ''}">
+          <div class="cand2026-name">${c.name}${cr && cr.winner ? ' <span class="won-badge">Won</span>' : ''}${isIncumbent(c, rec) ? ' <span class="incumbent-badge">Incumbent</span>' : ''}</div>
           <div class="cand2026-meta"><span class="party-label ${partyClass(c.party)}">${c.party}</span> &middot; ${c.municipality}</div>
+          ${candVote(c)}
           ${c.financing_type ? `<div class="cand2026-finance"><span class="fin-type">${c.financing_type}</span> &middot; ${fmtMoney(c.total_received)} raised &middot; ${fmtMoney(c.total_disbursed)} spent</div>` : ''}
-        </div>`).join('')}</div>` : `<div class="cand2026-empty">No 2026 candidates on file for this district.</div>`}
+        </div>`;
+      }).join('')}</div>` : `<div class="cand2026-empty">No 2026 candidates on file for this district.</div>`}
     </div>`;
+
+  function result2026Block(res) {
+    if (!res) return '';
+    const total = res.cast_votes || 0;
+    const list = (res.candidates || []).slice().sort((a, b) => (b.winner - a.winner) || (b.votes - a.votes));
+    const rows = list.map(c => `<div class="result-row${c.winner ? ' won' : ''}"><span class="cand ${pcls(c.party)}">${c.name} <span class="cand-party">(${shortParty(c.party)})</span></span><span>${res.uncontested ? '' : `<span class="votes">${c.votes.toLocaleString('en-US')}</span>${total ? fmtPct(c.votes / total * 100) : '&mdash;'}`}</span></div>`).join('');
+    const w = list[0], second = list[1];
+    const wp = w ? shortParty(w.party) : '';
+    const pill = res.uncontested
+      ? `<span class="margin-pill ${pcls(res.winner_party)}">Unopposed</span>`
+      : (w && total ? `<span class="margin-pill ${pcls(w.party)}">${wp}+${((w.votes - (second ? second.votes : 0)) / total * 100).toFixed(1)}</span>` : '');
+    const flip = res.flip ? `<span class="flip-pill ${pcls(res.winner_party)}">${shortParty(res.party_2024)} &rarr; ${shortParty(res.winner_party)} flip</span>` : '';
+    const notes = [];
+    if (res.towns_total && res.towns_reporting < res.towns_total) notes.push(`${res.towns_reporting} of ${res.towns_total} towns had reported in the unofficial count; called by DDHQ or the BDN desk.`);
+    return `<div class="detail-block">
+      <h4>2026 result ${pill}${flip}</h4>
+      ${rows}
+      ${notes.length ? `<div class="res-note">${notes.join(' ')}</div>` : ''}
+    </div>`;
+  }
 
   const reg = rec.registration;
   const regBlock = reg ? `
@@ -717,6 +939,7 @@ function renderDetail(key) {
     </div>
     ${cand2026Section}
     <div class="detail-grid">
+      ${result2026Block(res2026)}
       ${regBlock}
       ${resultBlock('2022 result', rec.result_2022)}
       ${resultBlock('2024 result', rec.result_2024)}
@@ -808,6 +1031,7 @@ function setChamber(next) {
   renderMap();
   renderDistrictList();
   renderTopSpending();
+  renderHero();
 }
 
 document.getElementById('btn-senate').addEventListener('click', () => setChamber('SS'));
@@ -903,11 +1127,12 @@ async function init() {
     console.error(err);
   }
 
-  renderUpdateTag('2026-11-03T11:40:06Z');
+  renderUpdateTag('2026-11-06T13:54:33Z');
   buildCandidateIndex();
-  renderMap();
+  setMapMode(mapMode);
   renderDistrictList();
   renderTopSpending();
+  renderHero();
 }
 
 init();
